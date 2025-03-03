@@ -1,0 +1,1 @@
+`Questions are:- 1 to 10 and 14 to 16 and 18,20 and 22 to 25`
