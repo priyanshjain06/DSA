@@ -17,7 +17,7 @@ int findMinimumCost(string str)
     }
 
     stack<char> s;
-    
+
     for (int i = 0; i < str.length(); i++)
     {
         char ch = str[i];
@@ -40,8 +40,8 @@ int findMinimumCost(string str)
     }
 
     // stack contains invalid expression
-    int a = 0, b = 0;    while (!s.empty())
-
+    int a = 0, b = 0;
+    while (!s.empty())
     {
         if (s.top() == '{')
         {

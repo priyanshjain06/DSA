@@ -22,7 +22,7 @@ private:
             }
             // ans is stack ka top
             ans[i] = s.top();
-            s.push(i); //REVIEW - 
+            s.push(i); // REVIEW -
         }
         return ans;
     }
@@ -33,10 +33,10 @@ private:
         s.push(-1);
         vector<int> ans(n);
 
-        for (int i = 0; i < n; i++) //REVIEW - 
+        for (int i = 0; i < n; i++) // REVIEW -
         {
             int curr = arr[i];
-            while (s.top() != -1 && arr[s.top()] >= curr) //REVIEW - 
+            while (s.top() != -1 && arr[s.top()] >= curr) // REVIEW -
             {
                 s.pop();
             }
@@ -52,7 +52,7 @@ public:
     {
         int n = heights.size();
 
-        vector<int> next(n); //REVIEW - 
+        vector<int> next(n); // REVIEW -
         next = nextSmallerElement(heights, n);
 
         vector<int> prev(n);
@@ -63,7 +63,7 @@ public:
         {
             int l = heights[i];
 
-            if (next[i] == -1) //End of Histogram //REVIEW - 
+            if (next[i] == -1) // End of Histogram //REVIEW -
             {
                 next[i] = n;
             }
