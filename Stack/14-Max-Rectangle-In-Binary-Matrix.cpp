@@ -1,138 +1,84 @@
-// NOTE  Given a binary matrix filled with 0s and 1s, your task is to find the area of the largest rectangle containing only 1s.
-
-// ANCHOR -  Time complexity : O(n * m ) where n,m are rows and columns and space complexity : O(m)
-
-// LINK -  we will use conecpt of 12th question
-
-// REVIEW -  follow these steps:
-//  1) Computate area for first row
-//  2) Compute area for remaining rows by adding previous row's value
-
-// REVIEW -  edge case to remember : we can declare a global variable to store the area.
-//  and
-//   we will check the base row should not be 0 while adding the previous row's value
-
 #include <iostream>
 #include <vector>
 #include <stack>
 using namespace std;
-#define MAX 1000
+
 class Solution
 {
 private:
-    vector<int> nextSmallerElement(int *arr, int n)
+    vector<int> getNextSmaller(vector<int> &heights)
     {
-        stack<int> s;
-        s.push(-1);
-        vector<int> ans(n);
+        int n = heights.size();
+        vector<int> next(n, n);
+        stack<int> st;
 
         for (int i = n - 1; i >= 0; i--)
         {
-            int curr = arr[i];
-            while (s.top() != -1 && arr[s.top()] >= curr)
+            while (!st.empty() && heights[st.top()] >= heights[i])
             {
-                s.pop();
+                st.pop();
             }
-            // ans is stack ka top
-            ans[i] = s.top();
-            s.push(i);
+            if (!st.empty()) //REVIEW - 
+                next[i] = st.top();
+            st.push(i);
         }
-        return ans;
+        return next; // REVIEW -
     }
 
-    vector<int> prevSmallerElement(int *arr, int n)
+    vector<int> getPrevSmaller(vector<int> &heights)
     {
-        stack<int> s;
-        s.push(-1);
-        vector<int> ans(n);
+        int n = heights.size();
+        vector<int> prev(n, -1);
+        stack<int> st;
 
         for (int i = 0; i < n; i++)
         {
-            int curr = arr[i];
-            while (s.top() != -1 && arr[s.top()] >= curr)
+            while (!st.empty() && heights[st.top()] >= heights[i])
             {
-                s.pop();
+                st.pop();
             }
-            // ans is stack ka top
-            ans[i] = s.top();
-            s.push(i);
+            if (!st.empty())
+                prev[i] = st.top();
+            st.push(i);
         }
-        return ans;
+        return prev; // REVIEW -
     }
 
-    int largestRectangleArea(int *heights, int n)
+    int getMaxRectangle(vector<int> &heights)
     {
-        // int n= heights.size();
+        int n = heights.size();
+        vector<int> next = getNextSmaller(heights);
+        vector<int> prev = getPrevSmaller(heights);
 
-        vector<int> next(n);
-        next = nextSmallerElement(heights, n);
-
-        vector<int> prev(n);
-        prev = prevSmallerElement(heights, n);
-
-        int area = INT_MIN;
+        int maxArea = 0;
         for (int i = 0; i < n; i++)
         {
-            int l = heights[i];
-
-            if (next[i] == -1)
-            {
-                next[i] = n;
-            }
-            int b = next[i] - prev[i] - 1;
-            int newArea = l * b;
-            area = max(area, newArea);
+            int width = next[i] - prev[i] - 1;
+            maxArea = max(maxArea, heights[i] * width);
         }
-        return area;
+        return maxArea;
     }
 
 public:
-    int maxArea(int M[MAX][MAX], int n, int m)
+    int maximalRectangle(vector<vector<char>> &matrix)
     {
+        if (matrix.empty())
+            return 0;
+        // REVIEW -
+        int rows = matrix.size(), cols = matrix[0].size(); // FIXME
 
-        // step 1: compute area for first row
-        int area = largestRectangleArea(M[0], m);
+        vector<int> heights(cols, 0);
+        int maxArea = 0;
 
-        for (int i = 1; i < n; i++) // REVIEW -  from 1
+        for (int i = 0; i < rows; i++)
         {
-            for (int j = 0; j < m; j++)
+            for (int j = 0; j < cols; j++)
             {
-
-                // row udpate: by adding previous row's value
-                if (M[i][j] != 0)
-                    M[i][j] = M[i][j] + M[i - 1][j];
-                else
-                    M[i][j] = 0;
+                heights[j] = (matrix[i][j] == '`1') ? heights[j] + 1 : 0;
             }
-
-            // entire row is updated now
-            area = max(area, largestRectangleArea(M[i], m));
+            maxArea = max(maxArea, getMaxRectangle(heights));
         }
-        return area;
+
+        return maxArea;
     }
 };
-
-int main()
-{
-    int T;
-    cin >> T;
-
-    int M[MAX][MAX];
-
-    while (T--)
-    {
-        int n, m;
-        cin >> n >> m;
-
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < m; j++)
-            {
-                cin >> M[i][j];
-            }
-        }
-        Solution obj;
-        cout << obj.maxArea(M, n, m) << endl;
-    }
-}
-// } Driver Code Ends

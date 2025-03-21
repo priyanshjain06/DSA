@@ -18,21 +18,21 @@ public:
         int n = nums.size();
         vector<int> nge(n, -1); // REVIEW -
         stack<int> st;
-        for (int i = 2 * n - 1; i >= 0; i--) //REVIEW - 
+        for (int i = 2 * n - 1; i >= 0; i--) // REVIEW -  2*n-1
         {
-            while (!st.empty() && st.top() <= nums[i % n]) //REVIEW - 
+            while (!st.empty() && st.top() <= nums[i % n]) // REVIEW -
             {
                 st.pop();
             }
 
-            if (i < n) //REVIEW - 
+            if (i < n) // REVIEW -
             {
                 if (st.empty())
                     nge[i] = -1;
                 else
                     nge[i] = st.top();
             }
-            st.push(nums[i % n]); //REVIEW - 
+            st.push(nums[i % n]); // REVIEW -
         }
         return nge;
     }

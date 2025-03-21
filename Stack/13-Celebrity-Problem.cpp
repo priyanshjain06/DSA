@@ -24,7 +24,7 @@ public:
         // Step 1: Find the celebrity candidate
         for (int i = 1; i < n; i++) // REVIEW from 1
         {
-            if (M[candidate][i] == 1)
+            if (M[candidate][i] == 1) //FIXME
             {
                 // candidate knows i, so candidate cannot be a celebrity
                 candidate = i;

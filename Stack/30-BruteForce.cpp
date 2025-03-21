@@ -1,53 +1,48 @@
 #include <iostream>
+#include <stack>
 using namespace std;
 
-string buildLowestNumber(string str, int n)
+string removeKdigits(string num, int k)
 {
-    // Base Case 1: If n == 0, append the whole 'str' to 'res' and return
-    if (n == 0)
+    int n = num.size();
+    stack<char> mystack; // REVIEW -
+    for (char c : num)
     {
-        return str;
-    }
-
-    int len = str.size();
-
-    // Base Case 2: If 'len' is smaller or equal to n, everything can be removed
-    if (len <= n)
-    {
-        return "";
-    }
-
-    // Find the smallest character among the first (n+1) characters of 'str'
-    int minIndex = 0;
-    for (int i = 1; i <= n; ++i)
-    {
-        if (str[i] < str[minIndex])
+        while (!mystack.empty() && k > 0 && mystack.top() > c)
         {
-            minIndex = i;
+            mystack.pop();
+            k--;
         }
+
+        if (!mystack.empty() || c != '0') // REVIEW -  for leading zero
+            mystack.push(c);              // REVIEW It will push the value in the stack if stack is empty
     }
 
-    // Append 'str[minIndex]' to 'res' and recur for the substring after minIndex
-    // and for n = n-minIndex
-    return str[minIndex] + buildLowestNumber(str.substr(minIndex + 1), n - minIndex);
+    // Now remove the largest values from the top of the
+    // stack
+    // REVIEW -  for 123456
+    while (!mystack.empty() && k--)
+        mystack.pop();
+
+    // REVIEW - 0000 or no value in the stack is left example :1111111
+    if (mystack.empty())
+        return "0";
+
+    // Now retrieve the number from stack into a string
+    // (reusing num)
+    while (!mystack.empty())
+    {
+        num[n - 1] = mystack.top(); // REVIEW -  reverse order
+        mystack.pop();
+        n--;
+    }
+    return num.substr(n);
 }
 
 int main()
 {
     string str = "765028321";
     int k = 5;
-
-    string result = buildLowestNumber(str, k);
-
-    // Output the result
-    if (result.empty())
-    {
-        cout << "0\n";
-    }
-    else
-    {
-        cout << result << "\n";
-    }
-
+    cout << removeKdigits(str, k);
     return 0;
 }

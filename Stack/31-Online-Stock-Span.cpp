@@ -2,37 +2,29 @@
 
 // ANCHOR -  Time Complexity: O(N) and Space Complexity: O(N)
 
-#include <iostream>
 #include <stack>
 using namespace std;
-void calculateSpan(int price[], int n, int S[])
+
+class StockSpanner
 {
-    stack<int> st;
-    st.push(0); // REVIEW -
+public:
+    stack<pair<int, int>> st; // Stores (price, span)
 
-    S[0] = 1;
+    StockSpanner() {} // REVIEW  Read the question also the example
 
-    for (int i = 1; i < n; i++)
+    int next(int price) // REVIEW
     {
-        while (!st.empty() && price[st.top()] <= price[i])
+        int span = 1;
+
+        // Pop smaller prices and accumulate their spans
+        while (!st.empty() && st.top().first <= price)
+        {
+            span += st.top().second;
             st.pop();
+        }
 
-        S[i] = (st.empty()) ? (i + 1) : (i - st.top()); // i+1 =>0+1
-
-        st.push(i);
+        // Push the current price and its computed span
+        st.push({price, span});
+        return span;
     }
-}
-
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-}
-
-int main()
-{
-    int price[] = {10, 4, 5, 90, 120, 80};
-    calculateSpan(price, n, S);
-    printArray(S, n);
-    return 0;
-}
+};

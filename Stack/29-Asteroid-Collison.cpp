@@ -25,7 +25,7 @@ public:
         vector<int> ans;
         for (auto i : a)
         {
-            if (i >= 0)
+            if (i >= 0) 
             {
                 st.push(i);
             }
@@ -42,7 +42,7 @@ public:
                 }
                 else
                 {
-                    if (st.empty() || st.top() < 0)
+                    if (st.empty() || st.top() < 0) //REVIEW this is the edge case , if all are negative! 
                     {
                         st.push(i);
                     }

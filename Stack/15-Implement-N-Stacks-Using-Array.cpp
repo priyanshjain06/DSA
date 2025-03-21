@@ -1,11 +1,11 @@
-// NOTE - 
+// NOTE -
 
 // ANCHOR -  Time Complexity - O(1) and Space Compexity - O(N+S) where N is number of stacks and S is size of stack
 
-//LINK Remember two edge cases : 
-// what does next do 
-// and 
-// make last index of next array -1
+// LINK Remember two edge cases :
+//  what does next do
+//  and
+//  make last index of next array -1
 
 #include <iostream>
 #include <vector>
@@ -24,8 +24,8 @@ public:
     // Initialize your data structure.
     NStack(int N, int S)
     {
-        n = N;
-        s = S;
+        n = N; // n is number of stacks to be implemented
+        s = S; // s is the size  of the array
         arr = new int[s];
         top = new int[n];
         next = new int[s];
@@ -42,10 +42,10 @@ public:
             next[i] = i + 1;
         }
         // update last index value to -1
-        next[s - 1] = -1; //REVIEW - 
+        next[s - 1] = -1; // REVIEW -
 
         // initialise freespot
-        freespot = 0;
+        freespot = 0; // REVIEW -
     }
 
     // Pushes 'X' into the Mth stack. Returns true if it gets pushed into the stack, and false otherwise.
@@ -56,7 +56,7 @@ public:
         {
             return false;
         }
-        
+
         // find index
         int index = freespot;
 
@@ -67,19 +67,19 @@ public:
         freespot = next[index];
 
         // update next;
-        next[index] = top[m - 1];
+        next[index] = top[m - 1]; // REVIEW m represents the stack number in which we are performing operations.
 
         // update top
         top[m - 1] = index;
 
-        return true;
+        return true; // REVIEW
     }
 
     // Pops top element from Mth Stack. Returns -1 if the stack is empty, otherwise returns the popped element.
     int pop(int m)
     {
         // check underflow condition
-        if (top[m - 1] == -1)  
+        if (top[m - 1] == -1)
         {
             return -1;
         }

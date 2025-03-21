@@ -1,8 +1,3 @@
-// REVIEW
-//  1) reverse the given infix
-//  2) now infix to postfix apply
-//  3) now reverse the postix which is your prefix
-
 #include <iostream>
 #include <stack>
 #include <algorithm> // For reverse function
@@ -75,37 +70,4 @@ string infixToPostfix(string s)
     }
 
     return result;
-}
-
-// Function to convert infix to prefix
-string infixToPrefix(string infix)
-{
-    // Step 1: Reverse the infix expression
-    reverse(infix.begin(), infix.end());
-
-    // Step 2: Swap '(' with ')' and vice versa
-    for (int i = 0; i < infix.size(); i++)
-    {
-        if (infix[i] == '(')
-            infix[i] = ')';
-        else if (infix[i] == ')')
-            infix[i] = '(';
-    }
-
-    // Step 3: Convert the modified infix to postfix
-    string postfix = infixToPostfix(infix);
-
-    // Step 4: Reverse the postfix to get the prefix
-    reverse(postfix.begin(), postfix.end());
-
-    return postfix;
-}
-
-// Driver Code
-int main()
-{
-    string exp = "((p+q)*(m-n)/o^r)";
-    cout << "Infix Expression: " << exp << endl;
-    cout << "Prefix Expression: " << infixToPrefix(exp) << endl;
-    return 0;
 }

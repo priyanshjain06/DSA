@@ -2,51 +2,41 @@
 
 // LINK : edge cases to handle : 11111 and 00000 and 00001 and 123456 and k==n
 
+// REVIEW this question doesnt mention that we change the order so we need to maintain the order !
+
 #include <iostream>
-#include <stack>
 using namespace std;
 
-string removeKdigits(string num, int k)
+class Solution
 {
-    int n = num.size();
-    stack<char> mystack; //REVIEW - 
-    for (char c : num)
+public:
+    string removeKdigits(string num, int k)
     {
-        while (!mystack.empty() && k > 0 && mystack.top() > c)
+        string result = ""; // Acts as a stack
+
+        for (char c : num)
         {
-            mystack.pop();
-            k--;
+            // Remove larger digits when a smaller digit is encountered
+            while (!result.empty() && k > 0 && result.back() > c)
+            {
+                result.pop_back(); // Acts like stack.pop()
+                k--;
+            }
+
+            // Avoid leading zeros
+            if (!result.empty() || c != '0')
+            {
+                result.push_back(c);
+            }
         }
-        
-        if (!mystack.empty() || c != '0') // REVIEW -  for leading zero
-            mystack.push(c);              // REVIEW It will push the value in the stack if stack is empty
+
+        // Remove remaining digits if k is still greater than 0
+        while (!result.empty() && k > 0)
+        {
+            result.pop_back();
+        }
+
+        // If result is empty, return "0"
+        return result.empty() ? "0" : result;
     }
-
-    // Now remove the largest values from the top of the
-    // stack
-    // REVIEW -  for 123456
-    while (!mystack.empty() && k--)
-        mystack.pop();
-
-    // REVIEW - 0000 or no value in the stack is left example :1111111
-    if (mystack.empty())
-        return "0";
-
-    // Now retrieve the number from stack into a string
-    // (reusing num)
-    while (!mystack.empty())
-    {
-        num[n - 1] = mystack.top(); // REVIEW -  reverse order
-        mystack.pop();
-        n--;
-    }
-    return num.substr(n);
-}
-
-int main()
-{
-    string str = "765028321";
-    int k = 5;
-    cout << removeKdigits(str, k);
-    return 0;
-}
+};

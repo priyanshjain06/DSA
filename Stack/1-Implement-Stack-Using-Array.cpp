@@ -27,6 +27,7 @@ public:
             cout << "Stack OverFlow" << endl;
         }
     }
+
     void pop()
     {
         if (top >= 0)

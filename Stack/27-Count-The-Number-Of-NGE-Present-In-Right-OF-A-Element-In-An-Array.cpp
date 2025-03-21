@@ -1,7 +1,27 @@
-//NOTE : arr = [3, 5, 2, 7, 5, 8, 6]
-// Queries: Q = [0, 2, 3]
+#include <iostream>
+#include <vector>
+using namespace std;
 
-//For index 0 (i.e., arr[0] = 3): =====>
-// Look at the elements to the right: [5, 2, 7, 5, 8, 6].
-// Elements greater than 3 are: [5, 7, 5, 8, 6].
-// Count of elements greater than 3 is 5.
+// REVIEW this is brute force , no need for optimal approach
+class Solution
+{
+public:
+    vector<int> count_NGE(int n, vector<int> &arr, int queries, vector<int> &indices)
+    {
+        vector<int> result;
+        for (int i = 0; i < indices.size(); i++)
+        {
+            int index = indices[i];
+            int countGreaterElements = 0;
+            for (int j = index + 1; j < n; j++)
+            {
+                if (arr[j] > arr[index])
+                {
+                    countGreaterElements += 1;
+                }
+            }
+            result.push_back(countGreaterElements);
+        }
+        return result;
+    }
+};

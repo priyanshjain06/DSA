@@ -17,6 +17,9 @@ string preToPost(string pre_exp)
         }
         else
         {
+            if (s.size() < 2)
+                return "Invalid Expression"; // Edge case
+                
             // pop two operands from stack
             string op1 = s.top();
             s.pop();
@@ -24,7 +27,7 @@ string preToPost(string pre_exp)
             s.pop();
 
             // concat the operands and operator
-            string temp = op1 + op2 + pre_exp[i]; 
+            string temp = op1 + op2 + pre_exp[i];
             // REVIEW - just reverse abc => cba
 
             s.push(temp);

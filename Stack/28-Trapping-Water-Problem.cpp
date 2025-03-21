@@ -2,8 +2,6 @@
 
 // LINK Time Complexity : O(n) and Space Complexity : O(n)
 
-// ANCHOR -  REVISE THE ALGO from screenshot
-
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -13,6 +11,10 @@ int trap(vector<int> &height)
     int left = 0, right = n - 1;
     int res = 0;
     int maxLeft = 0, maxRight = 0;
+     
+    if (n == 0) //REVIEW 
+        return 0; // Edge case: empty array
+
     while (left <= right)
     {
         if (height[left] <= height[right])

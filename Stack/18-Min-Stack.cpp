@@ -1,71 +1,43 @@
-// NOTE Problem Statement: Implement Min Stack | O(2N) and O(N) Space Complexity. Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
-
-// REVIEW min = 2*val-min and prevmin = 2*min-val
+// NOTE Problem Statement: Implement Min Stack | O(2N) and O(1) Space Complexity. Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
 #include <iostream>
 #include <stack>
 using namespace std;
-class MinStack
+
+class Solution
 {
-    stack<long long> st;
-    long long mini;
+private:
+    stack<pair<int, int>> s; // Stores (value, minimum so far)
 
 public:
-    MinStack() // REVIEW -
+    Solution() {}
+
+    // Add an element to the top of Stack
+    void push(int x)
     {
-        while (!st.empty())
-            st.pop();
-        mini = INT_MAX; // REVIEW -
+        int minVal = s.empty() ? x : min(x, s.top().second); 
+        // REVIEW s.top().second not minVal
+        s.push({x, minVal});
     }
 
-    void push(int value)
-    {
-
-        if (st.empty())
-        {
-            mini = value;
-            st.push(value);
-        }
-        else
-        {
-            if (value < mini)
-            {
-                st.push(2 * value * 1LL - mini); // REVIEW -
-                mini = value;
-            }
-            else
-            {
-                st.push(value);
-            }
-        }
-    }
-
+    // Remove the top element from the Stack
     void pop()
     {
-        if (st.empty())
-            return;
-        long long el = st.top();
-        st.pop();
-
-        if (el < mini)
+        if (!s.empty())
         {
-            mini = 2 * mini - el;
+            s.pop();
         }
     }
 
-    int top()
+    // Returns top element of the Stack
+    int peek()
     {
-        if (st.empty())
-            return -1;
-
-        long long el = st.top();
-        if (el < mini)
-            return mini;
-        return el;
+        return s.empty() ? -1 : s.top().first;
     }
 
+    // Finds minimum element of Stack
     int getMin()
     {
-        return mini;
+        return s.empty() ? -1 : s.top().second;
     }
 };

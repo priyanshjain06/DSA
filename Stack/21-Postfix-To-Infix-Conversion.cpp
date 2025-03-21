@@ -1,3 +1,6 @@
+
+// REVIEW The reason for using a stack of strings (stack<string>) instead of a stack of characters (stack<char>) is because we need to build and store entire subexpressions as strings.
+
 #include <iostream>
 #include <stack>
 #include <cctype>
@@ -13,14 +16,17 @@ string getInfix(string exp)
         {
 
             // In this code, the stack s is declared as a stack of strings (stack<string>), but exp[i] is a character.
-            s.push(string(1, exp[i])); //REVIEW - 
+
+            // is used to convert a single character (exp[i]) into a string and push it onto the stack.
+
+            s.push(string(1, exp[i])); // REVIEW -
         }
 
-        // We assume that input is
-        // a valid postfix and expect
-        // an operator.
         else
         {
+            if (s.size() < 2)
+                return "Invalid Expression"; //REVIEW  Edge case
+
             string op1 = s.top();
             s.pop();
             string op2 = s.top();

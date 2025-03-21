@@ -42,7 +42,7 @@ private:
             }
             // ans is stack ka top
             ans[i] = s.top();
-            s.push(i);
+            s.push(i); //REVIEW - 
         }
         return ans;
     }
@@ -66,7 +66,7 @@ public:
             if (next[i] == -1) // End of Histogram //REVIEW -
             {
                 next[i] = n;
-            }
+            }   
             int b = next[i] - prev[i] - 1;
             int newArea = l * b;
             area = max(area, newArea);

@@ -1,37 +1,46 @@
-#include <iostream>
 #include <stack>
-using namespace std;
-class MinStack
-{
-    stack<pair<int, int>> st; // REVIEW
+#include <limits.h>
+using namespace std ;
+class MinStack {
+private:
 
+    std::stack<int> stack;
+    std::stack<int> minStack;
+    
 public:
-    void push(int x)
-    {
-        int min;
-        if (st.empty())
-        {
-            min = x;
+    MinStack() {}
+    
+    void push(int val) {
+        stack.push(val);
+        if (minStack.empty() || val <= minStack.top()) {
+            minStack.push(val);
         }
-        else
-        {
-            min = std::min(st.top().second, x); // REVIEW -  syntax
+    }
+    
+    void pop() {
+        if (!stack.empty()) {
+            if (stack.top() == minStack.top()) {
+                minStack.pop();
+            }
+            stack.pop();
         }
-        st.push({x, min});
     }
-
-    void pop()
-    {
-        st.pop();
+    
+    int top() {
+        return stack.empty() ? -1 : stack.top();
     }
-
-    int top()
-    {
-        return st.top().first;
-    }
-
-    int getMin()
-    {
-        return st.top().second;
+    
+    int getMin() {
+        return minStack.empty() ? -1 : minStack.top();
     }
 };
+
+// Example usage:
+// MinStack minStack;
+// minStack.push(-2);
+// minStack.push(0);
+// minStack.push(-3);
+// cout << minStack.getMin(); // return -3
+// minStack.pop();
+// cout << minStack.top();    // return 0
+// cout << minStack.getMin(); // return -2

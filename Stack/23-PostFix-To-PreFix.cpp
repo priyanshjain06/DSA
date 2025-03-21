@@ -6,7 +6,7 @@
 using namespace std;
 string postToPre(string post_exp)
 {
-    stack<string> s;
+    stack<string> s; // REVIEW
     for (int i = 0; i < post_exp.length(); i++)
     {
         if (isalpha(post_exp[i]) || isdigit(post_exp[i]))
@@ -15,25 +15,28 @@ string postToPre(string post_exp)
         }
         else
         {
+            if (s.size() < 2)
+                return "Invalid Expression"; // Edge case
+
             string op1 = s.top();
             s.pop();
             string op2 = s.top();
             s.pop();
 
-            string temp = post_exp[i] + op2 + op1; //REVIEW - 
+            string temp = post_exp[i] + op2 + op1; // REVIEW -
 
             s.push(temp);
         }
     }
 
-    string ans = "";
+    string ans = ""; // REVIEW
 
-    while (!s.empty())
+    while (!s.empty()) // REVIEW
     {
         ans += s.top();
         s.pop();
     }
-    return ans; 
+    return ans;
 }
 
 int main()

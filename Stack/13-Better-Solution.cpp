@@ -21,7 +21,7 @@ using namespace std;
 class Solution
 {
 private:
-    bool knows(vector<vector<int>> &M, int a, int b, int n)
+    bool knows(vector<vector<int>> &M, int a, int b)
     {
         if (M[a][b] == 1)
             return true;
@@ -51,7 +51,7 @@ public:
             int b = s.top();
             s.pop();
 
-            if (knows(M, a, b, n))
+            if (knows(M, a, b))
             {
                 s.push(b); // REVIEW if a knows b then push b back
             }
@@ -60,7 +60,7 @@ public:
                 s.push(a);
             }
         }
-        int ans = s.top();
+        int ans = s.top(); // REVIEW
         // step3: single element in stack is potential celeb
         // so verify it
 
