@@ -8,7 +8,7 @@ using namespace std;
 class StockSpanner
 {
 public:
-    stack<pair<int, int>> st; // Stores (price, span)
+    stack<pair<int, int>> st; // REVIEW a pair is created ! Stores (price, span)
 
     StockSpanner() {} // REVIEW  Read the question also the example
 
@@ -20,7 +20,7 @@ public:
         while (!st.empty() && st.top().first <= price)
         {
             span += st.top().second;
-            st.pop();
+            st.pop(); // REVIEW coz we have counted it  !
         }
 
         // Push the current price and its computed span
