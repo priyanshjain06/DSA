@@ -57,7 +57,7 @@ string infixToPostfix(string s)
             while (!st.empty() && precedence(st.top()) >= precedence(c))
             {
                 // Handle right-associative '^' properly.
-                if (c == '^' && st.top() == '^')
+                if (c == '^' && st.top() == '^') //REVIEW - 
                     break;
 
                 result += st.top();
