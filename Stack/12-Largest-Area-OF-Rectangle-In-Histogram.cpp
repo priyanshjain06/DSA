@@ -22,7 +22,7 @@ private:
             }
             // ans is stack ka top
             ans[i] = s.top();
-            s.push(i); // REVIEW -
+            s.push(i); // REVIEW - because  we are storing the index for calculating b = next[i] - prev[i] - 1; which are difference of indexes
         }
         return ans;
     }
