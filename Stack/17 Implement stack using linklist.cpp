@@ -1,3 +1,4 @@
+//NOTE there is one edge case that we  return when the  head is null
 class Node
 {
 public:

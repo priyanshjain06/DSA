@@ -1,3 +1,5 @@
+//NOTE we return when the matrix is empty 
+
 #include <iostream>
 #include <vector>
 #include <stack>
