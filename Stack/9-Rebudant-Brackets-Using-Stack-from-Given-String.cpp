@@ -2,6 +2,10 @@
 
 // REVIEW : The Logic is to find the  operator between first closing and last opening bracket , If no operator is found then it is redundant
 
+// NOTE - 2 edge cases :
+//   remove the opening bracket at the start if the stack is not empty at the end
+//  if still redundant is true for any loop then return true !
+
 #include <iostream>
 #include <stack>
 
