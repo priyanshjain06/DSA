@@ -7,7 +7,7 @@ using namespace std;
 class Solution
 {
 private:
-    stack<pair<int, int>> s; // Stores (value, minimum so far)
+    stack<pair<int, int>> s; // Stores (value, minimum so far) //REVIEW -  make the stack pair 
 
 public:
     Solution() {}
