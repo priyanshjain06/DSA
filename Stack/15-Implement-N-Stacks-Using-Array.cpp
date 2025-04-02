@@ -78,7 +78,7 @@ public:
     // Pops top element from Mth Stack. Returns -1 if the stack is empty, otherwise returns the popped element.
     int pop(int m)
     {
-        // check underflow condition
+        //REVIEW  check underflow condition
         if (top[m - 1] == -1)
         {
             return -1;
@@ -92,6 +92,6 @@ public:
 
         freespot = index;
 
-        return arr[index];
+        return arr[index]; //REVIEW 
     }
 };
