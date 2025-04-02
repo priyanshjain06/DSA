@@ -1,3 +1,5 @@
+//REVIEW 2 edge cases : closing bracket  at start and if the stack is not empty at the end
+
 #include <iostream>
 #include <stack>
 using namespace std;

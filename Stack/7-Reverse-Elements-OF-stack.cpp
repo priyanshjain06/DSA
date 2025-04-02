@@ -35,7 +35,7 @@ void reverseStack(stack<int> &stack)
     stack.pop();
 
     // Step 2: Recursively reverse the remaining stack
-    reverseStack(stack);
+    reverseStack(stack); //REVIEW pehele khud ko fir dusro ko !
 
     // Step 3: Insert the removed element at the bottom
     insertAtBottom(stack, num);
