@@ -20,7 +20,7 @@ private:
             }
             if (!st.empty()) //REVIEW - 
                 next[i] = st.top();
-            st.push(i);
+            st.push(i); //REVIEW use the index of the element
         }
         return next; // REVIEW -
     }
@@ -74,9 +74,9 @@ public:
         {
             for (int j = 0; j < cols; j++)
             {
-                heights[j] = (matrix[i][j] == '`1') ? heights[j] + 1 : 0;
+                heights[j] = (matrix[i][j] == '1') ? heights[j] + 1 : 0;
             }
-            maxArea = max(maxArea, getMaxRectangle(heights));
+            maxArea = max(maxArea, getMaxRectangle(heights)); //REVIEW call the max rectangle
         }
 
         return maxArea;
