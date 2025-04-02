@@ -12,6 +12,7 @@ public:
     {
         vector<int> result;
         for (int i = 0; i < indices.size(); i++)
+        //REVIEW loop for indices only and not for arr
         {
             int threshold = indices[i];
             int countGreaterElements = 0;
