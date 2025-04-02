@@ -23,7 +23,7 @@ public:
                 st.pop();
             }
 
-            if (st.empty())
+            if (st.empty()) //REVIEW 
             {
                 nge[i] = -1;
             }
@@ -33,7 +33,7 @@ public:
                 nge[i] = st.top();
             }
 
-            st.push(nums[i]);
+            st.push(nums[i]); 
         }
 
         return nge;
