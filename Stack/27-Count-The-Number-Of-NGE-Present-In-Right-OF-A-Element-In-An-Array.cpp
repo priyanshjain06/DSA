@@ -3,6 +3,8 @@
 using namespace std;
 
 // REVIEW this is brute force , no need for optimal approach
+//NOTE read the question
+
 class Solution
 {
 public:
@@ -11,11 +13,11 @@ public:
         vector<int> result;
         for (int i = 0; i < indices.size(); i++)
         {
-            int index = indices[i];
+            int threshold = indices[i];
             int countGreaterElements = 0;
-            for (int j = index + 1; j < n; j++)
+            for (int j = threshold + 1; j < n; j++)
             {
-                if (arr[j] > arr[index])
+                if (arr[j] > arr[threshold])
                 {
                     countGreaterElements += 1;
                 }
