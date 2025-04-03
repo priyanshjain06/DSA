@@ -30,7 +30,7 @@ public:
         }
         else
         {
-            front = (front - 1 + size) % size; // Move front backwards circularly
+            front = (front - 1 + size) % size; //REVIEW Move front backwards circularly
         }
         arr[front] = x;
         return true;
@@ -61,7 +61,7 @@ public:
             return -1;
 
         int ans = arr[front];
-        arr[front] = -1;
+        arr[front] = -1; //REVIEW 
 
         if (front == rear) // If only one element was present
         {
@@ -89,7 +89,7 @@ public:
         }
         else
         {
-            rear = (rear - 1 + size) % size; // Move rear backward circularly
+            rear = (rear - 1 + size) % size; //REVIEW rear-1 Move rear backward circularly
         }
         return ans;
     }

@@ -20,7 +20,8 @@ public:
 
     bool isEmpty()
     {
-        return (qfront == -1 || qfront > rear);
+        return (qfront == -1 && rear == -1  // || qfront > rear
+                || qfront == rear);
     }
 
     void enqueue(int data)

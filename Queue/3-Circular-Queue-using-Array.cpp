@@ -45,9 +45,9 @@ public:
             return -1; // Queue is empty
         }
         int ans = arr[front];
-        arr[front] = -1;
+        arr[front] = -1; //REVIEW
 
-        if (front == rear) // Last element is removed, reset queue
+        if (front = rear) //REVIEW  Last element is removed, reset queue
         {
             front = rear = -1;
         }
