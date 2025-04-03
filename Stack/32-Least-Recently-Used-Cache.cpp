@@ -6,7 +6,7 @@ using namespace std;
 class LRUCache
 {
 public:
-    class node
+    class node //REVIEW class within a class 
     {
     public:
         int key;
