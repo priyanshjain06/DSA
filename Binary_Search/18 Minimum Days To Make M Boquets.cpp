@@ -56,11 +56,11 @@ int roseGarden(vector<int> arr, int k, int m)
         int mid = (low + high) / 2;
         if (possible(arr, mid, m, k))
             high = mid - 1;
-        // because we want minimum so we eliminate right side from mid
+        // NOTE because we want minimum so we eliminate right side from mid
         else
             low = mid + 1;
     }
-    return low;
+    return low; // NOTE why low ? becuase we want to return the minimum
 }
 
 int main()
