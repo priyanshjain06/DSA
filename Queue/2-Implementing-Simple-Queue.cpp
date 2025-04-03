@@ -20,55 +20,45 @@ public:
 
     bool isEmpty()
     {
-        if (qfront == rear)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (qfront == -1 || qfront > rear);
     }
 
     void enqueue(int data)
     {
-        if (rear == size)
-            cout << "Queue is Full" << endl;
-        else
+        if (rear == size - 1)
         {
-            rear++;
-            arr[rear] = data;
+            cout << "Queue is Full" << endl;
+            return;
         }
+        if (isEmpty())
+        {
+            qfront = 0; // First element insertion
+        }
+        rear++;
+        arr[rear] = data;
     }
+
     int dequeue()
     {
-        if (qfront == rear)
+        if (isEmpty())
         {
-            return -1;
+            return -1; // Queue underflow
         }
-        else //REVIEW - 
-        {
-            int deletedElement = arr[qfront];
-            arr[qfront] = -1;
-            qfront++; 
-            if (qfront == rear) 
-            {
-                qfront = 0;
-                rear = 0;
-            }
-            return deletedElement;
+        int deletedElement = arr[qfront];
+        qfront++;
+        if (qfront > rear)
+        { // Reset queue when empty
+            qfront = rear = -1;
         }
+        return deletedElement;
     }
 
     int front()
     {
-        if (qfront == rear)
+        if (isEmpty())
         {
             return -1;
         }
-        else
-        {
-            return arr[qfront];
-        }
+        return arr[qfront];
     }
 };

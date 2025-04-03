@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 class Deque
 {
     int *arr;
@@ -8,157 +9,132 @@ class Deque
     int size;
 
 public:
-    // Initialize your data structure.
+    // Initialize the Deque
     Deque(int n)
     {
         size = n;
-        arr = new int[n];
+        arr = new int[size];
         front = -1;
         rear = -1;
     }
 
-    // Pushes 'X' in the front of the deque. Returns true if it gets pushed into the deque, and false otherwise.
-    
+    // Pushes 'X' to the front of the deque
     bool pushFront(int x)
     {
-        // check full or not
         if (isFull())
-        {
             return false;
-        }
-        else if (isEmpty())
+
+        if (isEmpty()) // First element insertion
         {
             front = rear = 0;
         }
-        else if (front == 0 && rear != size - 1) // REVIEW revser of rear
-        {
-            front = size - 1;
-        }
         else
         {
-            front--;
+            front = (front - 1 + size) % size; // Move front backwards circularly
         }
         arr[front] = x;
         return true;
     }
 
-    // Pushes 'X' in the back of the deque. Returns true if it gets pushed into the deque, and false otwherwise.
+    // Pushes 'X' to the back of the deque
     bool pushRear(int x)
     {
         if (isFull())
-        {
             return false;
-        }
-        else if (isEmpty())
+
+        if (isEmpty()) // First element insertion
         {
             front = rear = 0;
         }
-        else if (rear == size - 1 && front != 0)
-        {
-            rear = 0;
-        }
         else
         {
-            rear++;
+            rear = (rear + 1) % size; // Move rear forward circularly
         }
         arr[rear] = x;
         return true;
     }
 
-    // Pops an element from the front of the deque. Returns -1 if the deque is empty, otherwise returns the popped element.
+    // Pops an element from the front
     int popFront()
     {
         if (isEmpty())
-        { // to check queue is empty
-            // cout << "Queue is Empty " << endl;
             return -1;
-        }
 
         int ans = arr[front];
         arr[front] = -1;
 
-        if (front == rear)
-        { // single element is present
+        if (front == rear) // If only one element was present
+        {
             front = rear = -1;
         }
-        else if (front == size - 1)
-        {
-            front = 0; // to maintain cyclic nature
-        }
         else
-        { // normal flow
-            front++;
+        {
+            front = (front + 1) % size; // Move front forward circularly
         }
         return ans;
     }
 
-    // Pops an element from the back of the deque. Returns -1 if the deque is empty, otherwise returns the popped element.
+    // Pops an element from the back
     int popRear()
     {
         if (isEmpty())
-        { // to check queue is empty
-            // cout << "Queue is Empty " << endl;
             return -1;
-        }
 
         int ans = arr[rear];
         arr[rear] = -1;
 
-        if (front == rear)
-        { // single element is present
+        if (front == rear) // If only one element was present
+        {
             front = rear = -1;
         }
-        else if (rear == 0)
-        {
-            rear = size - 1; // to maintain cyclic nature
-        }
         else
-        { // normal flow
-            rear--;
+        {
+            rear = (rear - 1 + size) % size; // Move rear backward circularly
         }
         return ans;
     }
 
-    // Returns the first element of the deque. If the deque is empty, it returns -1.
-
+    // Returns the first element
     int getFront()
     {
         if (isEmpty())
-        {
             return -1;
-        }
         return arr[front];
     }
 
-    // Returns the last element of the deque. If the deque is empty, it returns -1.
+    // Returns the last element
     int getRear()
     {
         if (isEmpty())
-        {
             return -1;
-        }
         return arr[rear];
     }
 
-    // Returns true if the deque is empty. Otherwise returns false.
+    // Checks if the deque is empty
     bool isEmpty()
     {
-        if (front == -1)
-            return true;
-        else
-            return false;
+        return front == -1;
     }
 
-    // Returns true if the deque is full. Otherwise returns false.
+    // Checks if the deque is full
     bool isFull()
     {
-        if ((front == 0 && rear == size - 1) || (front != 0 && rear == (front - 1) % (size - 1))) // REVIEW -
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return ((rear + 1) % size == front);
     }
 };
+
+// Driver Code
+int main()
+{
+    Deque dq(5);
+
+    dq.pushRear(10);
+    dq.pushRear(20);
+    dq.pushFront(5);
+    dq.pushFront(1);
+    dq.pushRear(30);               // Should succeed
+    cout << dq.popFront() << endl; // 1
+    cout << dq.popRear() << endl;  // 30
+    dq.pushFront(50);
+    cout << dq.popRear() << endl; // 20
+}
