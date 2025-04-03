@@ -9,11 +9,11 @@ int findKRotation(vector<int> &arr)
 {
     int low = 0, high = arr.size() - 1;
     int ans = INT_MAX; // REVIEW -
-    int index = -1; //REVIEW
+    int index = -1;    // REVIEW
     while (low <= high)
     {
         int mid = (low + high) / 2;
-        
+
         if (arr[low] <= arr[high])
         {
             if (arr[low] < ans)
@@ -35,20 +35,20 @@ int findKRotation(vector<int> &arr)
             }
 
             // Eliminate left half:
-            low = mid + 1;
+            low = mid + 1; // REVIEW we already processed the low !
         }
         else
         { // if right part is sorted:
 
             // keep the minimum:
-            if (arr[mid] < ans) //REVIEW - 
+            if (arr[mid] < ans) // REVIEW -
             {
                 index = mid;
                 ans = arr[mid];
             }
 
             // Eliminate right half:
-            high = mid - 1; //REVIEW
+            high = mid - 1; // REVIEW
         }
     }
     return index;
