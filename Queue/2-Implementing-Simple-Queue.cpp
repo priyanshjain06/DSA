@@ -46,7 +46,7 @@ public:
         {
             return -1;
         }
-        else
+        else //REVIEW - 
         {
             int deletedElement = arr[qfront];
             arr[qfront] = -1;
