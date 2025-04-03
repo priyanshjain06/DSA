@@ -1,56 +1,31 @@
-// NOTE Problem Statement: A monkey is given ‘n’ piles of bananas, whereas the 'ith' pile has ‘a[i]’ bananas. An integer ‘h’ is also given, which denotes the time (in hours) for all the bananas to be eaten.
-
-// Each hour, the monkey chooses a non-empty pile of bananas and eats ‘k’ bananas. If the pile contains less than ‘k’ bananas, then the monkey consumes all the bananas and won’t eat any more bananas in that hour.
-
-// Find the minimum number of bananas ‘k’ to eat per hour so that the monkey can eat all the bananas within ‘h’ hours.
-
-//  ANCHOR Time Complexity: O(N * log(max(a[]))) and Space Complexity: O(1)
-
-// REVIEW -  we need to return the min integer k such that koko can eat all the banana within the given h hours.
-
 #include <iostream>
 #include <vector>
+#include <cmath>
 using namespace std;
-int findMax(vector<int> &v)
-{
-    int maxi = INT_MIN;
-    int n = v.size();
-    for (int i = 0; i < n; i++)
-    {
-        maxi = max(maxi, v[i]);
-    }
-    return maxi;
-}
 
-int calculateTotalHours(vector<int> &v, int hourly)
+class Solution
 {
-    int totalH = 0;
-    int n = v.size();
-    for (int i = 0; i < n; i++)
+public:
+    int calculateTotalHours(vector<int> &piles, int k)
     {
-        totalH += ceil((double)(v[i]) / (double)(hourly)); // REVIEW -  ceil
+        int totalH = 0;
+        for (int bananas : piles)
+            totalH += ceil((double)bananas / k);
+        return totalH;
     }
-    return totalH;
-}
-int minimumRateToEatBananas(vector<int> v, int h)
-{
-    int low = 1, high = findMax(v); // REVIEW -
-    while (low <= high)
+
+    int minEatingSpeed(vector<int> &piles, int h)
     {
-        int mid = (low + high) / 2;
-        int totalH = calculateTotalHours(v, mid);
-        if (h <= totalH)
-            high = mid - 1;
-        else
-            low = mid + 1;
+        int low = 1, high = *max(piles.begin(), piles.end());
+        // REVIEW use *max
+        while (low < high)
+        {
+            int mid = (low + high) / 2;
+            if (calculateTotalHours(piles, mid) <= h)
+                high = mid;
+            else
+                low = mid + 1;
+        }
+        return low;
     }
-    return low; // REVIEW
-}
-int main()
-{
-    vector<int> v = {7, 15, 6, 3};
-    int h = 8;
-    int ans = minimumRateToEatBananas(v, h);
-    cout << "Koko should eat atleast " << ans << " bananas/hr.\n";
-    return 0;
-}
+};
