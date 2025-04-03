@@ -28,8 +28,7 @@ int findPeakElement(vector<int> &arr)
         else
             low = mid + 1; // Move right
     }
-    // Dummy return statement
-    return -1;
+    return low; // REVIEW
 }
 
 int main()
