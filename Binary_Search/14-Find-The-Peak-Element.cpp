@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+// NOTE the array is not sorted here !
 int findPeakElement(vector<int> &arr)
 {
     int n = arr.size();
@@ -19,17 +20,13 @@ int findPeakElement(vector<int> &arr)
         int mid = (low + high) / 2;
 
         // If arr[mid] is the peak:
-        if (arr[mid - 1] < arr[mid] && arr[mid] > arr[mid + 1])
+        if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1])
             return mid;
 
-        // If we are in the left:
-        if (arr[mid] > arr[mid - 1])
-            low = mid + 1;
-
-        // If we are in the right:
-        // Or, arr[mid] is a common point:
-        else // arr[mid] > arr[mid + 1]
-            high = mid - 1;
+        if (arr[mid] > arr[mid + 1])
+            high = mid; // Move left (mid may be the peak)
+        else
+            low = mid + 1; // Move right
     }
     // Dummy return statement
     return -1;
