@@ -24,7 +24,7 @@ int findPeakElement(vector<int> &arr)
             return mid;
 
         if (arr[mid] > arr[mid + 1])
-            high = mid; // Move left (mid may be the peak)
+            high = mid; // REVIEW not mid -1  // Move left (mid may be the peak)
         else
             low = mid + 1; // Move right
     }
