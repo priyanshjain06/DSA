@@ -1,5 +1,4 @@
-// Problem Statement: Given two numbers N and M, find the Nth root of M. The nth root of a number M is defined as a number X when raised to the power N equals M. If the 'nth root is not an integer, return -1.
-
+//NOTE read the question ! 
 #include <iostream>
 #include <vector>
 using namespace std;
