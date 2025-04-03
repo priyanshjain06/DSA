@@ -28,23 +28,23 @@ int calculateTotalHours(vector<int> &v, int hourly)
     int n = v.size();
     for (int i = 0; i < n; i++)
     {
-        totalH += ceil((double)(v[i]) / (double)(hourly)); //REVIEW -  ceil
+        totalH += ceil((double)(v[i]) / (double)(hourly)); // REVIEW -  ceil
     }
     return totalH;
 }
 int minimumRateToEatBananas(vector<int> v, int h)
 {
-    int low = 1, high = findMax(v); //REVIEW - 
+    int low = 1, high = findMax(v); // REVIEW -
     while (low <= high)
     {
         int mid = (low + high) / 2;
         int totalH = calculateTotalHours(v, mid);
-        if (totalH <= h)
+        if (h <= totalH)
             high = mid - 1;
         else
             low = mid + 1;
     }
-    return low; //REVIEW 
+    return low; // REVIEW
 }
 int main()
 {
