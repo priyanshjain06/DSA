@@ -50,8 +50,8 @@ public:
         {
             int deletedElement = arr[qfront];
             arr[qfront] = -1;
-            qfront++;
-            if (qfront == rear)
+            qfront++; 
+            if (qfront == rear) 
             {
                 qfront = 0;
                 rear = 0;
