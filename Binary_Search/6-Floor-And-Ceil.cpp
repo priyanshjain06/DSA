@@ -14,7 +14,7 @@ int findFloor(int arr[], int n, int x)
         if (arr[mid] <= x) // REVIEW
         {
             ans = arr[mid];
-            // look for smaller index on the left
+            // look for smaller index on the right 
             low = mid + 1; //REVIEW - 
         }
         else
