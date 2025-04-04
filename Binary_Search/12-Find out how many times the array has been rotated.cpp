@@ -48,7 +48,7 @@ int findKRotation(vector<int> &arr)
             }
 
             // Eliminate right half:
-            high = mid - 1; // REVIEW
+            high = mid - 1; // REVIEWf
         }
     }
     return index;

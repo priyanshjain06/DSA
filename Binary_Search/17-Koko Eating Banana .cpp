@@ -18,11 +18,12 @@ public:
     {
         int low = 1, high = *max(piles.begin(), piles.end());
         // REVIEW use *max
+        // REVIEW low <high not low<=high
         while (low < high)
         {
             int mid = (low + high) / 2;
             if (calculateTotalHours(piles, mid) <= h)
-                high = mid;
+                high = mid; //REVIEW  not mid -1 ;
             else
                 low = mid + 1;
         }
