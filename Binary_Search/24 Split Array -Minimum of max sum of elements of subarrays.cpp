@@ -3,7 +3,7 @@
 
 // REVIEW - Time Complexity: O(N * log(sum(arr[])-max(arr[])+1))
 
-// ANCHOR - leetcode 410  
+// ANCHOR - leetcode 410
 
 #include <iostream>
 #include <vector>
@@ -12,9 +12,9 @@
 using namespace std;
 int countPartitions(vector<int> &a, int maxSum)
 {
-    int n = a.size(); // size of array.
-    int partitions = 1; //REVIEW 
-    long long subarraySum = 0; //REVIEW 
+    int n = a.size();          // size of array.
+    int partitions = 1;        // REVIEW
+    long long subarraySum = 0; // REVIEW
     for (int i = 0; i < n; i++)
     {
         if (subarraySum + a[i] <= maxSum)
@@ -41,16 +41,12 @@ int largestSubarraySumMinimized(vector<int> &a, int k)
     {
         int mid = (low + high) / 2;
         int partitions = countPartitions(a, mid);
-        if (partitions > k) 
-        {
-            low = mid + 1;
-        }
-        else
-        {
+        if (partitions <= k)
             high = mid - 1;
-        }
+        else
+            low = mid + 1;
     }
-    return low; 
+    return low;
 }
 int main()
 {
@@ -60,4 +56,3 @@ int main()
     cout << "The answer is: " << ans << "\n";
     return 0;
 }
-

@@ -17,19 +17,19 @@ int countStudents(vector<int> &arr, int pages)
 {
     int n = arr.size();
     int students = 1;
-    long long pagesStudent = 0;
+    long long currentPagePerStudent = 0;
     for (int i = 0; i < n; i++)
     {
-        if (pagesStudent + arr[i] <= pages)
+        if (currentPagePerStudent + arr[i] <= pages)
         {
             // add pages to current student
-            pagesStudent = pagesStudent + arr[i];
+            currentPagePerStudent = currentPagePerStudent + arr[i];
         }
         else
         {
             // add pages to next student
             students++;
-            pagesStudent = arr[i];
+            currentPagePerStudent = arr[i];
         }
     }
     return students;
@@ -47,7 +47,7 @@ int findPages(vector<int> &arr, int n, int m)
     {
         int mid = (low + high) / 2;
         int students = countStudents(arr, mid);
-        if (students <= m)
+        if (students <= m) //REVIEW <= 
         {
             high = mid - 1;
         }
