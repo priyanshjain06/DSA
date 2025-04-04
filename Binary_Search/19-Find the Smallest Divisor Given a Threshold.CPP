@@ -16,11 +16,13 @@ int sumByD(vector<int> &arr, int div)
     }
     return sum;
 }
+
 int smallestDivisor(vector<int> &arr, int limit)
 {
     int n = arr.size();
-    if (n > limit)
-        return -1;                                            // REVIEW -
+    if (n > limit)                                            // REVIEW this is the edge case here !
+        return -1;         
+                                           // REVIEW -
     int low = 1, high = *max_element(arr.begin(), arr.end()); // REVIEW -
 
     while (low <= high)
