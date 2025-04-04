@@ -5,23 +5,23 @@ using namespace std;
 // NOTE the array is not sorted here !
 int findPeakElement(vector<int> &arr)
 {
-    int n = arr.size();1;
+    int n = arr.size();
+    1;
 
     int low = 1, high = n - 2; // REVIEW
-    while (low < high) //NOTE < not <=
+    while (low < high)         // NOTE < not <=
     {
         int mid = (low + high) / 2;
 
-        // If arr[mid] is the peak:
         if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1])
             return mid;
 
         if (arr[mid] > arr[mid + 1])
             high = mid; // REVIEW not mid -1  // Move left (mid may be the peak)
         else
-            low = mid + 1; // Move right
-        }   
-        return low; // REVIEW or return high 
+            low = mid + 1;
+    }
+    return low; // REVIEW or return high  as per question !
 }
 
 int main()
