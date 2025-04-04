@@ -1,4 +1,4 @@
-//NOTE read the question ! 
+// NOTE read the question !
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -19,11 +19,12 @@ int func(int mid, int n, int m)
     }
     if (ans == m)
         return 1;
-    return 0;
+    else
+        return 0;
 }
 int NthRoot(int n, int m)
 {
-    int low = 1, high = m; //REVIEW - 
+    int low = 1, high = m; // REVIEW -
     while (low <= high)
     {
         int mid = (low + high) / 2;
