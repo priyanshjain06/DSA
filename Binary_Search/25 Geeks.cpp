@@ -1,72 +1,62 @@
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
-
-
-// } Driver Code Ends
-
-// User function template for C++
-class Solution {
+class Solution
+{
 public:
-    long long minTime(vector<int>& arr, int k) {
-        int n = arr.size();
-        if (n < k) return -1; 
-
-        long long low = *max_element(arr.begin(), arr.end()); 
-        long long high = accumulate(arr.begin(), arr.end(), 0LL); 
-        while (low < high) {
-            long long mid = low + (high - low) / 2;
-            if (canPaint(arr, n, k, mid)) {
-                high = mid;
-            } else {
-                low = mid + 1;
-            }
-        }
-        return low;
+    // REVIEW -  create two function to find max and sum !
+    int getMax(vector<int> arr, int n)
+    {
+        int max = INT_MIN;
+        for (int i = 0; i < n; i++)
+            if (arr[i] > max)
+                max = arr[i];
+        return max;
     }
 
-private:
-    bool canPaint(vector<int>& arr, int n, int k, long long maxTime) {
-        int painters = 1;
-        long long currentTime = 0;
-        for (int i = 0; i < n; ++i) {
-            currentTime += arr[i];
-            if (currentTime > maxTime) {
-                ++painters;
-                currentTime = arr[i];
-                if (painters > k) {
-                    return false;
-                }
+    int getSum(vector<int> arr, int n)
+    {
+        int total = 0;
+        for (int i = 0; i < n; i++)
+            total += arr[i];
+        return total;
+    }
+
+    int numberOfPainters(vector<int> arr, int n, int maxLen)
+    {
+        int total = 0, numPainters = 1;
+
+        for (int i = 0; i < n; i++)
+        {
+            total += arr[i];
+
+            if (total > maxLen)
+            {
+
+                total = arr[i];
+                numPainters++;
             }
         }
-        return true;
+
+        return numPainters;
+    }
+
+    int minTime(vector<int> &arr, int k)
+    {
+        int n = arr.size();
+        int lo = getMax(arr, n);
+        int hi = getSum(arr, n);
+
+        while (lo < hi)
+        {
+            int mid = lo + (hi - lo) / 2;
+            int requiredPainters = numberOfPainters(arr, n, mid);
+
+            if (requiredPainters <= k)
+                hi = mid; // REVIEW -
+
+            else
+                lo = mid + 1;
+        }
+
+        // required
+        return lo;
     }
 };
-
-
-//{ Driver Code Starts.
-
-int main() {
-
-    int t;
-    cin >> t;
-    cin.ignore();
-    while (t--) {
-        vector<int> arr;
-        string input;
-        getline(cin, input);
-        stringstream ss(input);
-        int number;
-        while (ss >> number) {
-            arr.push_back(number);
-        }
-        int k;
-        cin >> k;
-        cin.ignore();
-        Solution obj;
-        cout << obj.minTime(arr, k) << endl;
-        cout << "~" << endl;
-    }
-    return 0;
-}
-// } Driver Code Ends
