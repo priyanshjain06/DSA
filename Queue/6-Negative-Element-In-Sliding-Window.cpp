@@ -9,7 +9,7 @@ using namespace std;
 vector<long long> printFirstNegativeInteger(long long int A[],
                                             long long int N, long long int K)
 {
-    deque<long long int> dq; // REVIEW -
+    deque<long long int> dq; // REVIEW - use a deque coz we will remove things from the front !
     vector<long long> ans;   // REVIEW long long
 
     // process first window
@@ -17,7 +17,7 @@ vector<long long> printFirstNegativeInteger(long long int A[],
     {
         if (A[i] < 0)
         {
-            dq.push_back(i);
+            dq.push_back(i); // REVIEW push the index not the value  !
         }
     }
 
