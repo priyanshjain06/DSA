@@ -8,12 +8,13 @@ using namespace std;
 
 int missingK(vector<int> vec, int n, int k)
 {
+    // NOTE see its burte force !
     int low = 0, high = n - 1;
     while (low <= high)
     {
         int mid = (low + high) / 2;
-        int missing = vec[mid] - (mid + 1); //REVIEW 
-        if (missing < k) //REVIEW - 
+        int missing = vec[mid] - (mid + 1); // REVIEW
+        if (missing < k)                    // REVIEW -
         {
             low = mid + 1;
         }
