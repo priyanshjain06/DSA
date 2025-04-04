@@ -23,7 +23,7 @@ int missingK(vector<int> vec, int n, int k)
             high = mid - 1;
         }
     }
-    return k + high + 1; // low+k
+    return k + high + 1; //REVIEW  low+k
 }
 
 int main()
