@@ -49,7 +49,7 @@ int aggressiveCows(vector<int> &stalls, int k)
         else
             high = mid - 1;
     }
-    return high; // REVIEW -
+    return high; // REVIEW - why ? always return oposite polarity from the position where high and low are when the answer is found !
 }
 int main()
 {
