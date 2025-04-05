@@ -13,14 +13,16 @@ using namespace std;
 double median(vector<int> &a, vector<int> &b)
 {
     int n1 = a.size(), n2 = b.size();
+
     // if n1 is bigger swap the arrays:
     if (n1 > n2)
         return median(b, a); // REVIEW
 
     int n = n1 + n2;              // total length
-    int left = (n1 + n2 + 1) / 2; // length of left half //REVIEW -
+    int left = (n1 + n2 + 1) / 2; // for handling odd lenght ! length of left half //REVIEW -
     // apply binary search:
     int low = 0, high = n1; // REVIEW -
+
     while (low <= high)
     {
         int mid1 = (low + high) >> 1; // REVIEW -  right shift by 1 or div by 2
