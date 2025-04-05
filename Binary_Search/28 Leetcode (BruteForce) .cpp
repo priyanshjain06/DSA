@@ -13,7 +13,7 @@ int rowWithMax1s(vector<vector<int>> &matrix, int n, int m)
         int cnt_ones = 0;
         for (int j = 0; j < m; j++)
         {
-            cnt_ones += matrix[i][j];
+            cnt_ones += matrix[i][j]; 
         }
         if (cnt_ones > cnt_max)
         {
