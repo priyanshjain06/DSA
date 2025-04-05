@@ -13,7 +13,7 @@ int kthElement(vector<int> &a, vector<int> &b, int m, int n, int k)
 
     int left = k; // length of left half //REVIEW -
 
-    int low = max(0, k - n), high = min(k, m); // REVIEW -
+    int low = max(0, k - n), high = min(k, m); // REVIEW - m is the arr1
 
     while (low <= high)
     {
