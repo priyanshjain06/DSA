@@ -38,7 +38,7 @@ int rowWithMax1s(vector<vector<int>> &matrix, int n, int m)
     for (int i = 0; i < n; i++)
     {
         // get the number of 1's:
-        int cnt_ones = m - lowerBound(matrix[i], m, 1); // REVIEW - m=>col
+        int cnt_ones = m - lowerBound(matrix[i], m, 1); // REVIEW - m -lowerBound
         if (cnt_ones > cnt_max)
         {
             cnt_max = cnt_ones;
