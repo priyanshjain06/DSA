@@ -30,7 +30,7 @@ pair<int, int> findPeakGrid(const vector<vector<int>> &mat)
     while (low <= high)
     {
         int midCol = (low + high) / 2;
-        int maxRow = findMaxInColumn(mat, midCol, n); // REVIEW -
+        int maxRow = findMaxInColumn(mat, midCol, n); // REVIEW - it ensures that we dont need to check for upper and lower element for each midcol since we have  the max element for that col !
 
         // Check if the current element is a peak
         bool leftIsSmaller = (midCol == 0 || mat[maxRow][midCol] > mat[maxRow][midCol - 1]);
@@ -42,7 +42,7 @@ pair<int, int> findPeakGrid(const vector<vector<int>> &mat)
         }
         else if (midCol > 0 && mat[maxRow][midCol - 1] > mat[maxRow][midCol]) // REVIEW -  midcol-1 > micol
         {
-            high = midCol - 1; // Move to the left half //REVIEW
+            high = midCol - 1; // Move to the left half because left is bigger than current mid cell in matrix  //REVIEW
         }
         else
         {

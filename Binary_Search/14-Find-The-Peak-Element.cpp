@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+
 // NOTE the array is not sorted here !
 int findPeakElement(vector<int> &arr)
 {

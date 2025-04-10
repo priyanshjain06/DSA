@@ -33,7 +33,7 @@ bool isPalindrome(string s)
             return false;
         }
 
-        left++;
+        left++; 
         right--;
     }
     return true;

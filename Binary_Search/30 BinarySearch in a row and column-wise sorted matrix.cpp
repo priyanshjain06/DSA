@@ -12,9 +12,12 @@ using namespace std;
 
 bool searchElement(vector<vector<int>> &matrix, int target)
 {
+    if (matrix.empty() || matrix[0].empty())
+        return false; // REVIEW
+
     int n = matrix.size();
-    int m = matrix[0].size(); //REVIEW - 
-    int row = 0, col = m - 1; //REVIEW - column
+    int m = matrix[0].size(); // REVIEW -
+    int row = 0, col = m - 1; // REVIEW - column start point
 
     // traverse the matrix from (0, m-1):
     while (row < n && col >= 0) // REVIEW -

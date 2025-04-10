@@ -7,6 +7,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
+// REVIEW -  remember the brute force !
 int lowerBound(vector<int> arr, int n, int x)
 {
     int low = 0, high = n - 1; // REVIEW -  high = n , n= row

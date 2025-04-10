@@ -12,7 +12,7 @@ public:
         for (int neighbor : graph[node])
         {
             if (colors[neighbor] == -1)
-            {                                                         // If the neighbor is not colored
+            {                                                         // If the neighbor is not colored 
                 if (dfs(neighbor, 1 - color, colors, graph) == false) // REVIEW 1-color , Recursively color with opposite color
                     return false;
             }
