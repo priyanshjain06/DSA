@@ -26,7 +26,7 @@ bool canWePlace(vector<int> &stalls, int dist, int cows)
             last = stalls[i]; // update the last location.
         }
         // REVIEW no else
-        if (cntCows >= cows)
+        if (cntCows == cows)
             return true;
     }
     return false;
