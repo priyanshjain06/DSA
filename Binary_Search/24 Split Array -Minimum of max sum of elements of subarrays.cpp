@@ -33,7 +33,7 @@ int countPartitions(vector<int> &a, int maxSum)
 int largestSubarraySumMinimized(vector<int> &a, int k)
 {
     int low = *max_element(a.begin(), a.end());
-    int high = accumulate(a.begin(), a.end(), 0);
+    int high = accumulate(a.begin(), a.end(), 0); //FIXME - 
     // Apply binary search:
     while (low <= high)
     {
