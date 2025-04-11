@@ -6,7 +6,7 @@ using namespace std;
 int binarySearch(vector<int> &nums, int target)
 {
     int n = nums.size();
-    int low = 0, high = n - 1;
+    int low = 0, high = n - 1; 
 
     while (low <= high)
     {
