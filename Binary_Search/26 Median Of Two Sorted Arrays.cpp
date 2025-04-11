@@ -52,7 +52,7 @@ double median(vector<int> &a, vector<int> &b)
 
         // eliminate the halves:
         else if (l1 > r2)
-            high = mid1 - 1;
+            high = mid1 - 1; //REVIEW too many elements from arr1)
         else
             low = mid1 + 1;
     }
