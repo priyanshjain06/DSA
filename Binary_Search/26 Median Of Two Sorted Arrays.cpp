@@ -20,6 +20,7 @@ double median(vector<int> &a, vector<int> &b)
 
     int n = n1 + n2;              // total length
     int left = (n1 + n2 + 1) / 2; // for handling odd lenght ! length of left half //REVIEW -
+    
     // apply binary search:
     int low = 0, high = n1; // REVIEW -
 
