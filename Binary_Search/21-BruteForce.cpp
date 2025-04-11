@@ -6,7 +6,7 @@ int missingK(vector<int> vec, int n, int k)
 {
     for (int i = 0; i < n; i++)
     {
-        if (vec[i] <= k)
+        if (vec[i] <= k) //REVIEW <=
             k++; // shifting k
         else
             break;
