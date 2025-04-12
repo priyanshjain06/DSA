@@ -1,5 +1,4 @@
-// EXample : priya jain => priya@40jain
-// NOTE replace with @40
+
 
 #include <iostream>
 #include <string>
