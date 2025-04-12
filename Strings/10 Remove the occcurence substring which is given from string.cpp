@@ -6,20 +6,26 @@
 #include <string>
 using namespace std;
 
-string removeOccurrences(string s, string part)
+class Solution
 {
-    string result;
-    int partLen = part.size();
-
-    for (char c : s)
+public:
+    string removeOccurrences(string s, string part)
     {
-        result.push_back(c);
+        string result;
+        int partLen = part.size();
 
-        if (result.size() >= partLen && result.substr(result.size() - partLen) == part)
+        // Iterate through the string character by character
+        for (char c : s)
         {
-            result.erase(result.end() - partLen, result.end());
-        }
-    }
+            result.push_back(c);
 
-    return result;
-}
+            // If the last 'partLen' characters in the result match 'part', remove them
+            if (result.size() >= partLen && result.substr(result.size() - partLen) == part)
+            {
+                result.erase(result.size() - partLen); // Remove last 'partLen' characters
+            }
+        }
+
+        return result;
+    }
+};
