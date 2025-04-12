@@ -13,7 +13,7 @@ public:
         while (i < n && s[i] == ' ')
             i++;
 
-        // Process rest
+        // Process rest 
         while (i < n)
         {
             // Copy non-space character
