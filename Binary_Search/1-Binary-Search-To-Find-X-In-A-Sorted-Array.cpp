@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 int binarySearch(vector<int> &nums, int target)
 {
     int n = nums.size();
@@ -20,6 +21,7 @@ int binarySearch(vector<int> &nums, int target)
     }
     return -1;
 }
+
 int main()
 {
     vector<int> a = {3, 4, 6, 7, 9, 12, 16, 17};
