@@ -13,7 +13,7 @@ public:
         while (i < n && s[i] == ' ')
             i++;
 
-        // Process rest 
+        // Process rest
         while (i < n)
         {
             // Copy non-space character
@@ -57,7 +57,7 @@ public:
 
         // Step 3: reverse each word in place
         int start = 0;
-        for (int end = 0; end <= s.size(); ++end) //REVIEW ++end 
+        for (int end = 0; end <= s.size(); ++end) // REVIEW ++end
         {
             if (end == s.size() || s[end] == ' ')
             {
