@@ -57,7 +57,7 @@ public:
 
         // Step 3: reverse each word in place
         int start = 0;
-        for (int end = 0; end <= s.size(); ++end)
+        for (int end = 0; end <= s.size(); ++end) //REVIEW ++end 
         {
             if (end == s.size() || s[end] == ' ')
             {
