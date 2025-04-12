@@ -1,58 +1,71 @@
-// Example : hello world => world hello
-// Input: s = "  hello world  "
-// Output: "world hello"
-// Explanation: Your reversed string should not contain leading or trailing spaces.
-// Input: s = "a good   example"
-// Output: "example good a"
-// Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
-
 #include <iostream>
 #include <string>
 using namespace std;
-string result(string s)
+class Solution
 {
-    int left = 0;
-    int right = s.length() - 1;
-
-    string temp = "";
-    string ans = "";
-
-    // Iterate the string and keep on adding to form a word
-    // If empty space is encountered then add the current word to the result
-    while (left <= right)
+public:
+    void trimSpaces(string &s)
     {
-        char ch = s[left];
-        if (ch != ' ')
+        int n = s.size();
+        int i = 0, j = 0;
+
+        // Skip leading spaces
+        while (i < n && s[i] == ' ')
+            i++;
+
+        // Process rest
+        while (i < n)
         {
-            temp += ch;
-        }
-        else if (ch == ' ')
-        {
-            if (ans != "") // for 2 concescutive spaces
-                ans = temp + " " + ans;
+            // Copy non-space character
+            if (s[i] != ' ')
+            {
+                s[j++] = s[i++];
+            }
+            // Handle single space between words
+            else if (j > 0 && s[j - 1] != ' ')
+            {
+                s[j++] = ' ';
+                i++;
+            }
             else
-                ans = temp;
-            temp = ""; // REVIEW RESET
+            {
+                i++;
+            }
         }
-        left++;
+
+        // Remove trailing space if present
+        if (j > 0 && s[j - 1] == ' ')
+            j--;
+
+        s.resize(j); // Resize to final trimmed length
     }
 
-    // If not empty string then add to the result(Last word is added)
-    if (temp != "")
+    void reverse(string &s, int left, int right)
     {
-        if (ans != "")
-            ans = temp + " " + ans;
-        else
-            ans = temp;
+        while (left < right)
+        {
+            swap(s[left++], s[right--]);
+        }
     }
-    return ans;
-}
-int main()
-{
-    string st = "TUF is great for interview preparation";
-    cout << "Before reversing words: " << endl;
-    cout << st << endl;
-    cout << "After reversing words: " << endl;
-    cout << result(st);
-    return 0;
-}
+
+    string reverseWords(string s)
+    {
+        trimSpaces(s);
+
+        // Step 2: reverse entire string
+        reverse(s, 0, s.size() - 1);
+
+        // Step 3: reverse each word in place
+        int start = 0;
+        for (int end = 0; end <= s.size(); ++end)
+        {
+            if (end == s.size() || s[end] == ' ')
+            {
+                reverse(s, start, end - 1);
+                start = end + 1;
+            }
+        }
+
+        return s;
+    }
+};
