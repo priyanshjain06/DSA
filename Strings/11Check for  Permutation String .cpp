@@ -2,6 +2,7 @@
 //  return true if one of s1's permutations is the substring of s2.
 // EXAMPLE :
 //  s1 = "ab" s2 = "eidbaooo" => true
+
 #include <iostream>
 #include <vector>
 #include <string>
