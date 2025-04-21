@@ -12,7 +12,7 @@ public:
         for (int i = 0; i < s.length(); ++i)
         {
             // Try rotating the string `s` and compare with `goal`
-            string rotated = s.substr(i) + s.substr(0, i);
+            string rotated = s.substr(i) + s.substr(0, i); //FIXME 
             if (rotated == goal)
             {
                 return true;

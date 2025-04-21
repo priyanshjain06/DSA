@@ -11,9 +11,10 @@ public:
         {
             return false;
         }
-        unordered_map<char, char> mapS, mapT;
+        
+        unordered_map<char, char> mapS, mapT; //FIXME 
 
-        for (int i = 0; i < s.size(); i++) // REVIEW -
+        for (int i = 0; i < s.size(); i++) 
         {
             // If a mapping exists, check if it matches the current character
             if (mapS.count(s[i]) && mapS[s[i]] != t[i]) // REVIEW map.count

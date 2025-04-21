@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_map>
+
 using namespace std;
 class Solution
 {
@@ -9,7 +10,7 @@ public:
         if (s.size() != t.size())
             return false;
 
-        unordered_map<char, int> countMap;
+        unordered_map<char, int> countMap;  //REVIEW 
 
         for (int i = 0; i < s.size(); i++)
         {
