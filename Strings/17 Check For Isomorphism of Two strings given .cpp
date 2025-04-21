@@ -13,7 +13,7 @@ public:
         }
         unordered_map<char, char> mapS, mapT;
 
-        for (int i = 0; i < s.size(); i++) //REVIEW - 
+        for (int i = 0; i < s.size(); i++) // REVIEW -
         {
             // If a mapping exists, check if it matches the current character
             if (mapS.count(s[i]) && mapS[s[i]] != t[i]) // REVIEW map.count
