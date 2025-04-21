@@ -33,12 +33,6 @@ public:
             }
         }
 
-        // Recursively process if duplicates were removed
-        if (changed)
-        {
-            return removeUtil(temp);
-        }
-
         return temp; // Return result
     }
 };
