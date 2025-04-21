@@ -2,39 +2,45 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std;
+
 class Solution
 {
 public:
-    string compress(string s)
+    int compress(vector<char> &chars)
     {
-        int n = s.length();
-        if (n == 0)
-            return s;
+        int n = chars.size();
+        int write = 0; // index to write compressed result
+        int read = 0;  // index to read original array
 
-        int i = 0, count = 0;
-        string result = "";
-
-        while (i < n)
+        while (read < n)
         {
-            char current = s[i];
-            count = 0;
+            char current = chars[read];
+            int count = 0;
 
-            // Count consecutive characters
-            while (i < n && s[i] == current)
+            // Count consecutive duplicates
+            while (read < n && chars[read] == current)
             {
+                read++;
                 count++;
-                i++;
             }
 
-            // Append the character and its count (if > 1)
-            result += current;
+            // Write the character
+            chars[write++] = current;
+
+            // Write the count if more than 1
             if (count > 1)
             {
-                result += to_string(count);
+                string cntStr = to_string(count);
+                for (char c : cntStr)
+                {
+                    chars[write++] = c;
+                }
             }
         }
 
-        return result.length() < n ? result : s; // Return compressed string only if it's smaller
+        return write;
     }
 };
