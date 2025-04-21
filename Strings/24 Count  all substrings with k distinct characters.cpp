@@ -21,7 +21,7 @@ int atMostKDistinct(string s, int k)
             left++;
         }
 
-        total += right - left; //REVIEW
+        total += right - left; // REVIEW
     }
 
     return total;
