@@ -20,10 +20,10 @@ int beautySum(string s)
 
             for (int f = 0; f < 26; f++)
             {
-                if (f > 0)
+                if (freq[f] > 0)
                 {
-                    maxFreq = max(maxFreq, f);
-                    minFreq = min(minFreq, f);
+                    maxFreq = max(maxFreq, freq[f]);
+                    minFreq = min(minFreq, freq[f]);
                 }
             }
 
