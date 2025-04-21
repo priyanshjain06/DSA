@@ -4,7 +4,7 @@
 // str.push_back
 // str.pop_back
 // str.empty // to check if the string is empty
-// str.erase(index ,count ) //Removes count characters starting at index. Alters the original string.
+// str.erase(index ,count ) // REVIEW Removes count characters starting at index. Alters the original string.
 // str.find //REVIEW - returns the first occuracne with 0 based index number, O(n*m) 
 // strcmp(str1, str2) // REVIEW Compares two C-style strings (const char*).
 // Returns:
