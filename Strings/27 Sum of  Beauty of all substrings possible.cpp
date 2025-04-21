@@ -17,7 +17,7 @@ int beautySum(string s)
             freq[s[j] - 'a']++;
 
             int maxFreq = 0, minFreq = INT_MAX; // REVIEW maxfreq is 0 to ignore zero in the input
-            
+
             for (int f = 0; f < 26; f++)
             {
                 if (f > 0)
@@ -26,8 +26,8 @@ int beautySum(string s)
                     minFreq = min(minFreq, f);
                 }
             }
-            
-            totalBeauty += (maxFreq - minFreq); //REVEIW compund operator
+
+            totalBeauty += (maxFreq - minFreq); // REVIEW -  compund operator
         }
     }
     return totalBeauty;
