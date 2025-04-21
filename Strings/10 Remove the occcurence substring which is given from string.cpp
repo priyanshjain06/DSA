@@ -23,7 +23,7 @@ public:
             if (result.size() >= partLen && result.substr(result.size() - partLen) == part)
             {
                 result.erase(result.size() - partLen); // Remove last 'partLen' characters
-            }
+            }w
         }
 
         return result;

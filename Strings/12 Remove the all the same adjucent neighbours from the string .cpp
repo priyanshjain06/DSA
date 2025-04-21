@@ -8,31 +8,32 @@
 #include <iostream>
 #include <string>
 using namespace std;
-class Solution
-{
-public:
-    string removeDuplicates(string s)
-    {
-        int n = s.length();
-        int i = 0; // Index for the next character to place
-        int j = 0;
-        while (j < n)
-        {
-            if (i > 0 && s[j] == s[i - 1])
-            {
-                // If duplicate, "remove" the previous character by decrementing the index
-                i--;
-            }
-            else
-            {
-                // Place the current character at the next available position
-                s[i] = s[j];
-                i++;
-            }
-            j++;
-        }
 
-        // Construct the final string using the first `i` characters
-        return s.substr(0, i); // REVIEW -
-    }
-};
+
+class Solution {
+    public:
+        string removeUtil(string &s) {
+            int n = s.length();
+            bool changed = false;  // Flag to track if changes were made
+            
+            string temp = "";
+            
+            // Remove adjacent duplicates in one pass
+            for (int i = 0; i < n; ++i) {
+                if (!temp.empty() && temp.back() == s[i]) {
+                    temp.pop_back();  // Remove duplicate
+                    changed = true;
+                } else {
+                    temp.push_back(s[i]);
+                }
+            }
+            
+            // Recursively process if duplicates were removed
+            if (changed) {
+                return removeUtil(temp);
+            }
+            
+            return temp;  // Return result
+        }
+    };
+    
