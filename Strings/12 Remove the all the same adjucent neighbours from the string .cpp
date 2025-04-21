@@ -9,31 +9,36 @@
 #include <string>
 using namespace std;
 
+class Solution
+{
+public:
+    string removeUtil(string &s)
+    {
+        int n = s.length();
+        bool changed = false; // Flag to track if changes were made
 
-class Solution {
-    public:
-        string removeUtil(string &s) {
-            int n = s.length();
-            bool changed = false;  // Flag to track if changes were made
-            
-            string temp = "";
-            
-            // Remove adjacent duplicates in one pass
-            for (int i = 0; i < n; ++i) {
-                if (!temp.empty() && temp.back() == s[i]) {
-                    temp.pop_back();  // Remove duplicate
-                    changed = true;
-                } else {
-                    temp.push_back(s[i]);
-                }
+        string temp = "";
+
+        // Remove adjacent duplicates in one pass
+        for (int i = 0; i < n; ++i)
+        {
+            if (!temp.empty() && temp.back() == s[i])
+            {
+                temp.pop_back(); // Remove duplicate
+                changed = true;
             }
-            
-            // Recursively process if duplicates were removed
-            if (changed) {
-                return removeUtil(temp);
+            else
+            {
+                temp.push_back(s[i]);
             }
-            
-            return temp;  // Return result
         }
-    };
-    
+
+        // Recursively process if duplicates were removed
+        if (changed)
+        {
+            return removeUtil(temp);
+        }
+
+        return temp; // Return result
+    }
+};
