@@ -29,6 +29,11 @@ public:
         while (i < n && isdigit(s[i]))
         {
             result = result * 10 + (s[i] - '0');
+            // E.g., "123" becomes:
+            // result = 0 → 0 * 10 + 1 = 1
+            // result = 1 → 1 * 10 + 2 = 12
+            // result = 12 → 12 * 10 + 3 = 123
+
             // Step 4: Handle overflow
             if (result * sign > INT_MAX)
                 return INT_MAX;
