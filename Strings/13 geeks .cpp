@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
-class Solution
+class Solution 
 {
 public:
     int checkCompressed(string S, string T)
