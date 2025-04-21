@@ -7,10 +7,10 @@ class Solution
 public:
     bool isAnagram(string s, string t)
     {
-        if (s.size() != t.size())
+        if (s.size() != t.size()) // REVIEW
             return false;
 
-        unordered_map<char, int> countMap;  //REVIEW 
+        unordered_map<char, int> countMap; // REVIEW
 
         for (int i = 0; i < s.size(); i++)
         {
@@ -25,6 +25,7 @@ public:
                 return false;
             }
         }
+
         return true;
     }
 };
