@@ -9,7 +9,6 @@ int main()
     cout << "Enter a line with spaces or tabs: ";
     // REVIEW
     getline(cin, input); // reads the entire line, including spaces and tabs
-
    
     cout << "You entered: " << input << endl;
 
