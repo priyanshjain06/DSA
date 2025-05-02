@@ -36,7 +36,7 @@ bool isPalindrome(string s)
         left++; 
         right--;
     }
-    return true;
+    return true; //REVIEW 
 }
 int main()
 {
