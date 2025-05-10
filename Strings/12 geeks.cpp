@@ -11,25 +11,19 @@ string removeUtil(string &s)
     // Traverse the string
     for (int i = 0; i < n; i++)
     {
-        if (i < n - 1 && s[i] == s[i + 1])
+        // Skip all adjacent duplicates
+        while (i < n - 1 && s[i] == s[i + 1])
         {
-            // Skip all adjacent duplicates
-            while (i < n - 1 && s[i] == s[i + 1])
-            {
-                i++;
-            }
+            i++;
         }
-        else
-        {
-            // Keep the non-duplicate character
-            s[k++] = s[i];
-        }
+        // Keep the non-duplicate character
+        s[k++] = s[i];
     }
 
     s.erase(k); // Remove leftover characters after k
 
     if (k != n)        // REVIEW      // If any duplicates were removed
         removeUtil(s); // Recursively remove duplicates again
-        
+
     return s;
 }

@@ -26,9 +26,9 @@ public:
             }
             else
             {
-                if (i >= S.size() || S[i] != T[j])
+                if(i >= S.size() || S[i] != T[j])
                     return 0;
-                i++, j++;
+                i++,  j++;
             }
         }
 
