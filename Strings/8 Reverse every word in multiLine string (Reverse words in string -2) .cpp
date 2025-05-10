@@ -11,7 +11,6 @@ public:
 
         // Reverse the entire string first
         reverse(str.begin(), str.end()); // REVIEW
-         
 
         // Reverse each word in the reversed string
         int start = 0;
@@ -19,12 +18,13 @@ public:
         {
             if (end == n || str[end] == ' ')
             {
-                reverse(str.begin() + start, str.begin() + end);
+                reverse(str.begin() + start, str.begin() + end); 
                 start = end + 1;
             }
         }
     }
 };
+
 int main()
 {
     Solution solution;

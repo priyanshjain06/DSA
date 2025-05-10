@@ -9,7 +9,7 @@ using namespace std;
 class Solution
 {
 public:
-    int compress(vector<char> &chars) // REVIEW vector not a  string
+    int compress(vector<char> &chars) // REVIEW vector , no string
     {
         int n = chars.size();
         int write = 0; // index to write compressed result
@@ -33,7 +33,7 @@ public:
             // Write the count if more than 1
             if (count > 1)
             {
-                string cntStr = to_string(count); 
+                string cntStr = to_string(count);
                 for (char c : cntStr) // Count may have digits like 12
                 {
                     chars[write++] = c;

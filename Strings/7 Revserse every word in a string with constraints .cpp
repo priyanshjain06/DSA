@@ -38,7 +38,7 @@ public:
         if (j > 0 && s[j - 1] == ' ')
             j--;
 
-        s.resize(j); // Resize to final trimmed length
+        s.resize(j); //REVIEW Resize to final trimmed length
     }
 
     void reverse(string &s, int left, int right)
@@ -62,7 +62,7 @@ public:
         {
             if (end == s.size() || s[end] == ' ')
             {
-                reverse(s, start, end - 1);
+                reverse(s, start, end - 1); //FIXME 
                 start = end + 1;
             }
         }

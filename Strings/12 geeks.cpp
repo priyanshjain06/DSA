@@ -2,7 +2,6 @@
 #include <string>
 using namespace std;
 
-
 string removeUtil(string &s)
 {
     int len = s.length(); // Get the length of the input string.
@@ -29,8 +28,8 @@ string removeUtil(string &s)
 
     s.erase(k); // Remove leftover characters after k
 
-    if (k != n)        // If any duplicates were removed
+    if (k != n)        // REVIEW      // If any duplicates were removed
         removeUtil(s); // Recursively remove duplicates again
-
+        
     return s;
 }

@@ -13,11 +13,13 @@ public:
     bool checkInclusion(string s1, string s2)
     {
         int n1 = s1.size(), n2 = s2.size();
-        if (n1 > n2)
+        if (n1 > n2) // ANCHOR -
             return false;
 
         // Frequency arrays for characters in 'a' to 'z'
-        vector<int> freq1(26, 0), freq2(26, 0);
+        vector<int> freq1(26, 0), freq2(26, 0); // FIXME
+
+        // REVIEW why vector ? not unordered map (there is no need for dynamic input! it is already fixed we have  26 letters !)
 
         // Populate frequency array for s1
         for (char c : s1)
@@ -41,6 +43,6 @@ public:
                 return true; // Check if the current window matches
         }
 
-        return false; // No permutation found
+        return false; // No permutation found //REVIEW
     }
 };

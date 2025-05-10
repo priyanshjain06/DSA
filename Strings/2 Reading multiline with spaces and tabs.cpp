@@ -17,7 +17,7 @@ int main()
             break;
         }
         // Append the line to fullText, adding a newline
-        fullText += input + '\n'; // REVIEW -
+        fullText += input + '\n'; // FIXME -
     }
 
     cout << "\n You entered:\n"

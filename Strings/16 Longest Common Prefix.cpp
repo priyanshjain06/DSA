@@ -7,7 +7,7 @@ using namespace std;
 class Solution
 {
 public:
-    string longestCommonPrefix(vector<string> &strs) //REVIEW 
+    string longestCommonPrefix(vector<string> &strs) // FIXME vector of string type not char type !
     {
         if (strs.empty())
             return "";
