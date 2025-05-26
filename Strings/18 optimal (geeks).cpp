@@ -12,11 +12,11 @@ public:
             return false;
 
         // Check if s2 is a substring of s1 + s1
-        return (s1 + s1).find(s2) != string::npos; // REVIEW
+        return (s1 + s1).find(s2) != string::npos; // REVIEW not found 
     }
 };
 
-// REVIEW time : O(n) and Space : O(1)
+// REVIEW time : O(n) and Space : O(n)
 
 // REVIEW : If you want to return the index
 class Solution

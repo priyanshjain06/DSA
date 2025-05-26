@@ -38,6 +38,7 @@ bool isPalindrome(string s)
     }
     return true; //REVIEW 
 }
+
 int main()
 {
     string s = "A man, a plan, a canal: Panama";
