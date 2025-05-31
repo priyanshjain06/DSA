@@ -32,6 +32,7 @@ public:
         size_t index = concatenated.find(s2);
 
         // Convert size_t to int (npos becomes -1)
+        //REVIEW 
         return (index != string::npos) ? static_cast<int>(index) : -1;
     }
 };

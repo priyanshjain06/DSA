@@ -48,6 +48,7 @@ void merge(vector<int> &arr, int low, int mid, int high)
         arr[i] = temp[i - low]; // NOTE i-low
     }
 }
+
 // Function to implement merge sort
 void merge_sort(vector<int> &arr, int low, int high)
 {

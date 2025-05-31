@@ -8,7 +8,7 @@ class Solution
 public:
     string longestCommonPrefix(vector<string> &strs) // FIXME vector of string type not char type !
     {
-        if (strs.empty())
+        if (strs.empty()) // REVIEW
             return "";
 
         // Assume the prefix is the first string

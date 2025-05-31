@@ -35,5 +35,5 @@ public:
 };
 
 // REVIEW Why two maps:-
-// For example, if 'a' maps to 'b' and 'b' also maps to 'b', the strings would not be isomorphic because multiple characters from s are being mapped to the same character in t.if (mapT.count(t[i]) && mapT[t[i]] != s[i])
+// For example, if 'a' maps to 'b' and 'b' also maps to 'b', the strings would not be isomorphic because multiple characters from s are being mapped to the same character in t.if (mapT.cWount(t[i]) && mapT[t[i]] != s[i])
 

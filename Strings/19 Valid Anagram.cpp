@@ -18,7 +18,7 @@ public:
             countMap[t[i]]--;
         }
 
-        for (auto &pair : countMap)
+        for (auto &pair : countMap) //FIXME 
         {
             if (pair.second != 0)
             {

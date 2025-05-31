@@ -12,7 +12,7 @@ public:
         {
             if ((num[i]) % 2 == 1)
             {
-                return num.substr(0, i + 1);
+                return num.substr(0, i + 1); //REVIEW i+1 example 52 => 5
             }
         }
         return ""; // REVIEW -
