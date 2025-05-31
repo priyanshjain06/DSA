@@ -11,7 +11,7 @@ public:
     {
         int V = adj.size(); // Number of vertices //REVIEW - 
         vector<int> bfs;
-        vector<bool> visited(V, false);
+        vector<bool> visited(V, false); //REVIEW - 
         queue<int> q;
 
         visited[0] = true;

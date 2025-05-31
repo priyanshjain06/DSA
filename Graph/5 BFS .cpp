@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-    void addEdge(vector<int> adj[], int u, int v)
+    void addEdge(vector<int> adj[], int u, int v) //FIXME -  adj []
     {
         adj[u].push_back(v);
         adj[v].push_back(u);
