@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stack>
 using namespace std;
+
 void solve(stack<int> &inputStack, int count, int size)
 {
     // base case:-

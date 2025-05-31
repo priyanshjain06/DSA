@@ -11,7 +11,7 @@ private:
     vector<int> getNextSmaller(vector<int> &heights)
     {
         int n = heights.size();
-        vector<int> next(n, n);
+        vector<int> next(n, n); //REVIEW 
         stack<int> st;
 
         for (int i = n - 1; i >= 0; i--)
@@ -30,7 +30,7 @@ private:
     vector<int> getPrevSmaller(vector<int> &heights)
     {
         int n = heights.size();
-        vector<int> prev(n, -1);
+        vector<int> prev(n, -1); //REVIEW 
         stack<int> st;
 
         for (int i = 0; i < n; i++)

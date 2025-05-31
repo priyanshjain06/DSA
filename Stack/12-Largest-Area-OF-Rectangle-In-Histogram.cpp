@@ -47,11 +47,10 @@ private:
         }
         return ans;
     }
-
 public:
     int largestRectangleArea(vector<int> &heights)
     {
-        int n = heights.size();
+        int n = heights.size(); 
 
         vector<int> next(n); // REVIEW -
         next = nextSmallerElement(heights, n);
