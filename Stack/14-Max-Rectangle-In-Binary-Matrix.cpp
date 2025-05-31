@@ -56,6 +56,7 @@ private:
         for (int i = 0; i < n; i++)
         {
             int width = next[i] - prev[i] - 1;
+            //REVIEW -  no edge case for next 
             maxArea = max(maxArea, heights[i] * width);
         }
         return maxArea;
@@ -69,7 +70,7 @@ public:
         // REVIEW -
         int rows = matrix.size(), cols = matrix[0].size(); // FIXME
 
-        vector<int> heights(cols, 0);
+        vector<int> heights(cols, 0); //REVIEW - 
         int maxArea = 0;
 
         for (int i = 0; i < rows; i++)

@@ -36,13 +36,14 @@ private:
         for (int i = 0; i < n; i++) // REVIEW -
         {
             int curr = arr[i];
-            while (s.top() != -1 && arr[s.top()] >= curr) // REVIEW -
+            while (s.top() != -1 && arr[s.top()] >= curr)
+            // REVIEW - arr[s.top()]
             {
                 s.pop();
             }
             // ans is stack ka top
             ans[i] = s.top();
-            s.push(i); //REVIEW - 
+            s.push(i); // REVIEW -
         }
         return ans;
     }
@@ -58,7 +59,7 @@ public:
         vector<int> prev(n);
         prev = prevSmallerElement(heights, n);
 
-        int area = 0;
+        int area = 0;   
         for (int i = 0; i < n; i++)
         {
             int l = heights[i];
@@ -66,7 +67,7 @@ public:
             if (next[i] == -1) // End of Histogram //REVIEW -
             {
                 next[i] = n;
-            }   
+            }
             int b = next[i] - prev[i] - 1;
             int newArea = l * b;
             area = max(area, newArea);

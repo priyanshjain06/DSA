@@ -7,7 +7,7 @@ using namespace std;
 class Solution
 {
 private:
-    stack<pair<int, int>> s; // Stores (value, minimum so far) //REVIEW -  make the stack pair 
+    stack<pair<int, int>> s; // Stores (value, minimum so far) //REVIEW -  make the stack pair
 
 public:
     Solution() {}
@@ -15,7 +15,7 @@ public:
     // Add an element to the top of Stack
     void push(int x)
     {
-        int minVal = s.empty() ? x : min(x, s.top().second); 
+        int minVal = s.empty() ? x : min(x, s.top().second);
         // REVIEW s.top().second not minVal
         s.push({x, minVal});
     }

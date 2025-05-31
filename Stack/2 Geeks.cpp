@@ -14,9 +14,9 @@ public:
     twoStacks(int n = 100)
     {
         size = n;
-        arr = new int[n]; //REVIEW - 
-        top1 = -1;   // Stack 1 starts from the left end
-        top2 = size; // Stack 2 starts from the right end
+        arr = new int[n]; // REVIEW -
+        top1 = -1;        // Stack 1 starts from the left end
+        top2 = size;      // Stack 2 starts from the right end
     }
 
     // Function to push an element into stack 1
@@ -58,7 +58,7 @@ public:
     }
 
     // Destructor to free memory
-    ~twoStacks()
+    ~twoStacks() // REVIEW
     {
         delete[] arr;
     }

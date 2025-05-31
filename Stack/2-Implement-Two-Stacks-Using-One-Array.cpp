@@ -10,8 +10,8 @@ public:
     {
         this->size = s;
         top1 = -1;
-        top2 = s; // REVIEW -
-        arr = new int[s]; //REVIEW - 
+        top2 = s;         // REVIEW -
+        arr = new int[s]; // REVIEW -
     }
 
     // Push in stack 1.
@@ -51,7 +51,7 @@ public:
     // Pop from stack 2 and return popped element.
     int pop2()
     {
-        if (top2 < size) //REVIEW - 
+        if (top2 < size) // REVIEW -
         {
             return arr[top2++];
         }
