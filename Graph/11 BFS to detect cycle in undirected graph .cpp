@@ -24,7 +24,7 @@ private:
                 if (!vis[neighbor])
                 {
                     vis[neighbor] = 1;
-                    q.push({neighbor, node}); //REVIEW node is parent here 
+                    q.push({neighbor, node}); // REVIEW node is parent here
                 }
                 else if (neighbor != parent) // REVIEW -
                 {
@@ -34,6 +34,7 @@ private:
         }
         return false; // REVIEW -
     }
+
 public:
     // Function to detect cycle in an undirected graph.
     bool isCycle(vector<vector<int>> &adj) // REVIEW -  for connected component
