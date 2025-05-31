@@ -1,3 +1,5 @@
+// NOTE we cannot use dfs here ?  becuase it will traverse only 1 node at a time !
+
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -29,7 +31,7 @@ int orangesRotting(vector<vector<int>> &grid)
     {
         int size = q.size();
         rottenCount += size; // REVIEW -
-        while (size--) //REVIEW - 
+        while (size--)       // REVIEW -
         {
             auto [r, c] = q.front();
             q.pop();
