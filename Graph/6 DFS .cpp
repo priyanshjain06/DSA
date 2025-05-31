@@ -15,7 +15,7 @@ private:
             // if the neighbour is not visited
             if (!vis[it])
             {
-                dfs(it, adj, vis, ls);
+                dfs(it, adj, vis, ls); //REVIEW -  it => node 
             }
         }
     }

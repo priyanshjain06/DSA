@@ -1,67 +1,68 @@
+// NOTE -  why bfs ? to traverse all the connected components
+
+// NOTE why not dfs ? we want to traverse level wise here since matrix given
+
+// NOTE  New starting point => count ++
+
+// NOTE  how to deterimine the starting point ? => by bfs and maintaining visited array
+
+// NOTE how to check the island ? => use 8 direction checking !
+
 #include <iostream>
 #include <vector>
 #include <queue>
 using namespace std;
-
 class Solution
 {
 private:
-    void bfs(int row, int col, vector<vector<int>> &vis, vector<vector<char>> &grid)
+    void bfsIsland(int row, int col, vector<vector<bool>> &visited, vector<vector<char>> &grid)
     {
-        // mark it visited
-        vis[row][col] = 1; //REVIEW - 
-        queue<pair<int, int>> q; //REVIEW - 
-        // push the node in queue
+        int n = grid.size(), m = grid[0].size();
+        queue<pair<int, int>> q; // REVIEW pair
         q.push({row, col});
-        int n = grid.size();
-        int m = grid[0].size();
+        visited[row][col] = true;
 
-        // until the queue becomes empty
+        // REVIEW  8 directions: N, S, E, W, NE, NW, SE, SW
+        vector<pair<int, int>> directions = {
+            {-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
         while (!q.empty())
         {
-            int row = q.front().first;
-            int col = q.front().second;
+            auto [r, c] = q.front();
             q.pop();
 
-            // traverse in the neighbours and mark them if its a land
-            for (int delrow = -1; delrow <= 1; delrow++)
+            for (auto [dr, dc] : directions)
             {
-                for (int delcol = -1; delcol <= 1; delcol++)
+                int nr = r + dr, nc = c + dc;
+                if (nr >= 0 && nr < n && nc >= 0 && nc < m &&
+                    grid[nr][nc] == '1' && !visited[nr][nc])
                 {
-                    int nrow = row + delrow;
-                    int ncol = col + delcol;
-                    // neighbour row and column is valid, and is an unvisited land
-                    if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m && grid[nrow][ncol] == '1' && !vis[nrow][ncol])
-                    {
-                        vis[nrow][ncol] = 1;
-                        q.push({nrow, ncol});
-                    }
+                    visited[nr][nc] = true;
+                    q.push({nr, nc});
                 }
             }
         }
     }
 
 public:
-    // Function to find the number of islands.
     int numIslands(vector<vector<char>> &grid)
     {
-        int n = grid.size();
-        int m = grid[0].size();
-        // create visited array and initialise to 0
-        vector<vector<int>> vis(n, vector<int>(m, 0)); //REVIEW - 
-        int cnt = 0;
-        for (int row = 0; row < n; row++)
+        int n = grid.size(), m = grid[0].size(), count = 0;
+        vector<vector<bool>> visited(n, vector<bool>(m, false)); // REVIEW
+
+        // REVIEW  WHy two loops ? to traverse the matrix input !
+        for (int row = 0; row < n; ++row)
         {
-            for (int col = 0; col < m; col++)
+            for (int col = 0; col < m; ++col)
             {
-                // if not visited and is a land
-                if (!vis[row][col] && grid[row][col] == '1')
+                if (grid[row][col] == '1' && !visited[row][col]) // REVIEW -
                 {
-                    cnt++;
-                    bfs(row, col, vis, grid);
+                    count++; // REVIEW
+                    bfsIsland(row, col, visited, grid);
                 }
             }
         }
-        return cnt;
+
+        return count;
     }
 };
