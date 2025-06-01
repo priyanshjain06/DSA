@@ -81,7 +81,7 @@ public:
             return -1;
 
         int ans = arr[rear];
-        arr[rear] = -1;
+        arr[rear] = -1; //REVIEW 
 
         if (front == rear) // If only one element was present
         {
@@ -113,13 +113,13 @@ public:
     // Checks if the deque is empty
     bool isEmpty()
     {
-        return front == -1;
+        return front == -1; //REVIEW 
     }
 
     // Checks if the deque is full
     bool isFull()
     {
-        return ((rear + 1) % size == front);
+        return ((rear + 1) % size == front); //REVIEW
     }
 };
 

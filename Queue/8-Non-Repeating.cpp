@@ -11,14 +11,14 @@ public:
     {
         unordered_map<char, int> count;
         string ans = "";
-        queue<char> q;
+        queue<char> q; // REVIEW why not set since set doesnt maintain duplicate elemens + doesnt maintain the order !
 
         for (int i = 0; i < A.length(); i++)
         {
             char ch = A[i];
             q.push(ch);
             count[ch]++;
-            
+
             while (!q.empty())
             {
                 if (count[q.front()] > 1)
@@ -28,7 +28,7 @@ public:
                 else
                 {
                     ans.push_back(q.front());
-                    break; //REVIEW
+                    break; // REVIEW
                 }
             }
             if (q.empty())

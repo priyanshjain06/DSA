@@ -48,7 +48,7 @@ public:
 
         int deletedElement = arr[qfront];
         qfront++;
-        if (qfront > rear)
+        if (qfront > rear) //REVIEW 
         { // Reset queue when empty
             qfront = rear = -1;
         }

@@ -42,7 +42,7 @@ public:
         // Check if the queue is empty
         if (front == -1)
         {
-            return -1; // Queue is empty
+            return -1; // Queue is empty F
         }
         int ans = arr[front];
         arr[front] = -1; //REVIEW
