@@ -14,6 +14,8 @@ public:
     {
         string result = ""; // Acts as a stack
 
+        //REVIEW take example as 10200
+
         for (char c : num)
         {
             // Remove larger digits when a smaller digit is encountered

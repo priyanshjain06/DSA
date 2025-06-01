@@ -45,6 +45,7 @@ public:
         {
             return -1; // Queue underflow
         }
+
         int deletedElement = arr[qfront];
         qfront++;
         if (qfront > rear)
