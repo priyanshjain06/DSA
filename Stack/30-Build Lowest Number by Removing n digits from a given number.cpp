@@ -34,6 +34,7 @@ public:
         while (!result.empty() && k > 0)
         {
             result.pop_back();
+            k--;
         }
 
         // If result is empty, return "0"
