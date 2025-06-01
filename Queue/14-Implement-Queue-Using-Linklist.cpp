@@ -48,7 +48,7 @@ void Queue ::Enqueue(int value)
 {
     QueueNode *Temp;
     Temp = new QueueNode(value);
-    if (Temp == nullptr) // When heap exhausted //REVIEW -
+    if (Temp == nullptr) // When heap exhausted //REVIEW - empty 
         cout << "Queue is Full" << endl;
     else
     {
@@ -63,7 +63,7 @@ void Queue ::Enqueue(int value)
             Rare = Temp;
         }
         cout << value << " Inserted into Queue " << endl;
-        size++;
+        size++; //REVIEW 
     }
 }
 void Queue ::Dequeue()
@@ -78,18 +78,4 @@ void Queue ::Dequeue()
         delete Temp;
         size--;
     }
-}
-int main()
-
-{
-    Queue Q;
-    Q.Enqueue(10);
-    Q.Enqueue(20);
-    Q.Enqueue(30);
-    Q.Enqueue(40);
-    Q.Enqueue(50);
-    Q.Dequeue();
-    cout << "The size of the Queue is " << Q.size << endl;
-    cout << "The Peek element of the Queue is " << Q.Peek() << endl;
-    return 0;
 }

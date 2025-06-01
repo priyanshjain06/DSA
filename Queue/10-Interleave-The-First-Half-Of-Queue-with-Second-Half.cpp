@@ -2,13 +2,16 @@
 
 // STUB -  Restrection : Don't use extra queue except the input queue!
 
-// LINK 
-// 0) CHeck if the input is even or odd
+// LINK
+// 0) Check if the input is even or odd
 //  1) push the first half of the queue into a stack
 //  2) push elements from stack to queue
 //  3) pop the first half of the queue and push them back into the queue
 //  4) push the first half of the queue again back into the stack
 //  5) Now insert the elements from the stack back into the queue in correct order
+
+// REVIEW input : 11 12 13 14 15 16 17 18 19 20
+//  REVIEW output : 11 16 12 17 13 18 14 19 15 20
 
 #include <iostream>
 #include <queue>
@@ -21,7 +24,7 @@ void interLeaveQueue(queue<int> &q)
         cout << "Input even number of integers." << endl;
 
     stack<int> s;
-    int halfSize = q.size() / 2; //REVIEW - 
+    int halfSize = q.size() / 2; // REVIEW -
 
     // Push first half elements into the stack
     // queue:16 17 18 19 20, stack: 15(T) 14 13 12 11
