@@ -4,7 +4,7 @@ class kQueue
 {
 public:
     int n;
-    int k;
+    int s;
     int *front;
     int *rear;
     int *arr;
@@ -15,8 +15,8 @@ public:
     kQueue(int n, int k)
     {
         this->n = n;
-        this->k = k;
-        front = new int[k];
+        this->s = s;
+        front = new int[s];
         rear = new int[k];
         // initialize all elements of front and rear as -1
         for (int i = 0; i < k; i++)
@@ -99,22 +99,3 @@ public:
         return arr[index];
     }
 };
-
-int main()
-{
-
-    kQueue q(10, 3);
-    q.enqueue(10, 1);
-    q.enqueue(15, 1);
-    q.enqueue(20, 2);
-    q.enqueue(25, 1);
-
-    cout << q.dequeue(1) << endl;
-    cout << q.dequeue(2) << endl;
-    cout << q.dequeue(1) << endl;
-    cout << q.dequeue(1) << endl;
-
-    cout << q.dequeue(1) << endl;
-
-    return 0;
-}
