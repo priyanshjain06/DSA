@@ -47,10 +47,11 @@ private:
         }
         return ans;
     }
+
 public:
     int largestRectangleArea(vector<int> &heights)
     {
-        int n = heights.size(); 
+        int n = heights.size();
 
         vector<int> next(n); // REVIEW -
         next = nextSmallerElement(heights, n);
@@ -58,7 +59,7 @@ public:
         vector<int> prev(n);
         prev = prevSmallerElement(heights, n);
 
-        int area = 0;   
+        int area = 0;
         for (int i = 0; i < n; i++)
         {
             int l = heights[i];
@@ -67,6 +68,7 @@ public:
             {
                 next[i] = n;
             }
+
             int b = next[i] - prev[i] - 1;
             int newArea = l * b;
             area = max(area, newArea);

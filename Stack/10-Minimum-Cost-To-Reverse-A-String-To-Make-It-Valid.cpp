@@ -11,7 +11,7 @@ using namespace std;
 int findMinimumCost(string str)
 {
     // odd condition:
-    if (str.length() % 2 == 1) //REVIEW - 
+    if (str.length() % 2 == 1) // REVIEW -
     {
         return -1;
     }

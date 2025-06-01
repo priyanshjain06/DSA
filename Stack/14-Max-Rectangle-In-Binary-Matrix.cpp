@@ -79,7 +79,8 @@ public:
             {
                 heights[j] = (matrix[i][j] == '1') ? heights[j] + 1 : 0;
             }
-            maxArea = max(maxArea, getMaxRectangle(heights)); //REVIEW call the max rectangle
+            maxArea = max(maxArea, getMaxRectangle(heights)); 
+            //REVIEW call the max rectangle
         }
 
         return maxArea;

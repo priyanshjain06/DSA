@@ -39,7 +39,7 @@ string getInfix(string exp)
     // There must be a single element
     // in stack now which is the required
     // infix.
-    return s.top(); // REVIEW -
+    return s.top(); // REVIEW this will contain the final entire string 
 }
 
 // Driver code

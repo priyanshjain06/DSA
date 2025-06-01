@@ -10,7 +10,7 @@ public:
     {
         int n = heights.size();
         stack<int> s;
-        vector<int> next(n, n);  // Stores next smaller element index
+        vector<int> next(n, n);  //REVIEW  // Stores next smaller element index
         vector<int> prev(n, -1); // Stores previous smaller element index
 
         // **Find Next Smaller Element (Right)**
