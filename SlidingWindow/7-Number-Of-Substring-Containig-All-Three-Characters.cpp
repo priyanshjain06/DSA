@@ -10,7 +10,7 @@ int NumberOFSubstring(string s)
     int count = 0;
     int n = s.length();
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) 
     {
         if (s[i] == 'a' || s[i] == 'b' || s[i] == 'c')
             lastseen[s[i] - 'a'] = i;

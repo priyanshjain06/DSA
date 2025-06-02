@@ -17,7 +17,7 @@ int NumberOfSubstring(string s, int n)
 
     for (int i = 0; i < n; i++)
     {
-        hashmap[3] = 0;
+        hashmap[3] = 0; 
 
         for (int j = i; j < n; j++)
         {
