@@ -28,7 +28,7 @@ public:
         }
 
         // Clear stack for the next computation
-        while (!s.empty())
+        while (!s.empty()) //REVIEW - 
             s.pop();
 
         // **Find Previous Smaller Element (Left)**
