@@ -36,7 +36,7 @@ Node *mergeTwoSortedLinkedLists(Node *list1, Node *list2)
         {
             temp->next = list1;
             list1 = list1->next;
-        }
+        } 
         else
         {
             temp->next = list2;
@@ -62,6 +62,7 @@ Node *mergeTwoSortedLinkedLists(Node *list1, Node *list2)
     return dummyNode->next; // REVIEW -
 }
 
+// REVIEW find the first middle node ! for even length linklist !
 Node *findMiddle(Node *head)
 {
     if (head == nullptr || head->next == nullptr)
@@ -85,7 +86,7 @@ Node *sortLL(Node *head)
 {
     if (head == nullptr || head->next == nullptr)
     {
-        return head;
+        return head; //REVIEW
     }
 
     Node *middle = findMiddle(head);

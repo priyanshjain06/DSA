@@ -30,7 +30,7 @@ void removeDuplicates(Node* head) {
             delete curr; // Free up the memory
         } else {
             // Mark the value as seen
-            seen[curr->data] = true;
+            seen[curr->data] = true; //FIXME
             prev = curr; // Move prev to current node
         }
         curr = prev->next; // Move to the next node //REVIEW - 
