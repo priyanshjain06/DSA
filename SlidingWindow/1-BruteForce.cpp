@@ -24,7 +24,7 @@ int solve(string str)
                 break;
             }
 
-            set.insert(str[j]);
+            set.insert(str[j]); //FIXME we insert in set not push! 
         }
     }
     return maxans;

@@ -9,7 +9,7 @@
 // If they are the same size, both explode.
 // Two asteroids moving in the same direction (both positive or both negative) never collide.
 
-//LINK -  you can also solve this by using a linklist 
+// LINK -  you can also solve this by using a linklist
 
 #include <iostream>
 #include <vector>
@@ -23,15 +23,15 @@ public:
     {
         stack<int> st;
         vector<int> ans;
-        for (auto i : a)
+        for (auto i : a) // REVIEW
         {
-            if (i >= 0) 
+            if (i >= 0)
             {
                 st.push(i);
             }
             else
             {
-                //if abs(i)<st.top() then it will never enter the stack
+                // if abs(i)<st.top() then it will never enter the stack
                 while (!st.empty() && st.top() > 0 && abs(i) > st.top())
                 {
                     st.pop();
@@ -42,7 +42,7 @@ public:
                 }
                 else
                 {
-                    if (st.empty() || st.top() < 0) //REVIEW this is the edge case , if all are negative! 
+                    if (st.empty() || st.top() < 0) // REVIEW this is the edge case , if all are negative!
                     {
                         st.push(i);
                     }

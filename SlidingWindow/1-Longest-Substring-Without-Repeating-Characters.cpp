@@ -10,26 +10,20 @@ class Solution
 public:
     int lengthofLongestSubstring(string s)
     {
-        vector<int> mpp(256, -1); // REVIEW -
 
         int left = 0, right = 0;
         int n = s.size();
         int len = 0;
-        vector<int> mpp(256, -1);//REVIEW - 
+        vector<int> mpp(256, -1); // REVIEW -
 
         while (right < n)
         {
-            len = max(len, right - left + 1);
-            mpp[s[right]] = right;//FIXME
-            right++;
+            if (mpp[s[right]] != -1 && mpp[s[right]] >= left)
+                left = mpp[s[right]] + 1;
 
-            if (mpp[s[right]] != -1)
-            {
-                if (mpp[s[right]] >= left) 
-                {
-                    left = mpp[s[right]] + 1;
-                }
-            }
+            mpp[s[right]] = right;
+            len = max(len, right - left + 1);
+            right++;
         }
         return len;
     }
