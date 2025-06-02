@@ -4,33 +4,31 @@
 #include <vector>
 using namespace std;
 
-int maxPoints(vector<int> &nums, int k)
+class Solution
 {
-    int n = nums.size();
-    int leftSum = 0, rightSum = 0, maxSum = 0;
-    
-    for (int i = 0; i < k; i++) //REVIEW -  
+public:
+    int maxScore(vector<int> &cardPoints, int k)
     {
-        leftSum += nums[i];
+        int n = cardPoints.size();
+        int leftSum = 0, rightSum = 0, maxSum = 0;
+
+        // Take all k cards from the left initially
+        for (int i = 0; i < k; i++)
+        {
+            leftSum += cardPoints[i];
+        }
+
+        maxSum = leftSum;
+
+        int rightIndex = n - 1;
+        // Try taking i cards from the left and k - i cards from the right
+        for (int i = k - 1; i >= 0; i--)
+        {
+            leftSum -= cardPoints[i];             // remove one from left
+            rightSum += cardPoints[rightIndex--]; // REVIEW  add one from right
+            maxSum = max(maxSum, leftSum + rightSum);
+        }
+
+        return maxSum;
     }
-
-    maxSum = leftSum;
-
-    int rightIndex = n - 1;
-    for (int i = k - 1; i >= 0; i--) //REVIEW -  k-1 
-    {
-        leftSum = leftSum - nums[i];
-        rightSum = rightSum + nums[rightIndex];
-        maxSum = max(maxSum, leftSum + rightSum);
-    }
-
-    return maxSum;
-}
-
-int main()
-{
-    vector<int> nums = {1, 2, 3, 4, 5, 6, 1}; // Example input
-    int k = 3;                                // Number of elements to select
-    cout << "Maximum points you can collect: " << maxPoints(nums, k) << endl;
-    return 0;
-}
+};
