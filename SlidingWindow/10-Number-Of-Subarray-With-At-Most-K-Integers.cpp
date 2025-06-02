@@ -12,14 +12,15 @@ int Max(int n, int k, int num[])
     int left = 0;
     int right = 0;
 
-    map<int, int> map; //REVIEW - 
+    map<int, int> map; // REVIEW -
     int count = 0;
 
     while (right < n)
     {
         map[num[right]]++;
 
-        if (map.size() > k)
+        // REVIEW use the while loop here
+        while (map.size() > k)
         {
             map[num[left]]--;
             if (map[num[left]] == 0)
@@ -28,11 +29,11 @@ int Max(int n, int k, int num[])
             }
             left++;
         }
-        if (map.size() <= k)
-        {
-            count = count + (right - left + 1); // REVIEW - just this part different from  4 th question
-        }
+
+        // REVIEW no if condition
+        count = count + (right - left + 1);
+
         right++;
     }
-    return count ;
+    return count;
 }
