@@ -16,21 +16,24 @@ using namespace std;
 
 vector<int> maxSlidingWindow(vector<int> &nums, int k)
 {
-    
+
     deque<int> dq;
     vector<int> ans;
-    
+
     for (int i = 0; i < nums.size(); i++)
     {
         // out of bond
-        if (!dq.empty() && dq.front() == i - k) // when i is  4 , val is 5
+        // when i is  4 , k = 3 and window is [2,3,4]
+        if (!dq.empty() && dq.front() == i - k)
             dq.pop_front();
 
-        // if no decreasing order is maintained
-        while (!dq.empty() && nums[dq.back()] < nums[i]) // when i is  4 , val is 5
+        // if no decreasing order is maintained ie front has max of the window and back has min
+
+        // REVIEW
+        while (!dq.empty() && nums[dq.back()] < nums[i])
             dq.pop_back();
 
-        dq.push_back(i);
+        dq.push_back(i); // REVIEW we are storing the index in dequeue
 
         if (i >= k - 1)
             ans.push_back(nums[dq.front()]);
