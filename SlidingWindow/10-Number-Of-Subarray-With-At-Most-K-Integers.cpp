@@ -34,5 +34,5 @@ int Max(int n, int k, int num[])
         }
         right++;
     }
-    return maxlen;
+    return count ;
 }
