@@ -144,7 +144,7 @@ bool isCircularList(Node *head)
     if (temp == head)
     {
         return true;
-    }   
+    }
 
     return false;
 }
@@ -154,7 +154,7 @@ bool detectLoop(Node *head)
 
     if (head == NULL)
         return false;
-        
+
     map<Node *, bool> visited;
 
     Node *temp = head;
@@ -202,7 +202,7 @@ Node *getStartingNode(Node *head)
 {
 
     if (head == NULL)
-    
+
         return NULL;
 
     Node *intersection = floydDetectLoop(head);
