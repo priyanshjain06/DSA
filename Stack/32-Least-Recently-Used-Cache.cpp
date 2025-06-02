@@ -6,7 +6,7 @@ using namespace std;
 class LRUCache
 {
 public:
-    class node //REVIEW class within a class 
+    class node // REVIEW class within a class
     {
     public:
         int key;
@@ -19,12 +19,11 @@ public:
             val = _val;
         }
     };
+    int cap;
+    unordered_map<int, node *> m; // REVIEW - int node *
 
     node *head = new node(-1, -1); // REVIEW -
     node *tail = new node(-1, -1);
-
-    int cap;
-    unordered_map<int, node *> m; // REVIEW -
 
     LRUCache(int capacity)
     {
@@ -32,13 +31,14 @@ public:
         head->next = tail;
         tail->prev = head;
     }
+    // REVIEW -  we never actually create or delete the node we just change the pointers to save inconsistency in the map
 
     void addnode(node *newnode)
     {
         node *temp = head->next;
         newnode->next = temp;
         newnode->prev = head;
-        head->next = newnode;
+        head->next = newnode; // REVIEW -
         temp->prev = newnode;
     }
 
@@ -59,7 +59,7 @@ public:
             m.erase(key_);
             deletenode(resnode);
             addnode(resnode);
-            m[key_] = head->next;
+            m[key_] = head->next; // REVIEW
             return res;
         }
 
@@ -76,9 +76,9 @@ public:
         }
         if (m.size() == cap)
         {
-            m.erase(tail->prev->key); //REVIEW - 
-            deletenode(tail->prev); //REVIEW - 
-        } 
+            m.erase(tail->prev->key); // REVIEW -
+            deletenode(tail->prev);   // REVIEW -
+        }
 
         addnode(new node(key_, value));
         m[key_] = head->next;
