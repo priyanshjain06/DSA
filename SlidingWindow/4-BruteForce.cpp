@@ -18,12 +18,12 @@ int Max(int k, int n, int nums[])
     int maxlen = 0;
     for (int i = 0; i <= n-1; i++)
     {
-        set<int> set;
+        set<int> set; //REVIEW 
         for (int j = i; j < n; j++)
         {
             set.insert(nums[j]);
 
-            if (set.size() <= 2)
+            if (set.size() <= 2) //REVIEW
             {
                 maxlen = max(maxlen, j - i + 1);
             }
