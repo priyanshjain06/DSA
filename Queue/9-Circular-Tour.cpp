@@ -11,7 +11,7 @@ public:
         int currGas = 0;
         int startStation = 0;
 
-        for (int i = 0; i < gas.size(); ++i)
+        for (int i = 0; i < gas.size(); i++)
         {
             totalGas += gas[i];
             totalCost += cost[i];
