@@ -32,5 +32,5 @@ pair<int, int> minSubsequenceWindow(int arr[], int n, int t[], int m)
             }
         }
     }
-    return start_index == -1 ? make_pair(-1, -1) : make_pair(min_length, start_index);
+    return start_index == -1 ? make_pair(-1, -1) : make_pair(min_length, start_index); //REVIEW  use substr(start_index, min_length)
 }

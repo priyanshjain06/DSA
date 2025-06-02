@@ -1,0 +1,45 @@
+#include <iostream>
+#include <unordered_map>
+#include <climits>
+using namespace std;
+
+int countMinSubsequenceWindows(int arr[], int n, int t[], int m)
+{
+    int min_length = INT_MAX;
+    int count = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == t[0])
+        {
+            int length = 1;
+            int k = 1;
+            int j = i + 1;
+
+            while (j < n && k < m)
+            {
+                if (arr[j] == t[k])
+                {
+                    k++;
+                }
+                length++;
+                j++;
+            }
+
+            if (k == m)
+            {
+                if (length < min_length)
+                {
+                    min_length = length;
+                    count = 1; //REVIEW  reset count
+                }
+                else if (length == min_length) //REVIEW 
+                {
+                    count++; // same length window found
+                }
+            }
+        }
+    }
+
+    return count;
+}
