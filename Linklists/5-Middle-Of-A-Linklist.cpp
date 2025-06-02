@@ -1,6 +1,6 @@
-//NOTE Problem Statement: Given the head of a linked list of integers, determine the middle node of the linked list. However, if the linked list has an even number of nodes, return the second middle node.
+// NOTE Problem Statement: Given the head of a linked list of integers, determine the middle node of the linked list. However, if the linked list has an even number of nodes, return the second middle node.
 
-//ANCHOR - time complexity O(N) and space complexity O(1)
+// ANCHOR - time complexity O(N) and space complexity O(1)
 
 #include <iostream>
 #include <map>
@@ -36,6 +36,10 @@ Node *findMiddle(Node *head)
 
     // Traverse the linked list using the
     // Tortoise and Hare algorithm. //REVIEW
+
+    // NOTE fast is not NULL → so fast->next is safe to access.
+    // fast->next is not NULL → so fast->next->next is safe to access in the next move.
+    
     while (fast != NULL && fast->next != NULL)
     {
         // Move slow one step.
@@ -44,7 +48,7 @@ Node *findMiddle(Node *head)
         fast = fast->next->next;
     }
 
-    return slow; //REVIEW - 
+    return slow; // REVIEW -
 }
 
 int main()

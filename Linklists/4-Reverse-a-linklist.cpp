@@ -22,6 +22,6 @@ public:
             prev = curr;
             curr = forward;
         }
-        return prev;
+        return prev; // it holds the current which is last node !
     }
 };

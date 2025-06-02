@@ -35,7 +35,7 @@ bool detectCycle(Node *head)
     Node *slow = head;
     Node *fast = head;
 
-    while (fast != nullptr && fast->next != nullptr)
+    while (fast && fast->next)
     {
         slow = slow->next;
         fast = fast->next->next;

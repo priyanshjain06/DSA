@@ -21,7 +21,7 @@ Node *kReverse(Node *head, int k)
         return NULL;
 
     Node *curr = head;
-    Node *forward = NULL; // REVIEW -
+    Node *forward = NULL; //REVIEW 
     Node *prev = NULL;
 
     int count = 0; // REVIEW -
@@ -55,25 +55,4 @@ void printList(Node *head) // REVIEW -
         temp = temp->next;
     }
     cout << endl;
-}
-int main()
-{
-    // Creating a linked list
-    Node *head = new Node(1);
-    head->next = new Node(2);
-    head->next->next = new Node(3);
-    head->next->next->next = new Node(4);
-    head->next->next->next->next = new Node(5);
-    head->next->next->next->next->next = new Node(6);
-
-    cout << "Original List: ";
-    printList(head);
-
-    int k = 2; // Set the size of k for k-reverse
-    Node *newHead = kReverse(head, k);
-
-    cout << "Reversed List in Groups of " << k << ": ";
-    printList(newHead);
-
-    return 0;
 }

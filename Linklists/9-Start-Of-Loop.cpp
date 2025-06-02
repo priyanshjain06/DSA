@@ -25,7 +25,7 @@ public:
 };
 Node *firstNode(Node *head)
 {
-
+ 
     Node *slow = head;
     Node *fast = head;
 
@@ -44,7 +44,7 @@ Node *firstNode(Node *head)
 
             // Reset the slow pointer
             // to the head of the list
-            slow = head;
+            slow = head; //REVIEW 
 
             // Phase 2: Find the first node of the loop
             while (slow != fast)
