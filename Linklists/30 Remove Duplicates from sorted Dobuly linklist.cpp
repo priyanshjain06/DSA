@@ -29,9 +29,9 @@ public:
             {
                 // Remove the duplicate node
                 Node *duplicate = curr->next;
-                curr->next = duplicate->next;
 
-            if (duplicate->next) //REVIEW If not the last node
+                curr->next = duplicate->next; // REVIEW
+                if (duplicate->next)          // REVIEW If not the last node
                     duplicate->next->prev = curr;
 
                 delete duplicate; // Free memory

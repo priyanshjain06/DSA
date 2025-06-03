@@ -18,18 +18,18 @@ class Solution
 public:
     vector<pair<int, int>> findPairsWithGivenSum(Node *head, int target)
     {
-        vector<pair<int, int>> result;
+        vector<pair<int, int>> result; // REVIEW - pair of vector !
         if (!head)
             return result; // Edge case
 
         // Finding the tail of DLL
         Node *left = head, *right = head;
 
-        while (right->next) //REVIEW - 
+        while (right->next)
             right = right->next;
 
         // Two-pointer approach
-        while (left != right && left->prev != right) //REVIEW - 
+        while (left != right && left->prev != right) // REVIEW -
         {
             int sum = left->data + right->data;
             if (sum == target)

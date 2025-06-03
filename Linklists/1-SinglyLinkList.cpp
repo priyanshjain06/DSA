@@ -117,8 +117,8 @@ void deleteNode(int position, Node *&head)
         int cnt = 1;
         while (cnt < position) // REVIEW - position not pos -1
         {
-            prev = curr;//REVIEW - 
-            curr = curr->next;//REVIEW - 
+            prev = curr;       // REVIEW -
+            curr = curr->next; // REVIEW -
             cnt++;
         }
 
@@ -128,7 +128,7 @@ void deleteNode(int position, Node *&head)
     }
 }
 
-bool isCircularList(Node *head) //REVIEW
+bool isCircularList(Node *head) // REVIEW
 {
     // empty list
     if (head == NULL)
@@ -221,7 +221,7 @@ Node *getStartingNode(Node *head)
     return slow;
 }
 
-void removeLoop(Node *head) //REVIEW 
+void removeLoop(Node *head) // REVIEW
 {
 
     if (head == NULL)

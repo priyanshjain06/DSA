@@ -12,7 +12,7 @@ public:
     int data;
     Node *next;
     Node *back;
-    Node(int data1, Node *next1, Node *back1) //REVIEW
+    Node(int data1, Node *next1, Node *back1) // REVIEW
     {
         data = data1;
         next = next1;
@@ -30,7 +30,7 @@ Node *convertArr2DLL(vector<int> arr)
 {
     Node *head = new Node(arr[0]); // REVIEW -
 
-    Node *prev = head;
+    Node *prev = head; // REVIEW
 
     for (int i = 1; i < arr.size(); i++)
     {
@@ -38,7 +38,7 @@ Node *convertArr2DLL(vector<int> arr)
         // Update the 'next' pointer of the
         // previous node to point to
         // the new node
-        prev->next = temp; 
+        prev->next = temp;
         // Move 'prev' to the newly created
         // node for the next iteration
         prev = temp;
@@ -100,7 +100,7 @@ Node *reverseDLL(Node *head)
         // in the original list
         current = current->back;
     }
-    
+
     // The final node in the original list
     // becomes the new head after reversal
     return prev->back; // REVIEW
