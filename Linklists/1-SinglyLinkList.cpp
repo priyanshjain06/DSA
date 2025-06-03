@@ -95,6 +95,7 @@ void insertAtPosition(Node *&tail, Node *&head, int position, int d)
 
     temp->next = nodeToInsert;
 }
+
 void deleteNode(int position, Node *&head)
 {
 
