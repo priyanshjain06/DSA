@@ -12,7 +12,7 @@ public:
     int data;
     Node *next;
     Node *back;
-    Node(int data1, Node *next1, Node *back1)
+    Node(int data1, Node *next1, Node *back1) //REVIEW
     {
         data = data1;
         next = next1;
@@ -38,7 +38,7 @@ Node *convertArr2DLL(vector<int> arr)
         // Update the 'next' pointer of the
         // previous node to point to
         // the new node
-        prev->next = temp;
+        prev->next = temp; 
         // Move 'prev' to the newly created
         // node for the next iteration
         prev = temp;

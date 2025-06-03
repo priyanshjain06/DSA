@@ -38,7 +38,7 @@
 //         {
 //             curr1->next = curr2;
 //             curr2->next = next1;
-//             curr1 = curr2;
+//             curr1 = curr2; //REVIEW
 //             curr2 = next2;
 //         }
 //         else
@@ -49,7 +49,7 @@
 //         if (next1 == NULL)
 //         {
 //             curr1->next = curr2;
-//            return first
+//            return  first; //REVIEW
 //         }
 //     }
 //     return first; //REVIEW -

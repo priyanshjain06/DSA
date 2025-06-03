@@ -34,7 +34,7 @@ Node *reverse(Node *head)
 Node *addOne(Node *head)
 {
     // Step 1: Reverse the linked list
-    head = reverse(head); //REVIEW - 
+    head = reverse(head); // REVIEW -
     Node *temp = head;
     int carry = 1;
 
@@ -50,14 +50,15 @@ Node *addOne(Node *head)
         }
         else
         {
-            temp->data = 0; //REVIEW - 
+            temp->data = 0; // REVIEW -
             carry = 1;
         }
 
         // If carry remains and we are at the last node, create a new node
-        if (carry == 1 && temp->next == nullptr) //REVIEW - 
+        if (carry == 1 && temp->next == nullptr)
         {
             temp->next = new Node(1);
+            // REVIEW temp->next which is head->next
             carry = 0;
         }
 
