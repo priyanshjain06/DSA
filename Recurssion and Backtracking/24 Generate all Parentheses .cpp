@@ -16,7 +16,7 @@ public:
             return;
         }
 
-        // If we can add an opening parenthesis
+        // If we can adan opening parenthesis
         if (open < n)
         {
             generateParenthesisHelper(n, open + 1, close, current + '(', result);

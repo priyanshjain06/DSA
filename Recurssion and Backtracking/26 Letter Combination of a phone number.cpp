@@ -21,9 +21,9 @@ public:
         }
     }
 
-    vector<string> letterCombinations(string input)
+    vector<string> letterCombinations(string input) //REVIEW 
     {
-        if (input.empty())
+    if (input.empty()) //REVIEW
             return {}; // Edge case: If input is empty
 
         vector<string> mapping = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}; //REVIEW 0 and 1 are not included

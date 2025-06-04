@@ -29,4 +29,3 @@ public:
         return (evenChoices * oddChoices) % MOD;
     }
 };
-

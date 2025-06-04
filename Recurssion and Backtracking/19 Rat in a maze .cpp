@@ -2,10 +2,11 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 class Solution
 {
     void solve(int i, int j, vector<vector<int>> &a, int n, vector<string> &ans, string move,
-               vector<vector<int>> &vis, int di[], int dj[]) // REVIEW
+               vector<vector<int>> &vis, int di[], int dj[]) // REVIEW i ,j move is string
     {
         if (i == n - 1 && j == n - 1) // coz of next
         {
@@ -44,7 +45,8 @@ public:
             1,
             0};
 
-        if (m[0][0] == 1)                            // REVIEW here m is 2d array represeting the maze and n is dimension 3*3 and 4*4 like this
+        // REVIEW here m is 2d array represeting the maze and n is dimension 3*3 and 4*4 like this
+        if (m[0][0] == 1)
             solve(0, 0, m, n, ans, "", vis, di, dj); // 9 Review
         return ans;
     }
