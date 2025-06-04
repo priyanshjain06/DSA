@@ -18,8 +18,10 @@ public:
             ans.push_back(sum);
             return;
         }
-        subsetSumsHelper(ind + 1, arr, n, ans, sum + arr[ind]);
-        subsetSumsHelper(ind + 1, arr, n, ans, sum); // REVIEW sum is not updated
+        subsetSumsHelper(ind + 1, arr, n, ans, sum + arr[ind]); // pick
+        subsetSumsHelper(ind + 1, arr, n, ans, sum);
+        // not pick // REVIEW sum is not updated
+        // REVIEW no datastructure is used
     }
     vector<int> subsetSums(vector<int> arr, int n)
     {

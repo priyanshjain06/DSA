@@ -19,10 +19,11 @@ void findCombination(int ind, int target, vector<int> &arr, vector<vector<int>> 
         return;
     }
     for (int i = ind; i < arr.size(); i++) // REVIEW start from index
+    // REVIEW it acts like the not pick
     {
         if (i > ind && arr[i] == arr[i - 1])
-            continue;
-        if (arr[i] > target) //sorted array
+            continue;        // REVIEW -  also acts as not pick by skiping !
+        if (arr[i] > target) // sorted array
             break;
 
         ds.push_back(arr[i]);
@@ -30,10 +31,11 @@ void findCombination(int ind, int target, vector<int> &arr, vector<vector<int>> 
         ds.pop_back();
     }
 }
+
 vector<vector<int>> combinationSum2(vector<int> &candidates, int target)
 {
     sort(candidates.begin(), candidates.end()); // REVIEW
-    vector<vector<int>> ans; //REVIEW 
+    vector<vector<int>> ans;                    // REVIEW
     vector<int> ds;
     findCombination(0, target, candidates, ans, ds);
     return ans;

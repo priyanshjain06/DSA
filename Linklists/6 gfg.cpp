@@ -1,5 +1,9 @@
 using namespace std;
 
+// REVIEW Even if the last group has fewer than k nodes, still reverse it.
+
+// REVIEW  This is different from Leetcode 25 (which does not reverse the last group if it's smaller than k).
+
 class Solution
 {
 public:

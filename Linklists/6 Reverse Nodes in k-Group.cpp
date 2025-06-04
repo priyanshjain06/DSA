@@ -18,30 +18,33 @@ public:
 Node *kReverse(Node *head, int k)
 {
     // Step 1: reverse the first 'k' nodes
-    if (head == NULL || head->next == NULL) // REVIEW -
-        return NULL;
+        if (head == NULL || head->next == NULL) // REVIEW -
+            return NULL;
 
-    Node *curr = head;
-    Node *forward = NULL; // REVIEW
-    Node *prev = NULL;
+            //if (head == NULL || k == 1) //REVIEW gfg
+            // return head;
 
-    int count = 0; // REVIEW -
+        Node *curr = head;
+        Node *forward = NULL; // REVIEW
+        Node *prev = NULL;
 
-    while (curr != NULL && count < k)
-    {
-        forward = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = forward;
-        count++; // REVIEW -
-    }
+        int count = 0; // REVIEW -
 
-    if (forward != NULL) // or curr!=NULL
-    {
-        head->next = kReverse(forward, k); // REVIEW -
-    }
+        while (curr != NULL && count < k)
+        {
+            forward = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = forward;
+            count++; // REVIEW -
+        }
 
-    return prev; // REVIEW -
+        if (forward != NULL) // or curr!=NULL
+        {
+            head->next = kReverse(forward, k); // REVIEW -
+        }
+
+        return prev; // REVIEW -
 }
 
 void printList(Node *head) // REVIEW -

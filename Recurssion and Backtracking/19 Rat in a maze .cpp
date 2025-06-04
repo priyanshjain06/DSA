@@ -7,13 +7,13 @@ class Solution
     void solve(int i, int j, vector<vector<int>> &a, int n, vector<string> &ans, string move,
                vector<vector<int>> &vis, int di[], int dj[]) // REVIEW
     {
-        if (i == n - 1 && j == n - 1) //coz of next
+        if (i == n - 1 && j == n - 1) // coz of next
         {
             ans.push_back(move);
             return;
         }
         string dir = "DLRU";
-        for (int ind = 0; ind < 4; ind++) //REVIEW till 4
+        for (int ind = 0; ind < 4; ind++) // REVIEW till 4
         {
             int nexti = i + di[ind];
             int nextj = j + dj[ind];

@@ -20,13 +20,14 @@ private:
             ans.push_back(nums);
             return;
         }
-        for (int i = index; i < nums.size(); i++) //REVIEW 
+        for (int i = index; i < nums.size(); i++) // REVIEW
         {
-            swap(nums[index], nums[i]);
+            swap(nums[index], nums[i]); 
             recurPermute(index + 1, nums, ans);
             swap(nums[index], nums[i]); // backtrack
         }
     }
+
 public:
     vector<vector<int>> permute(vector<int> &nums)
     {
