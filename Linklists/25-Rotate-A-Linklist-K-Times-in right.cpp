@@ -20,10 +20,12 @@ public:
         next = NULL;
     }
 };
-// utility function to insert node at the end of the list
+
+// utility function to insert node at the end of the list :
+
 void insertNode(node *&head, int val)
 {
-    node *newNode = new node(val);
+     node *newNode = new node(val);
     if (head == NULL)
     {
         head = newNode;

@@ -1,6 +1,7 @@
 // ANCHOR  Time Complexity is : O(n) and space Complexity is O(1)
 #include <iostream>
 using namespace std;
+
 class Node
 {
 public:
@@ -21,12 +22,11 @@ Node *kReverse(Node *head, int k)
         return NULL;
 
     Node *curr = head;
-    Node *forward = NULL; //REVIEW 
+    Node *forward = NULL; // REVIEW
     Node *prev = NULL;
 
     int count = 0; // REVIEW -
 
-    // Reverse first 'k' nodes
     while (curr != NULL && count < k)
     {
         forward = curr->next;
@@ -36,16 +36,14 @@ Node *kReverse(Node *head, int k)
         count++; // REVIEW -
     }
 
-    // Step 2: Recur for remaining nodes
     if (forward != NULL) // or curr!=NULL
     {
         head->next = kReverse(forward, k); // REVIEW -
     }
 
-    // Step 3: Return 'prev' which is the new head of the reversed portion
     return prev; // REVIEW -
 }
-// Function to print the linked list
+
 void printList(Node *head) // REVIEW -
 {
     Node *temp = head;
