@@ -14,7 +14,7 @@ bool isValid(vector<vector<char>> &board, int row, int col, char c)
     {
         if (board[i][col] == c)
             return false;
-
+        
         if (board[row][i] == c)
             return false;
 
