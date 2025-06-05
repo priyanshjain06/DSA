@@ -14,7 +14,7 @@ bool lemonadeChange(vector<int> &bills)
     // for $5 bills
     int five = 0;
 
-    // Initialize a counter
+    // Initialize   a counter
     // for $10 bills
     int ten = 0;
 

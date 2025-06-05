@@ -10,11 +10,11 @@ public:
             for (int j = 0; j < 9; ++j)
             {
                 char val = board[i][j];
-                if (val != '.')
+                if (val != '.') //REVIEW 
                 {
                     string rowKey = string(1, val) + " in row " + to_string(i);
                     string colKey = string(1, val) + " in col " + to_string(j);
-                    string boxKey = string(1, val) + " in box " + to_string(i / 3) + "-" + to_string(j / 3);
+                    string boxKey = string(1, val) + " in box " + to_string(i / 3) + "-" + to_string(j / 3); //REVIEW 
 
                     if (seen.count(rowKey) || seen.count(colKey) || seen.count(boxKey))
                         return false;
