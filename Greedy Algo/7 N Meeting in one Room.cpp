@@ -14,7 +14,7 @@ struct meeting
 class Solution
 {
 public:
-   static bool comparator(struct meeting m1, struct meeting m2)
+   static bool comparator(struct meeting m1, struct meeting m2) // REVIEW structure type
    {
       if (m1.end != m2.end)
          return m1.end < m2.end; // REVIEW
@@ -23,13 +23,14 @@ public:
 
    void maxMeetings(int s[], int e[], int n)
    {
-      struct meeting meet[n]; // REVIEW
+      struct meeting meet[n]; // REVIEW structure type
+
       for (int i = 0; i < n; i++)
       {
          meet[i].start = s[i], meet[i].end = e[i], meet[i].pos = i + 1;
       }
 
-      sort(meet, meet + n, comparator);
+      sort(meet, meet + n, comparator); //FIXME - 
 
       vector<int> answer;
 
@@ -40,7 +41,7 @@ public:
       {
          if (meet[i].start > limit)
          {
-            //count++
+            //  count++
             limit = meet[i].end;
             answer.push_back(meet[i].pos);
          }

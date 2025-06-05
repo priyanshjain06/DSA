@@ -14,7 +14,7 @@ struct Job
 class Solution
 {
 public:
-    static bool compareProfit(Job a, Job b)
+    static bool compareProfit(Job a, Job b) // REVIEW a and b are of job type!
     {
         return a.profit > b.profit; // Sort jobs by profit in descending order
     }
@@ -42,7 +42,7 @@ public:
         for (int i = 0; i < n; i++)
         {
             // Try to find a slot for the current job
-            for (int j = arr[i].dead; j > 0; j--)
+            for (int j = arr[i].dead; j > 0; j--) //REVIEW - 
             { // NOTE  use disjoint set union here to reduce it for time complexity
 
                 if (slot[j] == -1)
@@ -50,12 +50,12 @@ public:
                     slot[j] = i;                // Assign job to slot
                     countJobs++;                // Increment job count
                     jobProfit += arr[i].profit; // Add profit for this job
-                    break;
+                    break;                      // REVIEW
                 }
             }
         }
 
-        return make_pair(countJobs, jobProfit); // Return the result
+        return make_pair(countJobs, jobProfit); //REVIEW  Return the result
     }
 };
 

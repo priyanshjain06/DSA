@@ -8,7 +8,7 @@ public:
     int jump(vector<int> &nums)
     {
         int n = nums.size();
-        if (n == 1)
+        if (n == 1) //REVIEW 
             return 0; // No jump needed if there's only one element
 
         int jump = 0;     // Number of jumps made
