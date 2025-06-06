@@ -19,7 +19,6 @@
 //             minHeap.pop();
 //             int minVal = top[0], row = top[1], col = top[2];
 //             // NOTE min heap store 3 things for each node value , row ,col
-
 //             // Update range if smaller range found
 //             if (maxVal - minVal < rangeEnd - rangeStart)
 //             {

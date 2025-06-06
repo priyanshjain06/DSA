@@ -41,13 +41,13 @@ public:
     // Function to merge k sorted arrays.
     vector<int> mergeKArrays(vector<vector<int>> arr, int K)
     {
-        priority_queue<Node *, vector<Node *>, compare> minHeap; //FIXME
+        priority_queue<Node *, vector<Node *>, compare> minHeap; // FIXME
         vector<int> ans;
 
-                // Step 1: Insert first elements from each row into the heap
+        // Step 1: Insert first elements from each row into the heap
         for (int i = 0; i < K; i++)
         {
-            Node *temp = new Node(arr[i][0], i, 0);
+            Node *temp = new Node(arr[i][0], i, 0); // value row col
             minHeap.push(temp);
         }
 
@@ -63,13 +63,14 @@ public:
             // If next element exists in the same row, push it to the heap
             if (col + 1 < arr[row].size())
             {
-                Node *next = new Node(arr[row][col + 1], row, col + 1);
+                Node *next = new Node(arr[row][col + 1], row, col + 1); // REVIEW
                 minHeap.push(next);
             }
         }
         return ans;
     }
 };
+
 //{ Driver Code Starts.
 int main()
 {
