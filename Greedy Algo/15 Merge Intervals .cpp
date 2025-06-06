@@ -10,7 +10,7 @@ public:
     vector<vector<int>> merge(vector<vector<int>> &intervals)
     {
         // If the input is empty, return an empty result
-        if (intervals.empty())
+        if (intervals.empty()) //REVIEW
             return {};
 
         // Step 1: Sort the intervals based on the start time //FIXME -
@@ -37,7 +37,6 @@ public:
                 result.push_back(intervals[i]);
             }
         }
-
         return result;
     }
 };

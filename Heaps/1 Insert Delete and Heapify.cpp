@@ -20,6 +20,7 @@ public:
         int index = ++size;
         arr[index] = val;
 
+        
         while (index > 1)
         {
             int parent = index / 2;
