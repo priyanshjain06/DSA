@@ -28,9 +28,10 @@ public:
       for (int i = 0; i < n; i++)
       {
          meet[i].start = s[i], meet[i].end = e[i], meet[i].pos = i + 1;
+         // REVIEW i+1 for position !
       }
 
-      sort(meet, meet + n, comparator); //FIXME - 
+      sort(meet, meet + n, comparator); // FIXME -
 
       vector<int> answer;
 
@@ -41,7 +42,7 @@ public:
       {
          if (meet[i].start > limit)
          {
-            //  count++
+            //  count++ //REVIEW count of the meetings !
             limit = meet[i].end;
             answer.push_back(meet[i].pos);
          }
