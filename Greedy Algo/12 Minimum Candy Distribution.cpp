@@ -23,7 +23,7 @@ public:
                 sum += peak;
                 i++;
             }
-
+            
             int down = 0;//REVIEW - 
             while (i < n && ratings[i] < ratings[i - 1])
             {

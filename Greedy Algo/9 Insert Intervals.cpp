@@ -1,3 +1,11 @@
+// REVIEW 1) we can merge the overlapping intervals
+//  2) and then insert the newInterval in the result vector.
+//  3) we can return the result in a new vector ! not the input one !
+
+// NOTE Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
+// Output: [[1,2],[3,10],[12,16]]
+// Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
+
 #include <iostream>
 #include <vector>
 
@@ -19,7 +27,7 @@ public:
         }
 
         // Step 2: Merge overlapping intervals
-        while (i < n && intervals[i][0] <= newInterval[1]) //FIXME - 
+        while (i < n && intervals[i][0] <= newInterval[1]) // FIXME -
         {
             newInterval[0] = min(newInterval[0], intervals[i][0]);
             newInterval[1] = max(newInterval[1], intervals[i][1]);

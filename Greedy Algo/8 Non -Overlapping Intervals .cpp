@@ -10,9 +10,9 @@ public:
     static bool compare(vector<int>& a, vector<int>& b) {
         return a[1] < b[1];  // Sort by end time in ascending order
     }
-
+    
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
-        if (intervals.empty()) return 0;
+        if (intervals.empty()) return 0; //REVIEW - 
 
         // Step 1: Sort intervals using the custom comparator
         sort(intervals.begin(), intervals.end(), compare);
