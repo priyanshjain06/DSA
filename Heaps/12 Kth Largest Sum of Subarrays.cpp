@@ -19,7 +19,7 @@ using namespace std;
 // }
 
 int KthLargestSumOfSubarrays(vector<int> arr, int K) {
-    priority_queue<int, vector<int>, greater<int> > sumStore;
+    priority_queue<int, vector<int>, greater<int> > sumStore; //REVIEW
     int size = arr.size();
 
     for(int i=0; i<size; i++) {

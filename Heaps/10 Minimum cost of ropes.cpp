@@ -22,7 +22,6 @@ int minimumCost(vector<int> arr) {
         cost += sum; //REVIEW - 
         minHeap.push(sum); //REVIEW - 
     }
-
     return cost;
 }
 

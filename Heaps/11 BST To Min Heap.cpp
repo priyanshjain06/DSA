@@ -4,6 +4,7 @@
 using namespace std;
 
 void inorder(Node* root, vector<int> &arr) {
+
     if(root == NULL) {
         return;
     }
@@ -14,6 +15,7 @@ void inorder(Node* root, vector<int> &arr) {
 }
 
 void fillPreorder(Node* root, int &index, vector<int> arr) { //REVIEW
+    
     if(root == NULL) {
         return;
     }
@@ -30,7 +32,7 @@ void BST_Heap(Node* root) { //REVIEW
     vector<int> arr;
     inorder(root, arr);
     int i = 0;
-    fillPreorder(root, i, arr);
+    fillPreorder(root, i, arr); //REVIEW - 
 }
 
 int main() {

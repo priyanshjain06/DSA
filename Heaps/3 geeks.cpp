@@ -27,7 +27,7 @@ class Solution {
     void heapSort(vector<int>& arr) {
         int size = arr.size();
 
-        for (int i = size / 2 - 1; i >= 0; i--)
+        for (int i = size / 2 - 1; i >= 0; i--) //REVIEW 
             heapify(arr, size, i);
 
         while (size > 1) {
