@@ -29,7 +29,7 @@ public:
 class compare
 {
 public:
-    bool operator()(Node *a, Node *b)
+    bool operator()(Node *a, Node *b) //REVIEW 
     {
         return a->data > b->data; // Min heap
     }

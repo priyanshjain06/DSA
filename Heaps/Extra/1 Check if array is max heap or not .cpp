@@ -1,4 +1,3 @@
-
 // NOTE No need to check for complete tree
 class Solution
 {

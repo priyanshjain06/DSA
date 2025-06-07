@@ -12,7 +12,7 @@ struct ListNode
 };
 
 // Comparator for Min Heap
-struct Compare
+struct Compare //REVIEW - 
 {
     bool operator()(ListNode *a, ListNode *b)
     {

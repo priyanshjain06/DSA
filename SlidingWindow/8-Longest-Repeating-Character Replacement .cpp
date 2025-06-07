@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 int characterReplacement(string s, int k)
 {
     int left = 0, right = 0, maxLen = 0, maxFreq = 0;
@@ -19,7 +18,6 @@ int characterReplacement(string s, int k)
             freq[s[left] - 'A']--;
             left++;
         }
-
         maxLen = max(maxLen, right - left + 1); // Update max length
         right++;
     }
