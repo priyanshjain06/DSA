@@ -17,7 +17,7 @@ public:
 
         for (int i = start; i <= 9; i++) //REVIEW
         {
-            if (sum + i > n)
+            if (sum + i > n) //REVIEW 
                 break; // Stop if sum exceeds target
             combination.push_back(i);
             backtrack(i + 1, k - 1, n, sum + i, combination, res); // Reduce k

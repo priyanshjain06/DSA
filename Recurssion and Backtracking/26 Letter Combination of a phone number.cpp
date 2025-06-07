@@ -11,8 +11,8 @@ public:
             result.push_back(current);
             return;
         }
-        
-        string letters = mapping[input[index] - '2']; // Get letters for current digit
+
+        string letters = mapping[input[index] - '2']; // REVIEW  Get letters for current digit
         for (char ch : letters)
         {
             current.push_back(ch);                                 // Choose a letter
@@ -21,12 +21,12 @@ public:
         }
     }
 
-    vector<string> letterCombinations(string input) //REVIEW 
+    vector<string> letterCombinations(string input) // REVIEW
     {
-    if (input.empty()) //REVIEW
-            return {}; // Edge case: If input is empty
+        if (input.empty()) // REVIEW
+            return {};     // Edge case: If input is empty
 
-        vector<string> mapping = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}; //REVIEW 0 and 1 are not included
+        vector<string> mapping = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}; // REVIEW 0 and 1 are not included
         vector<string> result;
         string current;
 
@@ -38,7 +38,7 @@ public:
 int main()
 {
     Solution sol;
-    string input = "23";  // Changed "digits" to "input"
+    string input = "23"; // Changed "digits" to "input"
     vector<string> result = sol.letterCombinations(input);
 
     // Print result

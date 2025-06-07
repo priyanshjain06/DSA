@@ -10,7 +10,7 @@ public:
     Node *next, *prev;
     Node(int val) : data(val), next(NULL), prev(NULL)
     {
-    }
+        }
 };
 
 class Solution
