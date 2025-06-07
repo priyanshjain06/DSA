@@ -12,7 +12,6 @@ public:
         stringstream ss(path);
 
         while (getline(ss, part, '/'))
-            s
             // ss => read , part => write  / => delimiter
             {
                 if (part == "" || part == ".")

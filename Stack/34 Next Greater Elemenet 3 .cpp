@@ -36,7 +36,7 @@ public:
         reverse(s.begin() + i + 1, s.end());
 
         // Step 5: Convert back to integer and check range
-        long ans = stol(s);
+        long ans = stoi(s);
         return (ans > INT_MAX) ? -1 : static_cast<int>(ans); // REVIEW
     }
 };
