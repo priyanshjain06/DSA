@@ -26,7 +26,7 @@ public:
         {
             ListNode *temp = curr;
             curr = curr->next;    // REVIEW -
-            temp->next = nullptr; // Break the current node’s link
+            temp->next = nullptr; //REVIEW  Break the current node’s link
 
             if (index % 2 == 1)
             { // Odd index
