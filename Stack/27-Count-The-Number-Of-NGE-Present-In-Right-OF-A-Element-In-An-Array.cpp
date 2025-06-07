@@ -22,7 +22,7 @@ public:
                 {
                     countGreaterElements += 1;
                 }
-            }
+            }w
             result.push_back(countGreaterElements);
         }
         return result;

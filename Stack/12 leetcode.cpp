@@ -24,7 +24,7 @@ public:
             {
                 next[i] = s.top();
             }
-            s.push(i);
+            s.push(i); 
         }
 
         // Clear stack for the next computation

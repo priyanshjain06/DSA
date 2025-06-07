@@ -50,7 +50,7 @@ public:
         head = head->next;
         delete temp;
         size--;
-    }
+    } 
 
     int getTop()
     {

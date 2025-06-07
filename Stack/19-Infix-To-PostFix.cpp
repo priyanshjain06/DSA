@@ -54,7 +54,7 @@ void infixToPostfix(string s)
                 result += st.top();
                 st.pop();
             }
-            st.push(c);
+            st.push(c); //REVIEW - 
         }
     }
 
