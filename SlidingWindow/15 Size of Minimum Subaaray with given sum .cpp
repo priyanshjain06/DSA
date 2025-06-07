@@ -21,6 +21,6 @@ public:
             }
         }
 
-        return (minLen == INT_MAX) ? 0 : minLen;
+        return (minLen == INT_MAX) ? 0 : minLen; // REVIEW
     }
 };

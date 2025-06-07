@@ -21,12 +21,13 @@ class Solution
             if (nexti >= 0 && nextj >= 0 && nexti < n && nextj < n && !vis[nexti][nextj] && a[nexti][nextj] == 1)
             {
                 vis[i][j] = 1;
-                solve(nexti, nextj, a, n, ans, move + dir[ind], vis, di, dj); // REVIEW move +dir[ind] . remember the i j call here
+                solve(nexti, nextj, a, n, ans, move + dir[ind], vis, di, dj); // REVIEW 9 things
+                // REVIEW - move +dir[ind] . remember the i j call here
                 vis[i][j] = 0;
             }
         }
     }
-
+    
 public:
     vector<string> findPath(vector<vector<int>> &m, int n)
     {
