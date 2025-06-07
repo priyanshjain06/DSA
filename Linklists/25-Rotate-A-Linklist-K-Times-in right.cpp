@@ -25,12 +25,13 @@ public:
 
 void insertNode(node *&head, int val)
 {
-     node *newNode = new node(val);
+    node *newNode = new node(val);
     if (head == NULL)
     {
         head = newNode;
         return;
     }
+    
     node *temp = head;
     while (temp->next != NULL)
         temp = temp->next;
@@ -38,10 +39,11 @@ void insertNode(node *&head, int val)
     temp->next = newNode;
     return;
 }
+
 // utility function to rotate list by k times
 node *rotateRight(node *head, int k)
 {
-    if (head == NULL || head->next == NULL || k == 0) //REVIEW - 
+    if (head == NULL || head->next == NULL || k == 0) // REVIEW -
         return head;
 
     node *temp = head;
