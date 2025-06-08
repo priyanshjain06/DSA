@@ -9,12 +9,12 @@ public:
     bool isPossible(int N, int P, vector<pair<int, int>> &prerequisites)
     {
         vector<vector<int>> adj(N);
-        vector<int> indegree(N, 0);
+        vector<int> indegree(N, 0); // REVIEW
 
         // Construct adjacency list and in-degree array
-        for (auto &pre : prerequisites) //REVIEW
+        for (auto &pre : prerequisites) // REVIEW //FIXME & means pair
         {
-            adj[pre.second].push_back(pre.first);//REVIEW - second task should be completed before first so second -> first
+            adj[pre.second].push_back(pre.first); // REVIEW - second task should be completed before first so second -> first
             indegree[pre.first]++;
         }
 
@@ -30,6 +30,7 @@ public:
         {
             int node = q.front();
             q.pop();
+            // REVIEW there is no need to store the order
             count++;
 
             for (int neighbor : adj[node])

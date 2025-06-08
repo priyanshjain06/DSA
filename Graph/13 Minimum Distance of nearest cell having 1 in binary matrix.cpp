@@ -10,9 +10,9 @@ public:
     {
         int n = mat.size();
         int m = mat[0].size();
-        vector<vector<int>> dist(n, vector<int>(m, 0));//REVIEW - 
+        vector<vector<int>> dist(n, vector<int>(m, 0)); // REVIEW -
         vector<vector<int>> vis(n, vector<int>(m, 0));
-        queue<pair<pair<int, int>, int>> q;//REVIEW - 
+        queue<pair<pair<int, int>, int>> q; // REVIEW -
 
         for (int i = 0; i < n; i++)
         {
@@ -33,9 +33,9 @@ public:
         {
             int row = q.front().first.first;
             int col = q.front().first.second;
-            int steps = q.front().second;//REVIEW - 
+            int steps = q.front().second; // REVIEW -
             q.pop();
-            dist[row][col] = steps;//REVIEW - 
+            dist[row][col] = steps; // REVIEW -
 
             for (int i = 0; i < 4; i++)
             {
@@ -45,7 +45,7 @@ public:
                 if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && vis[newRow][newCol] == 0)
                 {
                     vis[newRow][newCol] = 1;
-                    q.push({{newRow, newCol}, steps + 1});//REVIEW - 
+                    q.push({{newRow, newCol}, steps + 1}); // REVIEW -
                 }
             }
         }

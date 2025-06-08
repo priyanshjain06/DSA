@@ -41,7 +41,6 @@ public:
                     q.push(it);
             }
         }
-
         return topo;
     }
 };
