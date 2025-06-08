@@ -51,7 +51,7 @@ public:
 
                     dist[adjNode] = d + wt;
                     st.insert({dist[adjNode], adjNode}); // REVIEW
-                }
+                }w
             }
         }
 

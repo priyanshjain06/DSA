@@ -27,13 +27,13 @@ public:
         // Step 4: Dijkstra's Algorithm
         while (!pq.empty())
         {
-            int d = pq.top().first;
+            int d = pq.top().first; // REVIEW access method !
             int node = pq.top().second;
-            pq.pop();
+            pq.pop(); // REVIEW
 
-            for (auto &[nei, weight] : adj[node])
+            for (auto &[nei, weight] : adj[node]) // FIXME
             {
-                if (d + weight < dist[nei])
+                if (d + weight < dist[nei]) // REVIEW only one if condition
                 {
                     dist[nei] = d + weight;
                     pq.push({dist[nei], nei});

@@ -19,9 +19,9 @@ public:
             adj[v].push_back({u, wt});
         }
 
-        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-        vector<int> dist(n + 1, 1e9);
-        vector<int> parent(n + 1);
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // REVIEW
+        vector<int> dist(n + 1, 1e9);                                                       // REVIEW -  1e9 is INT_MAX , n+1
+        vector<int> parent(n + 1);                                                          // REVIEW n+1
         for (int i = 1; i <= n; i++)
             parent[i] = i;
 
@@ -51,16 +51,16 @@ public:
             return {-1};
 
         vector<int> path;
-        int node = n;
+        int node = n; // REVIEW last node is checked first !
         while (parent[node] != node)
         {
             path.push_back(node);
             node = parent[node];
         }
-        path.push_back(1);
+        path.push_back(1); // REVIEW 1 is always the soruces (start)
         reverse(path.begin(), path.end());
 
-        path.insert(path.begin(), dist[n]); // add total cost
+        path.insert(path.begin(), dist[n]); // FIXME  add total cost
 
         return path;
     }
