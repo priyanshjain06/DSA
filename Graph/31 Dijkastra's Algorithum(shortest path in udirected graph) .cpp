@@ -29,8 +29,9 @@ public:
         // Step 4: Process the set
         while (!st.empty())
         {
-            auto it = *(st.begin());
+            auto it = *(st.begin()); // FIXME
             st.erase(it);
+            // we can erase it after node and d is fetched
 
             int node = it.second;
             int d = it.first;
@@ -45,11 +46,11 @@ public:
                     // Remove the old entry if it exists
                     if (dist[adjNode] != INT_MAX)
                     {
-                        st.erase({dist[adjNode], adjNode});
+                        st.erase({dist[adjNode], adjNode}); // FIXME
                     }
 
                     dist[adjNode] = d + wt;
-                    st.insert({dist[adjNode], adjNode});
+                    st.insert({dist[adjNode], adjNode}); // REVIEW
                 }
             }
         }

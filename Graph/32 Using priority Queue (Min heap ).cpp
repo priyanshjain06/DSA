@@ -17,7 +17,7 @@ public:
         }
 
         // Step 2: Min heap for Dijkstra (dist, node)
-        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // REVIEW
 
         // Step 3: Distance vector initialized to INF
         vector<int> dist(V, INT_MAX);
