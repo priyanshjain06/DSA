@@ -35,8 +35,12 @@ public:
         {
             if (!vis[i])
             {
-                if (dfs(i, -1, vis, adj) == true) // REVIEW  no detect function is called and  - i,-1
+                if (dfs(i, -1, vis, adj) == true)
+                {
+                    // REVIEW we need to pass parent also !
+                    //  REVIEW  no detect function is called and  - i,-1
                     return true;
+                }
             }
         }
         return false;
