@@ -43,12 +43,7 @@ public:
         for (int i = 0; i < V; i++) // REVIEW  loop for v not n
         {
             // if the node is not visited
-            if (!vis[i])
-            {
-                // counter to count the number of provinces
-                dfs(i, adjLs, vis); // REVIEW -
-                cnt++;              // REVIEW
-            }
+          e
         }
         return cnt;
     }

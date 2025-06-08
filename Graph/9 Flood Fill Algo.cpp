@@ -19,7 +19,7 @@ public:
         {
             int nrow = row + delRow[i], ncol = col + delCol[i];
             if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m &&
-                image[nrow][ncol] == iniColor)
+                image[nrow][ncol] == iniColor) 
             {
                 dfs(nrow, ncol, image, newColor, iniColor); //REVIEW 5
             }
@@ -33,6 +33,6 @@ public:
         {                             // Prevent infinite loop if the color is the same
             dfs(sr, sc, image, color, iniColor);
         }
-        return image;
+        return image; 
     }
 };
