@@ -3,7 +3,6 @@
 #include <algorithm>
 
 using namespace std;
-
 class Solution
 {
 public:
@@ -13,12 +12,12 @@ public:
         int indegree[V] = {0};
 
         // Reverse the graph and calculate indegrees
-        for (int i = 0; i < V; i++) //REVIEW - 
+        for (int i = 0; i < V; i++) // REVIEW -
         {
             for (auto it : adj[i])
             {
-                adjRev[it].push_back(i); //REVIEW - 
-                indegree[i]++; //REVIEW - 
+                adjRev[it].push_back(i); // REVIEW - 
+                indegree[i]++;           // REVIEW -
             }
         }
 
@@ -52,7 +51,7 @@ public:
         }
 
         // Sort the safe nodes in ascending order
-        sort(safeNodes.begin(), safeNodes.end()); //REVIEW - 
+        sort(safeNodes.begin(), safeNodes.end()); // REVIEW -
         return safeNodes;
     }
 };

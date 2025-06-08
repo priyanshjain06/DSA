@@ -1,6 +1,3 @@
-//{ Driver Code Starts
-// Initial Template for C++
-
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -47,7 +44,6 @@ public:
     }
 };
 
-//{ Driver Code Starts.
 int main()
 {
     int t;
