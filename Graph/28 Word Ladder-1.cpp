@@ -10,7 +10,7 @@ public:
                          vector<string> &wordList)
     {
         // Creating a queue ds of type {word,transitions to reach ‘word’}.
-        queue<pair<string, int>> q;
+        queue<pair<string, int>> q; // REVIEW string types
 
         // BFS traversal with pushing values in queue
         // when after a transformation, a word is found in wordList.
