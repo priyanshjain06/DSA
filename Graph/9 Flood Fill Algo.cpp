@@ -15,6 +15,7 @@ public:
 
         // Movement directions: Up, Right, Down, Left
         vector<int> delRow = {-1, 0, 1, 0}, delCol = {0, 1, 0, -1};
+        
         for (int i = 0; i < 4; i++) // REVIEW - 4
         {
             int nrow = row + delRow[i], ncol = col + delCol[i];

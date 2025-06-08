@@ -48,7 +48,7 @@ public:
             }
         }
 
-        sort(components.begin(), components.end()); // Sort the list of components
+        sort(components.begin(), components.end()); //REVIEW Sort the list of components
         return components;
     }
 };

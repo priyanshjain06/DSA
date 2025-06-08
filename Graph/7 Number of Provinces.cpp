@@ -24,7 +24,7 @@ public:
     {
         vector<int> adjLs[V];
 
-        //REVIEW  to change adjacency matrix to list
+        // REVIEW  to change adjacency matrix to list
         for (int i = 0; i < V; i++)
         {
             for (int j = 0; j < V; j++)
@@ -37,13 +37,14 @@ public:
                 }
             }
         }
-        
+
         int vis[V] = {0};
-        int cnt = 0; 
+        int cnt = 0;
         for (int i = 0; i < V; i++) // REVIEW  loop for v not n
         {
             // if the node is not visited
-          e
+            dfs(i, adjLs, vis);
+            cnt++;
         }
         return cnt;
     }
