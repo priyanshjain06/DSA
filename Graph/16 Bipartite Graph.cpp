@@ -7,7 +7,7 @@ class Solution
 public:
     bool dfs(int node, int color, vector<int> &colors, const vector<vector<int>> &graph) // REVIEW -
     {
-        colors[node] = color; // Color the current node
+        colors[node] = color; //REVIEW this color is 0 check the fucntion call , Color the current node
 
         for (int neighbor : graph[node])
         {

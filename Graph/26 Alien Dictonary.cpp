@@ -54,24 +54,24 @@ public:
         vector<int> adj[K];
         for (int i = 0; i < N - 1; i++)
         {
-            string s1 = dict[i]; //FIXME 
-            string s2 = dict[i + 1]; //FIXME
+            string s1 = dict[i];     // FIXME
+            string s2 = dict[i + 1]; // FIXME
             int len = min(s1.size(), s2.size());
-            for (int ptr = 0; ptr < len; ptr++) //REVIEW -  till length
+            for (int ptr = 0; ptr < len; ptr++) // REVIEW -  till length
             {
                 if (s1[ptr] != s2[ptr])
                 {
-                    adj[s1[ptr] - 'a'].push_back(s2[ptr] - 'a'); //REVIEW - 
-                    break; //REVIEW - 
+                    adj[s1[ptr] - 'a'].push_back(s2[ptr] - 'a'); // REVIEW -
+                    break;                                       // REVIEW -
                 }
             }
         }
 
-        vector<int> topo = topoSort(K, adj); //REVIEW - 
+        vector<int> topo = topoSort(K, adj); // REVIEW - pass adj array here
         string ans = "";
         for (auto it : topo)
         {
-            ans = ans + char(it + 'a');
+            ans = ans + char(it + 'a'); // REVIEW convert to character
         }
         return ans;
     }
