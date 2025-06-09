@@ -18,7 +18,7 @@ private:
                 topoSort(v, adj, vis, st);
             }
         }
-        st.push(node);
+        st.push(node); // REVIEW st is stack !
     }
 
 public:
@@ -37,7 +37,7 @@ public:
 
         // Step 2: Topological sort
         vector<int> vis(V, 0);
-        stack<int> st;
+        stack<int> st; // REVIEW
         for (int i = 0; i < V; i++)
         {
             if (!vis[i])
@@ -56,7 +56,7 @@ public:
             int node = st.top();
             st.pop();
 
-            if (dist[node] != INT_MAX)
+            if (dist[node] != INT_MAX) // 1e9
             {
                 for (auto it : adj[node])
                 {
