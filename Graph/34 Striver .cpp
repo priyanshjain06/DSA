@@ -16,13 +16,13 @@ public:
 
         // Create a queue for storing cells with their distances from source
         // in the form {dist,{cell coordinates pair}}.
-        queue<pair<int, pair<int, int>>> q;
+        queue<pair<int, pair<int, int>>> q; // REVIEW two pairs
         int n = grid.size();
         int m = grid[0].size();
 
         // Create a distance matrix with initially all the cells marked as
         // unvisited and the source cell as 0.
-        vector<vector<int>> dist(n, vector<int>(m, 1e9));
+        vector<vector<int>> dist(n, vector<int>(m, 1e9)); // REVIEW 1e9
         dist[source.first][source.second] = 0;
         q.push({0, {source.first, source.second}});
 
@@ -52,13 +52,14 @@ public:
                 // Checking the validity of the cell and updating if dist is shorter.
                 if (newr >= 0 && newr < n && newc >= 0 && newc < m && grid[newr][newc] == 1 && dis + 1 < dist[newr][newc])
                 {
-                    dist[newr][newc] = 1 + dis;
+                    dist[newr][newc] = 1 + dis; // REVIEW
 
                     // Return the distance until the point when
                     // we encounter the destination cell.
                     if (newr == destination.first &&
                         newc == destination.second)
                         return dis + 1;
+                        
                     q.push({1 + dis, {newr, newc}});
                 }
             }
