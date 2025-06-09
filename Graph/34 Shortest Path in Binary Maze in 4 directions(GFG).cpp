@@ -7,8 +7,10 @@ class Solution
 public:
     int shortestDistance(int N, int M, vector<vector<int>> A, int X, int Y)
     {
-        // If the starting point is blocked
-        if (A[0][0] == 0)
+        // REVIEW n and m is the size of the row and column of matrix A and x and y are the coordinates of the destination
+
+        //  If the starting point is blocked
+        if (A[0][0] == 0) // REVIEW
             return -1;
 
         // Directions for up, down, left, right
