@@ -16,7 +16,7 @@ private:
             int nrow = row + delrow[i];
             int ncol = col + delcol[i];
             if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m &&
-                !vis[nrow][ncol] && board[nrow][ncol] == 'O') //REVIEW -
+                !vis[nrow][ncol] && board[nrow][ncol] == 'O') // REVIEW -
             {
                 dfs(nrow, ncol, vis, board, delrow, delcol);
             }
@@ -27,7 +27,7 @@ public:
     void solve(vector<vector<char>> &board)
     {
         int n = board.size();
-        if (n == 0)
+        if (n == 0) // REVIEW
             return;
         int m = board[0].size();
 
@@ -44,7 +44,7 @@ public:
             }
             if (!vis[n - 1][j] && board[n - 1][j] == 'O')
             {
-                dfs(n - 1, j, vis, board, delrow, delcol); //REVIEW - n-1
+                dfs(n - 1, j, vis, board, delrow, delcol); // REVIEW - n-1
             }
         }
 
@@ -53,11 +53,11 @@ public:
         {
             if (!vis[i][0] && board[i][0] == 'O')
             {
-                dfs(i, 0, vis, board, delrow, delcol);//REVIEW - i 0
+                dfs(i, 0, vis, board, delrow, delcol); // REVIEW - i 0
             }
             if (!vis[i][m - 1] && board[i][m - 1] == 'O')
             {
-                dfs(i, m - 1, vis, board, delrow, delcol); //REVIEW - im-1
+                dfs(i, m - 1, vis, board, delrow, delcol); // REVIEW - i m-1
             }
         }
 
@@ -72,6 +72,5 @@ public:
                 }
             }
         }
-        
     }
 };
