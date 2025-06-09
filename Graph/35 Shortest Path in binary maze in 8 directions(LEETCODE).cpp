@@ -2,6 +2,7 @@
 #include <vector>
 #include <queue>
 using namespace std;
+
 class Solution
 {
 public:
@@ -10,7 +11,7 @@ public:
         int n = grid.size();
 
         // If starting or ending cell is blocked
-        if (grid[0][0] != 0 || grid[n - 1][n - 1] != 0)
+        if (grid[0][0] != 0 || grid[n - 1][n - 1] != 0) // REVIEW
             return -1;
 
         // 8 directions
@@ -19,7 +20,7 @@ public:
 
         // BFS Queue: {row, col, steps}
         queue<tuple<int, int, int>> q; // REVIEW
-        q.push({0, 0, 1});             // steps = 1 since we count starting cell
+        q.push({0, 0, 1});             // REVIEW  steps = 1 since we count starting cell
 
         // Visited matrix
         vector<vector<bool>> visited(n, vector<bool>(n, false));
@@ -31,7 +32,7 @@ public:
             q.pop();
 
             // Reached destination
-            if (row == n - 1 && col == n - 1)
+            if (row == n - 1 && col == n - 1) // REVIEW
                 return steps;
 
             for (auto [dx, dy] : directions)
@@ -50,5 +51,5 @@ public:
             }
         }
         return -1; // No path found
-    }s
+    }
 };
