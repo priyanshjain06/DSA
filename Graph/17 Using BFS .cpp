@@ -11,7 +11,7 @@ public:
         queue<int> q;
         q.push(start);
         colors[start] = 0; // Start coloring the node with 0
-w
+
         while (!q.empty())
         {
             int node = q.front();
