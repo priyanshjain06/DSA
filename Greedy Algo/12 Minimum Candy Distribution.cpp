@@ -32,6 +32,7 @@ public:
                 i++;
             }
             down++;          // REVIEW -
+            
             if (down > peak) // REVIEW -  not >=
                 sum += (down - peak);
         }

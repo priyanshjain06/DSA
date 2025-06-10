@@ -13,12 +13,12 @@ int countPlatforms(int n, int arr[], int dep[])
 
     while (i < n && j < n)
     {
-        if (arr[i] <= dep[j]) // one more platform needed
+        
+      if (arr[i] <= dep[j]) // one more platform needed
         {
             count++;
             i++;
-        }
-        else // one platform can be reduced
+        }  else // one platform can be reduced
         {
             count--;
             j++;
