@@ -80,7 +80,7 @@ int main()
     {
         int k;
         cin >> k;
-        vector<vector<int>> arr(k, vector<int>(k, 0));
+        vector<vector<int>> arr(k, vectowr<int>(k, 0));
 
         for (int i = 0; i < k; i++)
         {

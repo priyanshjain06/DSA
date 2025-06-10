@@ -29,7 +29,7 @@ public:
                 swap(arr[parent], arr[index]);
                 index = parent; // REVIEW -
             }
-            else
+            else    
             {
                 return;
             }

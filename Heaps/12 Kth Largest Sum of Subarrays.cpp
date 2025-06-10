@@ -25,8 +25,8 @@ int KthLargestSumOfSubarrays(vector<int> arr, int K) {
     for(int i=0; i<size; i++) {
         int temp = 0;
         for(int j=i; j<size; j++) {
-            temp += arr[j];
-            
+                       temp += arr[j];
+ 
             if(sumStore.size() < K) {
                 sumStore.push(temp);
             } else {
