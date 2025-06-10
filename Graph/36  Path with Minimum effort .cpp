@@ -32,10 +32,10 @@ public:
             auto [row, col] = pos;       // REVIEW -
             pq.pop();
 
-            //REVIEW  or use this
-            //   int diff = it.first;
-            //  int row = it.second.first;
-            //  int col = it.second.second;
+            // REVIEW  or use this
+            //    int diff = it.first;
+            //   int row = it.second.first;
+            //   int col = it.second.second;
 
             if (row == n - 1 && col == m - 1)
                 return diff;
@@ -47,7 +47,7 @@ public:
 
                 if (newr >= 0 && newr < n && newc >= 0 && newc < m)
                 {
-                    int newEffort = max(abs(heights[row][col] - heights[newr][newc]), diff);
+                    int newEffort = max(abs(heights[row][col] - heights[newr][newc]), diff); // FIXME -
 
                     if (newEffort < dist[newr][newc])
                     {

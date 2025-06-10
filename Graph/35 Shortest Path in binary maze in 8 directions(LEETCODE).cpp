@@ -43,10 +43,11 @@ public:
                 // Boundary & condition check
                 if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n &&
                     grid[newRow][newCol] == 0 && !visited[newRow][newCol])
+                // REVIEW
                 {
 
                     visited[newRow][newCol] = true;
-                    q.push({newRow, newCol, steps + 1});
+                    q.push({newRow, newCol, steps + 1}); // REVIEW
                 }
             }
         }

@@ -18,7 +18,7 @@ public:
         int dy[] = {0, 0, -1, 1};
 
         // BFS queue storing {x, y, steps}
-        queue<vector<int>> q;
+        queue<vector<int>> q;//REVIEW queue is used 
         q.push({0, 0, 0}); // {row, col, distance}
 
         // Visited matrix

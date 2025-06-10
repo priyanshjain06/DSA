@@ -15,13 +15,14 @@ public:
             int u = edge[0];
             int v = edge[1];
             int wt = edge[2];
-            adj[u].push_back({v, wt});
-            adj[v].push_back({u, wt});
+            adj[u].push_back({v, wt}); // REVIEW
+            adj[v].push_back({u, wt}); // REVIEW
         }
 
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // REVIEW
         vector<int> dist(n + 1, 1e9);                                                       // REVIEW -  1e9 is INT_MAX , n+1
-        vector<int> parent(n + 1);                                                          // REVIEW n+1
+
+        vector<int> parent(n + 1); // REVIEW n+1
         for (int i = 1; i <= n; i++)
             parent[i] = i;
 
@@ -41,7 +42,7 @@ public:
                 if (d + wt < dist[adjNode])
                 {
                     dist[adjNode] = d + wt;
-                    parent[adjNode] = node;
+                    parent[adjNode] = node; // REVIEW
                     pq.push({dist[adjNode], adjNode});
                 }
             }

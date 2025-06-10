@@ -33,12 +33,12 @@ public:
             st.erase(it);
             // we can erase it after node and d is fetched
 
-            int node = it.second;
+            int node = it.second; //REVIEW 
             int d = it.first;
 
             for (auto &neighbor : adj[node])
             {
-                int adjNode = neighbor.first;
+                int adjNode = neighbor.first; //REVIEW 
                 int wt = neighbor.second;
 
                 if (d + wt < dist[adjNode])
@@ -51,7 +51,7 @@ public:
 
                     dist[adjNode] = d + wt;
                     st.insert({dist[adjNode], adjNode}); // REVIEW
-                }w
+                }
             }
         }
 
