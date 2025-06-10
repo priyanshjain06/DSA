@@ -42,8 +42,8 @@ public:
         for (int i = 0; i < n; i++)
         {
             // Try to find a slot for the current job
-            for (int j = arr[i].dead; j > 0; j--) //REVIEW - 
-            { // NOTE  use disjoint set union here to reduce it for time complexity
+            for (int j = arr[i].dead; j > 0; j--) // REVIEW -
+            {                                     // NOTE  use disjoint set union here to reduce it for time complexity
 
                 if (slot[j] == -1)
                 {                               // If the slot is free
@@ -55,7 +55,7 @@ public:
             }
         }
 
-        return make_pair(countJobs, jobProfit); //REVIEW  Return the result
+        return make_pair(countJobs, jobProfit); // REVIEW  Return the result
     }
 };
 
