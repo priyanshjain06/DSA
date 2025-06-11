@@ -8,11 +8,11 @@ public:
         val = 0;
         neighbors = vector<Node*>();
     }
-    Node(int _val) {
+    Node(int _val) { //REVIEW 
         val = _val;
         neighbors = vector<Node*>();
     }
-    Node(int _val, vector<Node*> _neighbors) {
+    Node(int _val, vector<Node*> _neighbors) { //REVIEW 
         val = _val;
         neighbors = _neighbors;
     }
@@ -35,9 +35,8 @@ public:
             if (mp.find(neighbor) == mp.end())
             {
                 // create the neighbor's clone
-                (newNode->neighbors)
-                    .push_back(
-                        cloneUtil(neighbor, mp)); // Recursively call it !
+                (newNode->neighbors).push_back(cloneUtil(neighbor, mp));
+                // REVIEW  Recursively call it !
             }
             else
             {
@@ -48,8 +47,7 @@ public:
     }
     Node *cloneGraph(Node *node)
     {
-        unordered_map<Node *, Node *>
-            mp; //  create a hashamp for marking old - new
+        unordered_map<Node *, Node *> mp; //  create a hashamp for marking old - new
         return cloneUtil(node, mp);
     }
 };
