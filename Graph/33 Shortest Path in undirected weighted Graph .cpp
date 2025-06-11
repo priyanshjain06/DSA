@@ -20,7 +20,8 @@ public:
         }
 
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // REVIEW
-        vector<int> dist(n + 1, 1e9);                                                       // REVIEW -  1e9 is INT_MAX , n+1
+
+        vector<int> dist(n + 1, 1e9); // REVIEW -  1e9 is INT_MAX , n+1
 
         vector<int> parent(n + 1); // REVIEW n+1
         for (int i = 1; i <= n; i++)

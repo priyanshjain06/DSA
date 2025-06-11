@@ -43,7 +43,7 @@ public:
                 // Boundary & condition check
                 if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n &&
                     grid[newRow][newCol] == 0 && !visited[newRow][newCol])
-                // REVIEW
+                // REVIEW  0 
                 {
 
                     visited[newRow][newCol] = true;
