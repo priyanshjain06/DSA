@@ -10,6 +10,7 @@ public:
     {
         // Build adjacency list: node -> [(neighbor, weight)]
         vector<pair<int, int>> adj[n];
+        
         for (auto &flight : flights)
         {
             adj[flight[0]].push_back({flight[1], flight[2]});

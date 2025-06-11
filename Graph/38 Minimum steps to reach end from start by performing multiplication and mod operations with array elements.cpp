@@ -1,7 +1,5 @@
 // REVIEW if the  number is more than 10^5 than we will need to find its mod !
 
-// User function Template for C++
-
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -21,7 +19,7 @@ public:
         q.push({start, 0});
 
         // Distance array to track minimum multiplications needed
-        vector<int> dist(100000, 1e9); //REVIEW 
+        vector<int> dist(100000, 1e9); // REVIEW
         dist[start] = 0;
 
         int mod = 100000; // REVIEW 10^5
@@ -35,7 +33,7 @@ public:
             {
                 int next = (num * node) % mod;
 
-                if (steps + 1 < dist[next]) //REVIEW 
+                if (steps + 1 < dist[next]) // REVIEW
                 {
                     dist[next] = steps + 1;
 
@@ -46,7 +44,6 @@ public:
                 }
             }
         }
-
         // If end value is unreachable
         return -1;
     }
