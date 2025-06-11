@@ -62,7 +62,7 @@ public:
                 {
                     int v = it.first;
                     int wt = it.second;
-                    if (dist[node] + wt < dist[v]) //REVIEw node v 
+                    if (dist[node] + wt < dist[v]) //REVIEW node v 
                     {
                         dist[v] = dist[node] + wt;
                     }

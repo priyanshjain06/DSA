@@ -60,7 +60,7 @@ public:
             {
                 // check for unvisited land cell
                 if (grid[i][j] == 1 & vis[i][j] == 0)//REVIEW - 
-                    cnt++;
+                    cnt++; //REVIEW - 
             }
         }
         return cnt;
