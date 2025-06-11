@@ -20,6 +20,7 @@ public:
         visited.insert(start); // REVIEW
 
         for (auto &[neighbor, weight] : graph[start])
+        // REVIEW first loop then check visited or not
         {
             if (visited.count(neighbor) == 1)
                 continue; // skip if node is visited !
@@ -53,7 +54,7 @@ public:
         {
             string start = query[0];
             string end = query[1];
-            unordered_set<string> visited; //REVIEW set of visited nodes
+            unordered_set<string> visited; // REVIEW set of visited nodes
             result.push_back(dfs(start, end, visited));
         }
 

@@ -8,7 +8,7 @@ public:
     int snakesAndLadders(vector<vector<int>> &board)
     {
         int n = board.size();
-        vector<int> arr(n * n + 1);
+        vector<int> arr(n * n + 1); //REVIEW 
         // Flatten the 2D board into a 1D array
         for (int i = 0; i < n; ++i)
         {
@@ -29,7 +29,7 @@ public:
         while (!q.empty())
         {
             int sz = q.size();
-            while (sz--)
+            while (sz--) // REVIEW
             {
                 int curr = q.front();
                 q.pop();
@@ -38,7 +38,8 @@ public:
 
                 for (int next = curr + 1; next <= min(curr + 6, n * n); ++next)
                 {
-                    int dest = (arr[next] > 0 ? arr[next] : next);
+                    int dest = (arr[next] > 0 ? arr[next] : next); 
+                    //REVIEW arr[next] > 0 handles the ladders 
                     if (!seen[dest])
                     {
                         seen[dest] = true;
@@ -46,8 +47,12 @@ public:
                     }
                 }
             }
-            ++moves;
+            ++moves; // REVIEW 
         }
         return -1;
     }
 };
+
+//REVIEW We cannot avoid snakes here 
+//REVIEW all the -1 means normal square , not a snake not a ladder
+//REVIEW  number > 0 means either a snake or a ladder
