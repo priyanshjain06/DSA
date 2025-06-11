@@ -12,14 +12,14 @@ public:
         vector<pair<int, int>> adj[n];
 
         // Build the adjacency list
-        for (auto &it : roads)
+        for (auto &it : roads) //REVIEW 
         {
             adj[it[0]].push_back({it[1], it[2]});
             adj[it[1]].push_back({it[0], it[2]});
         }
 
         // Use long long for large values
-        using ll = long long; // REVIEW
+        using ll = long long; // REVIEW //FIXME - 
 
         priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<>> pq;
         // REVIEW
@@ -40,7 +40,7 @@ public:
 
             for (auto &[adjNode, weight] : adj[node])
             {
-                ll newDist = dis + weight;
+                ll newDist = dis + weight; //REVIEW ll 
                 if (newDist < dist[adjNode])
                 {
                     dist[adjNode] = newDist;
