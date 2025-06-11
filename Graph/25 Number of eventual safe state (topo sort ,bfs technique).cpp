@@ -29,7 +29,7 @@ public:
         {
             if (indegree[i] == 0)
             {
-                q.push(i);
+                q.push(i); 
             }
         }
 

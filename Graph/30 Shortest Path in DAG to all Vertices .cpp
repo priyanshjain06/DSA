@@ -56,7 +56,7 @@ public:
             int node = st.top();
             st.pop();
 
-            if (dist[node] != INT_MAX) // 1e9
+            if (dist[node] != INT_MAX) // 1e9 //REVIEW 
             {
                 for (auto it : adj[node])
                 {
@@ -64,7 +64,8 @@ public:
                     int wt = it.second;
                     if (dist[node] + wt < dist[v]) //REVIEW node v 
                     {
-                        dist[v] = dist[node] + wt;
+                        dist[v] = dist[node] + wt; 
+                        //REVIEW no push in stack or queue 
                     }
                 }
             }
