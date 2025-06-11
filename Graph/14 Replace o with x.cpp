@@ -33,7 +33,7 @@ public:
 
         int delrow[] = {-1, 0, +1, 0};
         int delcol[] = {0, +1, 0, -1};
-        vector<vector<int>> vis(n, vector<int>(m, 0)); // Mark visited
+        vector<vector<int>> vis(n, vector<int>(m, 0)); //FIXME Mark visited
 
         // Traverse first row and last row
         for (int j = 0; j < m; j++)
