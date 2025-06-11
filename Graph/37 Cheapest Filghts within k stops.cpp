@@ -15,8 +15,8 @@ public:
             adj[flight[0]].push_back({flight[1], flight[2]});
         }
 
-        //REVIEW  Queue holds: {stops, {node, total cost}}
-        
+        // REVIEW  Queue holds: {stops, {node, total cost}}
+
         queue<pair<int, pair<int, int>>> q; // REVIEW queue is used !
         q.push({0, {src, 0}});
 
@@ -37,8 +37,8 @@ public:
             if (stops > k)
                 continue; // REVIEW
 
-            for (auto &[adjNode, weight] : adj[node]) 
-            //REVIEW we can use  auto it also 
+            for (auto &[adjNode, weight] : adj[node])
+            // REVIEW we can use  auto it also
             {
                 int newCost = cost + weight;
 

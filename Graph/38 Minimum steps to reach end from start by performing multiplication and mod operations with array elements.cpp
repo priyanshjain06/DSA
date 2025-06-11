@@ -21,7 +21,7 @@ public:
         q.push({start, 0});
 
         // Distance array to track minimum multiplications needed
-        vector<int> dist(100000, 1e9);
+        vector<int> dist(100000, 1e9); //REVIEW 
         dist[start] = 0;
 
         int mod = 100000; // REVIEW 10^5
