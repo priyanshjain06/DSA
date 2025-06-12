@@ -11,7 +11,8 @@ public:
     {
         rank.resize(n + 1, 0);
         parent.resize(n + 1);
-        size.resize(n + 1, 1); // Initially, every set has size 1
+        size.resize(n + 1, 1);
+        // REVIEW n+1 coz to manage both 0 and 1 based indexing !
 
         for (int i = 0; i <= n; i++)
         {
@@ -46,7 +47,7 @@ public:
         else
         {
             parent[ulp_v] = ulp_u;
-            rank[ulp_u]++;
+            rank[ulp_u]++; //REVIEW 
         }
     }
 
