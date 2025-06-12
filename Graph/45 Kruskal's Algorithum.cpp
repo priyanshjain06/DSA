@@ -106,7 +106,6 @@ public:
                 ds.unionBySize(u, v); // REVIEW
             }
         }
-
         return mstWt;
     }
 };
