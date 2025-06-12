@@ -30,7 +30,7 @@ public:
                     // i to j, then update the value of dist[i][j]
 
                     if (dist[i][k] != 100000000 && dist[k][j] != 100000000 &&
-                        dist[i][j] > dist[i][k] + dist[k][j])
+                        dist[i][j] > dist[i][k] + dist[k][j]) //REVIEW 
                     {
                         dist[i][j] = dist[i][k] + dist[k][j];
                     }
