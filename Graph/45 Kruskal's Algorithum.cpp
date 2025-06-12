@@ -91,8 +91,8 @@ public:
                 edges.push_back({wt, {node, adjNode}});
             }
         }
-        DisjointSet ds(V);  //REVIEW 
-        sort(edges.begin(), edges.end()); //REVIEW edge is list 
+        DisjointSet ds(V);                // REVIEW
+        sort(edges.begin(), edges.end()); // REVIEW edge is list
         int mstWt = 0;
         for (auto it : edges)
         {
@@ -100,10 +100,10 @@ public:
             int u = it.second.first;
             int v = it.second.second;
 
-            if (ds.findUPar(u) != ds.findUPar(v)) //REVIEW call findparent
+            if (ds.findUPar(u) != ds.findUPar(v)) // REVIEW call findparent
             {
                 mstWt += wt;
-                ds.unionBySize(u, v); //REVIEW 
+                ds.unionBySize(u, v); // REVIEW
             }
         }
 
