@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -52,7 +51,7 @@ public:
             }
         }
 
-        // Step 2: Group emails by ultimate parent
+        //  Step 2: Group emails by ultimate parent
         vector<string> mergedEmails[n];
         for (auto& [email, idx] : emailToNode) {
             int parent = ds.findUPar(idx);
@@ -68,7 +67,6 @@ public:
             merged.insert(merged.end(), mergedEmails[i].begin(), mergedEmails[i].end());
             result.push_back(merged);
         }
-
         return result;
     }
 };
