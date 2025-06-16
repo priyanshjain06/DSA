@@ -8,7 +8,7 @@ public:
         int n = nums.size();
         vector<int> ans(n, 1);
 
-        // First loop: prefix product
+        // First loop: prefix product left to right !
         for (int i = 1; i < n; ++i) {
             ans[i] = ans[i - 1] * nums[i - 1];
         }
