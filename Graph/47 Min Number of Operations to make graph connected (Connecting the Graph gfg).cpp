@@ -12,7 +12,7 @@ class DisjointSet
 public:
     DisjointSet(int n)
     {
-        parent.resize(n);
+        parent.resize(n); //REVIEW 
         size.resize(n, 1);
         for (int i = 0; i < n; i++)
             parent[i] = i;

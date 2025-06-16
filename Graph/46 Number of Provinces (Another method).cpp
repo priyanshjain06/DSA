@@ -10,7 +10,7 @@ public:
     DisjointSet(int n)
     {
         rank.resize(n, 0);
-        parent.resize(n);
+        parent.resize(n); // REVIEW -  0 based indexing , so not n+1
         size.resize(n, 1);
         for (int i = 0; i < n; i++)
             parent[i] = i;
@@ -41,12 +41,6 @@ public:
             size[ulp_u] += size[ulp_v];
         }
     }
-
-    // To access parent array externally in numProvinces
-    vector<int> getParent()
-    {
-        return parent;
-    }
 };
 
 class Solution
@@ -61,7 +55,7 @@ public:
             {
                 if (adj[i][j] == 1 && i != j)
                 {
-                    ds.unionBySize(i, j); //REVIEW 
+                    ds.unionBySize(i, j); // REVIEW
                 }
             }
         }
