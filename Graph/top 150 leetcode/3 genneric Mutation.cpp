@@ -42,7 +42,7 @@ public:
                     if (ch == original)
                         continue; // REVIEW
 
-                    current[i] = ch;
+                    current[i] = ch; //REVIEW - 
                     if (valid.count(current) && !visited.count(current))
                     {
                         visited.insert(current);
