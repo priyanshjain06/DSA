@@ -47,7 +47,7 @@ int main()
     int n = 3;
     vector<int> dp(n + 1, -1);
 
-    dp[0] = 1;
+    dp[0] = 1; //REVIEW - 
     dp[1] = 1;
 
     for (int i = 2; i <= n; i++)

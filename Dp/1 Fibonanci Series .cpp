@@ -15,15 +15,6 @@ int f(int n, vector<int> &dp)
     return dp[n] = f(n - 1, dp) + f(n - 2, dp);
 }
 
-int main()
-{
-
-    int n = 5;
-    vector<int> dp(n + 1, -1);
-    cout << f(n, dp);
-    return 0;
-}
-
 // REVIEW Tabulaion :
 // time complexity : O(n) and Space Complexity : O(n)
 
@@ -48,8 +39,6 @@ int main()
 
 // REVIEW space Optimization :
 // Time Complexity :  O(N) and Space Complexity :  O(1)
-
-
 
 using namespace std;
 
