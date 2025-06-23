@@ -1,5 +1,5 @@
 // REVIEW Recurssion :
-// Time:  O(N*N) and Space Complexity : O(N*N)+ O(n)
+// Time:  O(3^N*N) and Space Complexity : O(N*N)+ O(n)
 
 #include <iostream>
 #include <vector>
