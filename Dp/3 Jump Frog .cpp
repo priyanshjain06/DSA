@@ -19,7 +19,7 @@ int frogJump(int i, vector<int> &height)
     return min(jumpOne, jumpTwo);
 }
 
-// REVIEW - memoization : Time: n and Space Complexity :  n
+// REVIEW - memorization : Time: n and Space Complexity :  n
 
 using namespace std;
 
