@@ -99,7 +99,7 @@ int ninjaTraining(int n, vector<vector<int>> &points)
         }
     }
 
-    return dp[n - 1][3];
+    return dp[n - 1][3];//SECTION - 
 }
 
 // REVIEW - Space Optimization
