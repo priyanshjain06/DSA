@@ -45,7 +45,7 @@ int main()
     vector<int> height{30, 10, 60, 10, 60, 50};
     int n = height.size();
     vector<int> dp(n, -1);
-    dp[0] = 0; //REVIEW - 
+    dp[0] = 0; // REVIEW -
     for (int ind = 1; ind < n; ind++)
     {
         int jumpTwo = INT_MAX;
