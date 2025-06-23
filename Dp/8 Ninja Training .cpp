@@ -49,7 +49,7 @@ int f(int day, int last, vector<vector<int>> &points, vector<vector<int>> &dp)
 
         for (int i = 0; i <= 2; i++)
         {
-                maxi = max(maxi, points[0][i]);
+            maxi = max(maxi, points[0][i]);
         }
         return dp[day][last] = maxi; // SECTION -
     }
@@ -99,7 +99,7 @@ int ninjaTraining(int n, vector<vector<int>> &points)
         }
     }
 
-    return dp[n - 1][3];//SECTION - 
+    return dp[n - 1][3]; // SECTION -
 }
 
 // REVIEW - Space Optimization
@@ -123,13 +123,13 @@ int ninjaTraining(int n, vector<vector<int>> &points)
         vector<int> temp(4, 0);
         for (int last = 0; last < 4; last++)
         {
-            temp[last] = 0; //! SECTION
+            temp[last] = 0; // SECTION
             for (int task = 0; task <= 2; task++)
             {
                 if (task != last)
                 {
 
-                    temp[last] = max(temp[last], points[day][task] + prev[task]);
+                    temp[last] = max(temp[last], points[day][task] + prev[task]); // SECTION - temp [last]
                 }
             }
         }

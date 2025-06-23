@@ -98,7 +98,7 @@ int countWays(int m, int n)
 
 int countWays(int m, int n)
 {
-    vector<int> prev(n, 0);
+    vector<int> prev(n, 0); //SECTION - 
 
     for (int i = 0; i < m; i++)
     {
