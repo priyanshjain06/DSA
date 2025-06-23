@@ -115,7 +115,7 @@ int getMaxPathSum(vector<vector<int>> &matrix)
         }
     }
 
-    int maxi = INT_MIN;
+    int maxi = INT_MIN; //SECTION - 
     for (int j = 0; j < m; j++)
     {
         maxi = max(maxi, dp[n - 1][j]);
@@ -132,7 +132,7 @@ int getMaxPathSum(vector<vector<int>> &matrix)
     int n = matrix.size();
     int m = matrix[0].size();
 
-    vector<int> prev(m, 0);
+    // vector<int> prev(m, 0);// SECTION if  we copy directly then dont declare it here if loop is used then it will work
     vector<int> cur(m, 0);
 
     vector<int> prev(matrix[0]);
@@ -144,6 +144,7 @@ int getMaxPathSum(vector<vector<int>> &matrix)
         for (int j = 0; j < m; j++)
         {
             int up = matrix[i][j] + prev[j];
+            // SECTION cannot go out of bound
 
             int leftDiagonal = matrix[i][j];
             if (j - 1 >= 0)
