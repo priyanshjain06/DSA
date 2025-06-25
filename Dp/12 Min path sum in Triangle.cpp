@@ -46,7 +46,7 @@ int minimumPathSum(vector<vector<int>> &triangle, int n)
     return minimumPathSumUtil(0, 0, triangle, n, dp);
 }
 
-// REVIEW -  Space Optimization :
+// REVIEW -  Tabulation :
 //  TIME : O(n*n) and Space : O(n*n)
 
 int minimumPathSum(vector<vector<int>> &triangle, int n)
@@ -63,7 +63,7 @@ int minimumPathSum(vector<vector<int>> &triangle, int n)
     }
 
     // SECTION -  why two loops ? coz row number  =  elements (i.e no. of  columns) eg 1st row = 1 elmenent which is 1st column
-    for (int i = n - 2; i >= 0; i--)
+    for (int i = n - 2; i >= 0; i--) // NOTE reverse loop
     {
         for (int j = i; j >= 0; j--)
         {

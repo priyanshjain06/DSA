@@ -23,6 +23,6 @@ public:
             prev = cur;
         }
 
-        return *min_element(prev.begin(), prev.end()); // REVIEW min element instead of max
+        return *min_element(prev.begin(), prev.end()); // REVIEW min element instead of max sicne we need to return asnwer in sorted way
     }
 };

@@ -102,8 +102,7 @@ int minSumPath(int n, int m, vector<vector<int>> &matrix)
                 temp[j] = matrix[i][j];
             else
             {
-
-                int up = matrix[i][j];
+                int up = matrix[i][j]; // SECTION - not 0
                 if (i > 0)
                     up += prev[j];
                 else // SECTION -
