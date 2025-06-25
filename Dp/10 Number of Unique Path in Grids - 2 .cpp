@@ -81,6 +81,7 @@ int mazeObstacles(int n, int m, vector<vector<int>> &maze)
                 temp[j] = 0;
                 continue;
             }
+
             if (i == 0 && j == 0)
             {
                 temp[j] = 1;
@@ -91,9 +92,9 @@ int mazeObstacles(int n, int m, vector<vector<int>> &maze)
             int left = 0;
 
             if (i > 0)
-                up = prev[j];
+                up = prev[j]; // SECTION -
             if (j > 0)
-                left = temp[j - 1];
+                left = temp[j - 1]; // SECTION -
             temp[j] = up + left;
         }
         prev = temp;

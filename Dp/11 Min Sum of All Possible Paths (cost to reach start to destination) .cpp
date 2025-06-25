@@ -70,12 +70,14 @@ int minSumPath(int n, int m, vector<vector<int>> &matrix)
                 if (i > 0)
                     up += dp[i - 1][j]; // SECTION -  compound operator
                 else
-                    up += 1e9;
+                    up += 1e9; // SECTION -
+
                 int left = matrix[i][j];
                 if (j > 0)
                     left += dp[i][j - 1];
                 else
                     left += 1e9;
+
                 dp[i][j] = min(up, left);
             }
         }
