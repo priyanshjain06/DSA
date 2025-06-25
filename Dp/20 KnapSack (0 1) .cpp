@@ -1,5 +1,5 @@
 // REVIEW Recurrsion
-
+// Time : O(2^n) and Space : O(n)
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -28,6 +28,7 @@ public:
 };
 
 // REVIEW  Memorization
+// Time : O(n * W) and Space : O(n * W)
 
 class Solution
 {
@@ -56,6 +57,8 @@ public:
 };
 
 // REVIEW Tabulation
+// Time : O(n * W) and Space : O(n * W)
+
 class Solution
 {
 public:
@@ -83,7 +86,8 @@ public:
     }
 };
 
-// REVIEW space Optimization    
+// REVIEW space Optimization
+// Time : and Space :
 
 int knapsack(vector<int> wt, vector<int> val, int n, int maxWeight)
 {
@@ -114,11 +118,11 @@ int knapsack(vector<int> wt, vector<int> val, int n, int maxWeight)
 
 // REVIEW Space Optimization
 // NOTE using only 1 prev vector and scaninng right to left instead of left to right and 2 vector
-//Time O(n * maxWeight) and Space O(maxWeight)
+// Time Complexity : O(n * maxWeight) and Space Complexity ; O(maxWeight)
 
 int knapsack(vector<int> wt, vector<int> val, int n, int maxWeight)
 {
-    vector<int> prev(maxWeight + 1, 0); 
+    vector<int> prev(maxWeight + 1, 0);
 
     for (int W = wt[0]; W <= maxWeight; W++)
         prev[W] = val[0];
