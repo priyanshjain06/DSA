@@ -128,7 +128,6 @@ int ninjaTraining(int n, vector<vector<int>> &points)
             {
                 if (task != last)
                 {
-
                     temp[last] = max(temp[last], points[day][task] + prev[task]); // SECTION - temp [last]
                 }
             }

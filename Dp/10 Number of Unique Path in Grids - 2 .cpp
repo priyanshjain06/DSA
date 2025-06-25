@@ -3,7 +3,6 @@
 #include <vector>
 using namespace std;
 
-// Helper function to count the number of paths from (i, j) to (0, 0)
 int mazeObstaclesUtil(int i, int j, vector<vector<int>> &maze, vector<vector<int>> &dp)
 {
     // Base cases
