@@ -1,6 +1,6 @@
 // REVIEW Recurssion
 //  Time:  and Space :O(n)
-// NOTE this q has same concept as q 19 
+// NOTE this q has same concept as q 19
 #include <iostream>
 #include <vector>
 #include <numeric>
@@ -128,7 +128,7 @@ int targetSum(int n, int target, vector<int> &arr)
 // REVIEW Space Optimization
 //  Time :O(n*k) and space : O(k)
 
-const int mod = (int)1e9 + 7; 
+const int mod = (int)1e9 + 7;
 
 int findWays(vector<int> &num, int tar)
 {
@@ -152,7 +152,7 @@ int findWays(vector<int> &num, int tar)
             int taken = 0;
             if (num[ind] <= target)
                 taken = prev[target - num[ind]];
-            cur[target] = (notTaken + taken) % mod; 
+            cur[target] = (notTaken + taken) % mod;
         }
         prev = cur;
     }
@@ -161,9 +161,8 @@ int findWays(vector<int> &num, int tar)
 
 int targetSum(int n, int target, vector<int> &arr)
 {
-    int totSum = accumulate(arr.begin(), arr.end(), 0); //SECTION
-    if (totSum - target < 0 || (totSum - target) % 2 != 0) 
+    int totSum = accumulate(arr.begin(), arr.end(), 0); // SECTION
+    if (totSum - target < 0 || (totSum - target) % 2 != 0)
         return 0;
     return findWays(arr, (totSum - target) / 2);
 }
-    
