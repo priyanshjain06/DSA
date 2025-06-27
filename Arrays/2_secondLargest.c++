@@ -1,6 +1,7 @@
 // brute force : sort the elements and second last which is not eqaul to last element . O(nlogn)
 // better : find largest and then find second largest by comapring
 // optimal :
+
 #include <iostream>
 #include <climits>
 using namespace std;
