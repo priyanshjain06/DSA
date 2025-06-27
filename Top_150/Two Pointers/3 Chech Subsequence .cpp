@@ -1,6 +1,8 @@
 #include <string>
 using namespace std;
 
+// LINK https://leetcode.com/problems/is-subsequence/description/
+
 class Solution
 {
 public:

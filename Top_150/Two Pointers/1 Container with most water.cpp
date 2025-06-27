@@ -17,7 +17,6 @@ public:
             else
                 j--;
         }
-
         return maxArea;
     }
 };
