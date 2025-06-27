@@ -9,6 +9,8 @@ using namespace std;
 // j will always point to the last zero element
 // while i will point to the non-zero element
 
+// LINK https://leetcode.com/problems/move-zeroes/description/
+
 vector<int> moveZeros(int n, vector<int> a)
 {
     int j = -1;
