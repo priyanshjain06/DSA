@@ -28,13 +28,3 @@ int pascalTriangle(int r, int c)
     return element;
 }
 
-
-int main()
-{
-    int r = 5; // row number
-    int c = 3; // col number
-    int element = pascalTriangle(r, c);
-    cout << "The element at position (r,c) is: "
-         << element << "n";
-    return 0;
-}

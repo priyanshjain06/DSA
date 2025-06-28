@@ -3,15 +3,23 @@
 #include <algorithm>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    int hIndex(vector<int>& citations) {
-        sort(citations.begin(), citations.end());  // Sort citations in ascending order
+    int hIndex(vector<int> &citations)
+    {
+        sort(citations.begin(), citations.end());
+        // Sort citations in ascending order
+
         int n = citations.size();
 
-        for (int i = 0; i < n; ++i) {
-            int h = n - i;  // Number of papers with at least citations[i] citations
-            if (citations[i] >= h) {
+        for (int i = 0; i < n; ++i)
+        {
+            int h = n - i;
+            // Number of papers with at least citations[i] citations
+
+            if (citations[i] >= h)
+            {
                 return h;
             }
         }
@@ -19,9 +27,9 @@ public:
         return 0;
     }
 };
-//REVIEW -  dry run :Example:
-// Input: [3, 0, 6, 1, 5]
-// Sorted: [0, 1, 3, 5, 6]
+// REVIEW -  dry run :Example:
+//  Input: [3, 0, 6, 1, 5]
+//  Sorted: [0, 1, 3, 5, 6]
 
 // Try:
 
