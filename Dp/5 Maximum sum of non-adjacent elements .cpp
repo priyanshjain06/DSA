@@ -27,7 +27,7 @@ public:
 };
 
 // REVIEW memorization
-// TIme :  O(n) and space : n +n = n
+// Time :  O(n) and space : n +n = n
 
 int solveUtil(int ind, vector<int> &arr, vector<int> &dp)
 {
