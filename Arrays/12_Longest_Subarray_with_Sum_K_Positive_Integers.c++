@@ -1,6 +1,6 @@
 // NOTE -  Subarray with given Sum K(Positives)
 //  time complexity : O(2n)
-//  ANCHOR remember that subarray can be of 0 length and also of entre array
+//  ANCHOR remember that subarray can be of 0 length and also of entire array
 //  in simple terms subarray is consecutive or contagious array
 
 #include <iostream>
@@ -14,8 +14,8 @@ int getLongestSubarray(vector<int> &a, long long k)
     int left = 0, right = 0; // 2 pointers
     long long sum = a[0];
     int maxLen = 0;
-    
-    while (right < n) //REVIEW -
+
+    while (right < n) // REVIEW -
     {
         // if sum > k, reduce the subarray from left
         // until sum becomes less or equal to k:
@@ -35,8 +35,8 @@ int getLongestSubarray(vector<int> &a, long long k)
 
         // Move forward the right pointer:
         right++;
-        
-        if (right <= n - 1) //REVIEW - 
+
+        if (right <= n - 1) // REVIEW -
             sum += a[right];
     }
 
