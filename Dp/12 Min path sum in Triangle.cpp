@@ -8,7 +8,7 @@ using namespace std;
 int minimumPathSumUtil(int i, int j, vector<vector<int>> &triangle, int n, vector<vector<int>> &dp)
 {
 
-    // SECTION here we start from 0 go to  till last row reverse of conventonal recurssion
+    // SECTION here we start from 0 go to  till last row reverse of conventional recurssion
     if (i == n - 1)
         return triangle[i][j];
 
@@ -72,7 +72,6 @@ int minimumPathSum(vector<vector<int>> &triangle, int n)
             dp[i][j] = min(down, diagonal);
         }
     }
-
     return dp[0][0];
 }
 
