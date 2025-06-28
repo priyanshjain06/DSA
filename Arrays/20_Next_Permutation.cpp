@@ -3,12 +3,11 @@
 //  Given an array Arr[] of integers, rearrange the numbers of the given array into the lexicographically next greater permutation of numbers.
 //  If such an arrangement is not possible, it must rearrange to the lowest possible order (i.e., sorted in ascending order).
 
-//LINK -  the approach is to find the break point and then find the next greater element  and swap it with the break point
+// LINK -  the approach is to find the break point and then find the next greater element  and swap it with the break point
 
 // NOTE - time complexity : O(3n) and space complexity : O(1)
 
-//REVIEW -  for better and brute force approach refer to screenshot
-
+// REVIEW -  for better and brute force approach refer to screenshot
 
 #include <iostream>
 #include <vector>
@@ -20,8 +19,8 @@ vector<int> nextGreaterPermutation(vector<int> &A)
     int n = A.size(); // size of the array.
 
     // Step 1: Find the break point:
-    int ind = -1; // break point
-    for (int i = n - 2; i >= 0; i--) //REVIEW - 
+    int ind = -1;                    // break point
+    for (int i = n - 2; i >= 0; i--) // REVIEW -
     {
         if (A[i] < A[i + 1])
         {
@@ -53,7 +52,6 @@ vector<int> nextGreaterPermutation(vector<int> &A)
 
     // Step 3: reverse the right half:
     reverse(A.begin() + ind + 1, A.end());
-
     return A;
 }
 

@@ -29,13 +29,11 @@ vector<int> printSpiral(vector<vector<int>> mat)
         // For moving left to right
         for (int i = left; i <= right; i++)
             ans.push_back(mat[top][i]);
-
         top++;
 
         // For moving top to bottom.
         for (int i = top; i <= bottom; i++)//REVIEW - 
             ans.push_back(mat[i][right]);
-
         right--;
 
         // For moving right to left.
