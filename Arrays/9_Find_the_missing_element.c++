@@ -1,16 +1,14 @@
 // time complexity O(n) and space comlexity O(1)
 // NOTE here N is the size of the array (size of given array+1)
 
-// you can also use xor rember xor of 2^2 is o while xor of 2^0 is 2 while xor of 2^2^2 is 2
+// you can also use xor remember xor of 2^2 is o while xor of 2^0 is 2 while xor of 2^2^2 is 2
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-
 int missingNumber(vector<int> &a, int N)
 {
-
     // Summation of first N numbers:
     int sum = (N * (N + 1)) / 2;
 
@@ -24,7 +22,6 @@ int missingNumber(vector<int> &a, int N)
     int missingNum = sum - s2;
     return missingNum;
 }
-
 
 int main()
 {

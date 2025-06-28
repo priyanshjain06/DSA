@@ -11,9 +11,10 @@
 // Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 // Output: [9,4]
 // Explanation: [4,9] is also accepted.
+
+
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 vector<int> intersectionOfArrays(vector<int> A, vector<int> B)
@@ -46,21 +47,4 @@ vector<int> intersectionOfArrays(vector<int> A, vector<int> B)
     }
   }
   return ans;
-}
-
-int main()
-{
-
-  // Array Initialisation.
-  vector<int> A{1, 2, 3, 3, 4, 5, 6, 7};
-  vector<int> B{3, 3, 4, 4, 5, 8};
-
-  vector<int> ans = intersectionOfArrays(A, B);
-
-  for (int i = 0; i < ans.size(); i++)
-  {
-    cout << ans[i] << " ";
-  }
-
-  return 0;
 }
