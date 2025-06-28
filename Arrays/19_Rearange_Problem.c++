@@ -1,10 +1,10 @@
 // NOTE Positive and negative numbers are alternated as much as possible.
 //  If there are leftover numbers from either the positive or negative side, they are placed at the end of the array.
 
+
 // LINK time complexity : O(2n) and space complexity : O(n)
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 vector<int> RearrangebySign(vector<int> A, int n)

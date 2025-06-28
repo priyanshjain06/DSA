@@ -7,18 +7,17 @@
 
 using namespace std;
 
-
 vector<int> RearrangebySign(vector<int> A)
 {
 
     int n = A.size();
 
     // Define array for storing the ans separately.
-    vector<int> ans(n, 0);//REVIEW - 
+    vector<int> ans(n, 0); // REVIEW -
 
     // positive elements start from 0 and negative from 1.
-    int posIndex = 0, negIndex = 1; //REVIEW - 
-    
+    int posIndex = 0, negIndex = 1; // REVIEW -
+
     for (int i = 0; i < n; i++)
     {
 
@@ -38,21 +37,4 @@ vector<int> RearrangebySign(vector<int> A)
     }
 
     return ans;
-}
-
-int main()
-{
-
-    // Array Initialisation.
-
-    vector<int> A = {1, 2, -4, -5};
-
-    vector<int> ans = RearrangebySign(A);
-
-    for (int i = 0; i < ans.size(); i++)
-    {
-        cout << ans[i] << " ";
-    }
-
-    return 0;
 }

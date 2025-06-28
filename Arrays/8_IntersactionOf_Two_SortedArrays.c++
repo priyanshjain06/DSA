@@ -12,7 +12,6 @@
 // Output: [9,4]
 // Explanation: [4,9] is also accepted.
 
-
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -25,7 +24,7 @@ vector<int> intersectionOfArrays(vector<int> A, vector<int> B)
 
   int i = 0, j = 0;
 
-  // to traverse the arraysz
+  // to traverse the arrays
   while (i < A.size() && j < B.size())
   {
 
