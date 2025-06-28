@@ -1,17 +1,19 @@
-//ANCHOR - Find the number that appears once, and while rest of the numbers appear twice 
-//NOTE time complexity : O(n)
+// ANCHOR - Find the number that appears once, and while rest of the numbers appear twice
+// NOTE time complexity : O(n)
+
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
-int getSingleElement(vector<int> &arr) {
-    //size of the array:
+int getSingleElement(vector<int> &arr)
+{
+    // size of the array:
     int n = arr.size();
 
     // XOR all the elements:
     int xorr = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         xorr = xorr ^ arr[i];
     }
     return xorr;

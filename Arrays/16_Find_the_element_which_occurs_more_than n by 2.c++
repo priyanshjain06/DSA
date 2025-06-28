@@ -14,7 +14,6 @@
 // NOTE time complexity : O(n) + O(n) (optinal) and space complexity : O(1)
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 int majorityElement(vector<int> v)
@@ -38,7 +37,7 @@ int majorityElement(vector<int> v)
         else
             cnt--;
     }
-    
+
     // checking if the stored element
     //  is the majority element:
     int cnt1 = 0;
@@ -52,12 +51,4 @@ int majorityElement(vector<int> v)
     if (cnt1 > (n / 2))
         return el;
     return -1;
-}
-
-int main()
-{
-    vector<int> arr = {2, 2, 1, 1, 1, 2, 2};
-    int ans = majorityElement(arr);
-    cout << "The majority element is: " << ans << endl;
-    return 0;
 }

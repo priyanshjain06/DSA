@@ -1,11 +1,10 @@
 // LINK -  the approach is called as  Dutch National Flag Algo
 //   the concept it to use 3 pointer and sort the array
 
-// NOTE  time complexit is O(n) and space complexity is O(1)
+// NOTE  time complexity is O(n) and space complexity is O(1)
 
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 void sortArray(vector<int> &arr, int n)
