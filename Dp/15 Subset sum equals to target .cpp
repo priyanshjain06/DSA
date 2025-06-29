@@ -77,7 +77,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr)
                 taken = dp[ind - 1][target - arr[ind]];
             }
 
-            dp[ind][target] = notTaken || taken;
+            dp[ind][target] = notTaken || taken; 
         }
     }
 

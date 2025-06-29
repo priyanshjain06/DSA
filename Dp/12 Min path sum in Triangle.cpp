@@ -63,6 +63,7 @@ int minimumPathSum(vector<vector<int>> &triangle, int n)
     }
 
     // SECTION -  why two loops ? coz row number  =  elements (i.e no. of  columns) eg 1st row = 1 elmenent which is 1st column
+
     for (int i = n - 2; i >= 0; i--) // NOTE reverse loop
     {
         for (int j = i; j >= 0; j--)
