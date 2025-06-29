@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int mod = (int)1e9 + 7;
+int mod = (int)1e9 + 7; // SECTION -
 
 int countPartitionsUtil(int ind, int target, vector<int> &arr, vector<vector<int>> &dp)
 {
@@ -105,7 +105,7 @@ int countPartitions(int n, int d, vector<int> &arr)
 // REVIEW - Space Optimization
 //  Time : O(N*k) and Space Complexity : O(k)
 
-int mod = (int)1e9 + 7; //SECTION - 
+int mod = (int)1e9 + 7; // SECTION -
 
 int findWays(vector<int> &num, int tar)
 {
@@ -132,8 +132,8 @@ int findWays(vector<int> &num, int tar)
             if (num[ind] <= target)
                 taken = prev[target - num[ind]];
 
-            cur[target] = (notTaken + taken) % mod; //SECTION - 
-        } 
+            cur[target] = (notTaken + taken) % mod; // SECTION -
+        }
         prev = cur;
     }
     return prev[tar];
