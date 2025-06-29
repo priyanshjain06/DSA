@@ -2,7 +2,7 @@
 
 // REVIEW  concept  is to select the min  in the array and campare to start of the array  if condition fails then swap the places
 
-#include <iostream> // For input/output
+#include <iostream> 
 using namespace std;
 void selection_sort(int arr[], int n)
 {

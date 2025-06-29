@@ -1,5 +1,5 @@
 // Time Complexity all cases : O(n ^2)
-// the concept is to push the maximum to the end the of the array by comparing the adjacent
+// the concept is to push the maximum to the end  of the array by comparing the adjacent
 
 #include <iostream>
 using namespace std;
