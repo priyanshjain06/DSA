@@ -22,7 +22,6 @@ public:
         int pick = INT_MIN;
         if (wt[index] <= W)
             pick = val[index] + solve(index - 1, W - wt[index], val, wt);
-
         return max(pick, notPick);
     }
 };

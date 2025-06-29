@@ -97,9 +97,9 @@ long countWaysToMakeChange(vector<int> &arr, int n, int T)
     {
         for (int target = arr[ind]; target <= T; target++) // SECTION -
         {
-            prev[target] += prev[target - arr[ind]];
+            prev[target] += prev[target - arr[ind]]; // SECTION -
         }
     }
-
+    
     return prev[T];
 }

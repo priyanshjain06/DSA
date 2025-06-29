@@ -15,7 +15,7 @@ int minSubsetSumDifference(vector<int> &arr, int n)
         totSum += arr[i];
     }
 
-    vector<bool> prev(totSum + 1, false);
+    vector<bool> prev(totSum + 1, false); // SECTION -
 
     prev[0] = true;
 
