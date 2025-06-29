@@ -1,5 +1,5 @@
-// time complexity all cases : O(n ^2)
-// the concept is to push the maximum to the end the of the array by comparing the adjacent 
+// Time Complexity all cases : O(n ^2)
+// the concept is to push the maximum to the end the of the array by comparing the adjacent
 
 #include <iostream>
 using namespace std;
@@ -12,11 +12,10 @@ void bubble_sort(int arr[], int n)
         {
             if (arr[j] > arr[j + 1])
             {
-               
+
                 int temp = arr[j + 1];
                 arr[j + 1] = arr[j];
                 arr[j] = temp;
-             
             }
         }
     }
