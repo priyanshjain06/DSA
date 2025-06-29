@@ -20,11 +20,4 @@ void selection_sort(int arr[], int n)
         arr[mini] = arr[i];
         arr[i] = temp;
     }
-
-    cout << "After selection sort: " << "\n";
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << "\n";
 }
