@@ -11,7 +11,7 @@ int findWaysUtil(int ind, int target, vector<int> &arr, vector<vector<int>> &dp)
         return 1;
 
     if (ind == 0)
-        return (arr[0] == target) ? 1 : 0; // SECTION -
+        return (arr[0] == target) ? 1 : 0;
 
     if (dp[ind][target] != -1)
         return dp[ind][target];
@@ -22,7 +22,7 @@ int findWaysUtil(int ind, int target, vector<int> &arr, vector<vector<int>> &dp)
     if (arr[ind] <= target)
         taken = findWaysUtil(ind - 1, target - arr[ind], arr, dp);
 
-    return dp[ind][target] = notTaken + taken;
+    return dp[ind][target] = notTaken + taken; // SECTION -
 }
 
 int findWays(vector<int> &num, int k)
@@ -112,7 +112,7 @@ int findWays(vector<int> &num, int k)
 //  REVIEW Space Optimization
 //   Time : O(N*K) and Space : O(K)
 // NOTE : for constraint 0 <= num[i] <= 1000
-//NOTE : use this for coding ninja and gfg !
+// NOTE : use this for coding ninja and gfg !
 
 class Solution
 {
