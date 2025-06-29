@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+
 int characterReplacement(string s, int k)
 {
     int left = 0, right = 0, maxLen = 0, maxFreq = 0;

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
-
-using namespace std;
+using namespace std ;
 
 int atMostSum(vector<int> &arr, int goal)
 {
@@ -20,7 +19,7 @@ int atMostSum(vector<int> &arr, int goal)
             l++;
         }
 
-        count =count+ (r - l + 1); // Count subarrays ending at r
+        count = count + (r - l + 1); // Count subarrays ending at r
         r++;
     }
     return count;

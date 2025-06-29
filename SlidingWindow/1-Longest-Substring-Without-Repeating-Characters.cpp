@@ -28,6 +28,7 @@ public:
         return len;
     }
 };
+;
 
 int main()
 {
