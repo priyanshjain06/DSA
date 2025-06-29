@@ -19,11 +19,11 @@ public:
 
         for (int r = 0; r < nums.size(); r++)
         {
-            sum += (nums[r] % 2); //REVIEW - // Convert odd to 1, even to 0 **on the fly**
+            sum += (nums[r] % 2); // REVIEW - // Convert odd to 1, even to 0 **on the fly**
 
             while (sum > goal)
             {
-                sum -= (nums[l] % 2); //REVIEW -  // Convert while shrinking window
+                sum -= (nums[l] % 2); // REVIEW -  // Convert while shrinking window
                 l++;
             }
 

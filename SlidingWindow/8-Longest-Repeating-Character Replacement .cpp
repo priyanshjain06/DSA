@@ -24,17 +24,3 @@ int characterReplacement(string s, int k)
     }
     return maxLen;
 }
-
-int main()
-{
-    string s;
-    int k;
-
-    cout << "Enter the string: ";
-    cin >> s;
-    cout << "Enter the value of k: ";
-    cin >> k;
-
-    cout << "Maximum length: " << characterReplacement(s, k) << endl;
-    return 0;
-}
