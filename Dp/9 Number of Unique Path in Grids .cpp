@@ -98,11 +98,11 @@ int countWays(int m, int n)
 
 int countWays(int m, int n)
 {
-    vector<int> prev(n, 0); //SECTION - 
+    vector<int> prev(n, 0); // SECTION -
 
     for (int i = 0; i < m; i++)
     {
-        vector<int> temp(n, 0); //SECTION -  not a 2d array
+        vector<int> temp(n, 0); // SECTION -  not a 2d array
 
         for (int j = 0; j < n; j++)
         {
@@ -127,5 +127,5 @@ int countWays(int m, int n)
         prev = temp; // SECTION -
     }
 
-    return prev[n - 1]; //SECTION - 
+    return prev[n - 1]; // SECTION -
 }

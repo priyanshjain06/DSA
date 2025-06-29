@@ -11,7 +11,7 @@ bool subsetSumRecursive(int ind, int target, vector<int> &arr)
         return true;
 
     if (ind == 0)
-        return arr[0] == target; 
+        return arr[0] == target;
 
     bool notTaken = subsetSumRecursive(ind - 1, target, arr);
 
@@ -69,7 +69,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr)
         for (int target = 1; target <= k; target++)
         {
 
-            bool notTaken = dp[ind - 1][target]; 
+            bool notTaken = dp[ind - 1][target];
 
             bool taken = false;
             if (arr[ind] <= target)
@@ -77,7 +77,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr)
                 taken = dp[ind - 1][target - arr[ind]];
             }
 
-            dp[ind][target] = notTaken || taken; 
+            dp[ind][target] = notTaken || taken;
         }
     }
 
