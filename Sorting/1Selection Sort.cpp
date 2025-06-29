@@ -1,6 +1,6 @@
 // time complexity for all cases is O(n^2)
 
-// concept  is to select the min  in the array and campare to start of the array  if condition fails then swap the places
+// REVIEW  concept  is to select the min  in the array and campare to start of the array  if condition fails then swap the places
 
 #include <iostream> // For input/output
 using namespace std;
