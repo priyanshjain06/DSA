@@ -18,11 +18,11 @@ public:
         {
             for (int target = coins[ind]; target <= amount; target++)
             {
-                unsigned long long sum = prev[target] + prev[target - coins[ind]];
+                unsigned long long sum = prev[target] + prev[target - coins[ind]]; // SECTION prev{target} + prev{target-coins[ind]}
                 prev[target] = (sum > INT_MAX) ? INT_MAX : sum;
             }
         }
 
-        return (int)prev[amount];
+        return (int)prev[amount]; // SECTION -  return the answer in int
     }
 };

@@ -121,9 +121,9 @@ int minimumElements(vector<int> &arr, int T)
         prev = cur;
     }
 
-    int ans = prev[T]; 
+    int ans = prev[T];
 
-    if (ans >= 1e9) //SECTION - 
+    if (ans >= 1e9) // SECTION -
         return -1;
 
     return ans;
