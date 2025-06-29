@@ -46,6 +46,5 @@ int partition(vector<int> &arr, int low, int high)
 
     // Swap the pivot element to its correct position
     swap(arr[low], arr[j]);
-    // Return the partition index
     return j;
 }
