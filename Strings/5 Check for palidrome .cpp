@@ -8,7 +8,6 @@
 #include <cctype>
 using namespace std;
 
-// Function to check if a string is a valid palindrome
 bool isPalindrome(string s)
 {
     int left = 0, right = s.length() - 1;
@@ -21,7 +20,7 @@ bool isPalindrome(string s)
             left++;
         }
 
-        // Move right pointer to the previous alphanumeric character
+        // Move right pointer to the previous alphanumeric character ! 
         while (left < right && !isalnum(s[right]))
         {
             right--;
@@ -33,15 +32,8 @@ bool isPalindrome(string s)
             return false;
         }
 
-        left++; 
+        left++;
         right--;
     }
-    return true; //REVIEW 
-}
-
-int main()
-{
-    string s = "A man, a plan, a canal: Panama";
-    cout << (isPalindrome(s) ? "True" : "False") << endl; // Output: True
-    return 0;
+    return true; // REVIEW
 }

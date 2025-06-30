@@ -8,20 +8,17 @@ int main()
 
     cout << "Enter multiple lines (enter an empty line to finish):" << endl;
 
-    // Loop to read multiple lines
     while (getline(cin, input)) // REVIEW -
     {
-        // Stop if the user enters an empty line
         if (input.empty()) // REVIEW -
         {
             break;
         }
-        // Append the line to fullText, adding a newline
         fullText += input + '\n'; // FIXME -
     }
 
     cout << "\n You entered:\n"
-         << fullText << endl;
+         << fullText << endl; //REVIEW - 
 
     return 0;
 }

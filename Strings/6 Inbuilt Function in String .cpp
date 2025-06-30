@@ -16,4 +16,4 @@
 // to_string //REVIEW from numeric to string
 // isspace
 // isalpha
-// isalnumw
+// isalnum
