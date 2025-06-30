@@ -7,7 +7,7 @@ int Max(int n, int k, int num[])
     int maxlen = 0;
     int left = 0;
     int right = 0;
-    
+
     map<int, int> map;
 
     while (right < n)

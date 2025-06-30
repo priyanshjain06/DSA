@@ -19,6 +19,7 @@ int characterReplacement(string s, int k)
             freq[s[left] - 'A']--;
             left++;
         }
+
         maxLen = max(maxLen, right - left + 1); // Update max length
         right++;
     }
