@@ -4,7 +4,6 @@
 using namespace std;
 
 // Function to merge two sorted subarrays
-
 // NOTE means that arr is a reference to a vector<int>
 
 void merge(vector<int> &arr, int low, int mid, int high)
