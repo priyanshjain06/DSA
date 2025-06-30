@@ -16,7 +16,7 @@ public:
 
             while (sum >= target)
             {
-                minLen = min(minLen, right - left + 1);
+                minLen = min(minLen, right - left + 1); //REVIEW 
                 sum -= nums[left++];
             }
         }

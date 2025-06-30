@@ -22,10 +22,3 @@ int NumberOFSubstring(string s)
     }
     return count;
 }
-
-int main()
-{
-    string s = "abcbabacab";
-    cout << "The number of substrings containing at least 'a', 'b', and 'c' is: " << NumberOFSubstring(s) << "\n";
-    return 0;
-}
