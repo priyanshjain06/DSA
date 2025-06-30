@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 class Solution
@@ -37,16 +36,3 @@ public:
         return atMostSum(nums, k) - atMostSum(nums, k - 1); // Use the modified function directly
     }
 };
-
-int main()
-{
-    vector<int> nums = {1, 1, 2, 1, 1}; // Example test case
-    int k = 3;
-
-    Solution sol;
-    int result = sol.numberOfSubarrays(nums, k);
-
-    cout << "Number of nice subarrays: " << result << endl;
-
-    return 0;
-}
