@@ -9,7 +9,6 @@ public:
     string minWindow(string s, string t)
     {
         unordered_map<char, int> required; // REVIEW -
-
         int count = 0, min_length = INT_MAX, start_index = -1;
 
         for (char c : t)
@@ -49,6 +48,7 @@ public:
                 left++;
             }
         }
+        
         return (start_index == -1) ? "" : s.substr(start_index, min_length); // REVIEW -
     }
 };
