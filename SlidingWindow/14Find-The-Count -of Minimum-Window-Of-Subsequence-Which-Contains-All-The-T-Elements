@@ -2,7 +2,6 @@
 #include <unordered_map>
 #include <climits>
 using namespace std;
-
 int countMinSubsequenceWindows(int arr[], int n, int t[], int m)
 {
     int min_length = INT_MAX;

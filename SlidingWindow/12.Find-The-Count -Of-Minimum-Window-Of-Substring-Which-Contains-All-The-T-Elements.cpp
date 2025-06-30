@@ -48,7 +48,7 @@ public:
                 left++;
             }
         }
-        
+
         return (start_index == -1) ? "" : s.substr(start_index, min_length); // REVIEW -
     }
 };
