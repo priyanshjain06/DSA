@@ -78,5 +78,6 @@ string shortestSupersequence(string s1, string s2)
 
     reverse(ans.begin(), ans.end()); // SECTION -
 
-    return ans;
+    return ans; // SECTION -  may be asked to return the length here !
 }
+
