@@ -14,6 +14,7 @@ public:
     bool checkInclusion(string s1, string s2)
     {
         int n1 = s1.size(), n2 = s2.size();
+        
         if (n1 > n2) // ANCHOR -
             return false;
 

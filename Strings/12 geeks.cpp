@@ -25,6 +25,5 @@ string removeUtil(string &s)
     if (k != n)        // REVIEW      // If any duplicates were removed
         removeUtil(s); // Recursively remove duplicates again
 
-    return s; //REVIEW
+    return s; // REVIEW
 }
-
