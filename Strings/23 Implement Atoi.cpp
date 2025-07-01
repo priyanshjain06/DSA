@@ -10,6 +10,7 @@ public:
     int myAtoi(string s)
     {
         int i = 0, n = s.length();
+
         // Step 1: Ignore leading whitespaces
         while (i < n && isspace(s[i])) // REVIEW
         {
