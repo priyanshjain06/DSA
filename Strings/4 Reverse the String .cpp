@@ -1,10 +1,11 @@
 // REVIEW  Time Complexity: O(n)
-// NOTE exampple : priya jain => ayirp niaj
+// NOTE example : priya jain => ayirp niaj
 
 #include <iostream>
 #include <string>
 #include <algorithm>
 using namespace std;
+
 
 int main()
 {
@@ -15,6 +16,7 @@ int main()
 }
 
 // REVIEW -  for leetcode
+
 
 // class Solution {
 // public:
