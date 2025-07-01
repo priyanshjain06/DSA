@@ -25,7 +25,7 @@ public:
             // Handle single space between words
             else if (j > 0 && s[j - 1] != ' ')
             {
-                s[j++] = ' ';
+                s[j++] = ' '; //SECTION -  j ++
                 i++;
             }
             else
