@@ -38,7 +38,7 @@ string shortestSupersequence(string s1, string s2)
     int j = m;
 
     int index = len - 1;
-    string ans = "";
+    string ans = ""; // SECTION - not dummy but empty string !
 
     while (i > 0 && j > 0)
     {
@@ -61,7 +61,9 @@ string shortestSupersequence(string s1, string s2)
         }
     }
 
-    // Adding Remaing Characters - Only one of the below two while loops will run
+    // SECTION -  the above will produce reverse string !
+
+    //  Adding Remaing Characters - Only one of the below two while loops will run EXAMPLE : (0,1) or (1,0)
 
     while (i > 0)
     {
@@ -74,7 +76,7 @@ string shortestSupersequence(string s1, string s2)
         j--;
     }
 
-    reverse(ans.begin(), ans.end());
+    reverse(ans.begin(), ans.end()); // SECTION -
 
     return ans;
 }
