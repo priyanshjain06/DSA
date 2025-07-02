@@ -45,7 +45,7 @@ int orangesRotting(vector<vector<int>> &grid)
                 }
             }
         }
-        if (!q.empty())
+        if (!q.empty()) // outside of while loop !
             days++;
     }
 
