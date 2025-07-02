@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 int findMin(vector<int> &arr)
 {
     int low = 0, high = arr.size() - 1;
@@ -38,11 +39,4 @@ int findMin(vector<int> &arr)
         }
     }
     return ans;
-}
-int main()
-{
-    vector<int> arr = {4, 5, 6, 7, 0, 1, 2, 3};
-    int ans = findMin(arr);
-    cout << "The minimum element is: " << ans << "\n";
-    return 0;
 }
