@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 using namespace std;
+
 class Solution
 {
 public:
@@ -22,7 +23,7 @@ public:
         {
             int mid = (low + high) / 2;
             if (calculateTotalHours(piles, mid) <= h)
-                high = mid; //REVIEW  not mid -1 ;
+                high = mid; // REVIEW  not mid -1 ;
             else
                 low = mid + 1;
         }
