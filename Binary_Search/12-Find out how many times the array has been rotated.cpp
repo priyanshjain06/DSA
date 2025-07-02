@@ -38,6 +38,7 @@ int findKRotation(vector<int> &arr)
             // Eliminate left half:
             low = mid + 1; // REVIEW we already processed the low !
         }
+
         else
         { // if right part is sorted:
 
