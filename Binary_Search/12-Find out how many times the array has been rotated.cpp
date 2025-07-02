@@ -10,6 +10,7 @@ int findKRotation(vector<int> &arr)
     int low = 0, high = arr.size() - 1;
     int ans = INT_MAX; // REVIEW -
     int index = -1;    // REVIEW
+
     while (low <= high)
     {
         int mid = (low + high) / 2;
