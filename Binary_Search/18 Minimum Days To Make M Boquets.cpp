@@ -21,6 +21,7 @@ bool possible(vector<int> &arr, int day, int m, int k)
     int n = arr.size(); // size of the array
     int cnt = 0;
     int noOfB = 0;
+    
     // count the number of bouquets:
     for (int i = 0; i < n; i++)
     {
@@ -43,6 +44,7 @@ int roseGarden(vector<int> arr, int k, int m)
     int n = arr.size();
     if (val > n)
         return -1; // impossible case.
+
     int mini = INT_MAX, maxi = INT_MIN;
     for (int i = 0; i < n; i++)
     {
@@ -61,17 +63,4 @@ int roseGarden(vector<int> arr, int k, int m)
             low = mid + 1;
     }
     return low; // NOTE why low ? becuase we want to return the minimum
-}
-
-int main()
-{
-    vector<int> arr = {7, 7, 7, 7, 13, 11, 12, 7};
-    int k = 3;
-    int m = 2;
-    int ans = roseGarden(arr, k, m);
-    if (ans == -1)
-        cout << "We cannot make m bouquets.\n";
-    else
-        cout << "We can make bouquets on day " << ans << "\n";
-    return 0;
 }
