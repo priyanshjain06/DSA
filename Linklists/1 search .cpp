@@ -22,7 +22,6 @@ public:
     }
 };
 
-// Function to check if a given element is present in the linked list
 int checkifPresent(Node *head, int desiredElement)
 {
     Node *temp = head;

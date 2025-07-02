@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 class Solution
 {
 public:
@@ -9,7 +12,7 @@ public:
         { // If the list is empty, new node becomes head
             return newNode;
         }
-        
+
         Node *temp = head;
         while (temp->next != nullptr)
         { // Traverse to the last node

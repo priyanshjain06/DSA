@@ -7,7 +7,6 @@ public:
     int data;
     Node *next;
 
-    // Constructor (keeping it the same as you wanted)
     Node(int data1, Node *next1 = nullptr) // REVIEW -
     {
         data = data1;
@@ -15,7 +14,6 @@ public:
     }
 };
 
-// Function to delete the Nth node from the end
 Node *deleteNthFromEnd(Node *head, int N)
 {
     Node *fast = head, *slow = head;
