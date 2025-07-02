@@ -42,12 +42,12 @@ int findPages(vector<int> &arr, int n, int m)
         return -1;
 
     int low = *max_element(arr.begin(), arr.end());
-    int high = accumulate(arr.begin(), arr.end(), 0); //NOTE
+    int high = accumulate(arr.begin(), arr.end(), 0); // NOTE
     while (low <= high)
     {
         int mid = (low + high) / 2;
         int students = countStudents(arr, mid);
-        if (students <= m) //REVIEW <= 
+        if (students <= m) // REVIEW <=
         {
             high = mid - 1;
         }
