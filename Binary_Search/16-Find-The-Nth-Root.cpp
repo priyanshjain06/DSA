@@ -1,4 +1,5 @@
 // NOTE read the question !
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -22,6 +23,7 @@ int func(int mid, int n, int m)
     else
         return 0;
 }
+
 int NthRoot(int n, int m)
 {
     int low = 1, high = m; // REVIEW -
@@ -39,11 +41,4 @@ int NthRoot(int n, int m)
             high = mid - 1;
     }
     return -1;
-}
-int main()
-{
-    int n = 3, m = 27;
-    int ans = NthRoot(n, m);
-    cout << "The answer is: " << ans << "\n";
-    return 0;
 }

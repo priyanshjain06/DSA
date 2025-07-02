@@ -22,12 +22,3 @@ int floorSqrt(int n)
     }
     return high; //REVIEW 
 }
-
-int main()
-{
-    int n = 28;
-    int ans = floorSqrt(n);
-    cout << "The floor of square root of " << n
-         << " is: " << ans << "\n";
-    return 0;
-}
