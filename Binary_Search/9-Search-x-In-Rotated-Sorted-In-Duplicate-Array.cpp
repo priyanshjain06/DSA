@@ -38,15 +38,3 @@ bool searchInARotatedSortedArrayII(vector<int> &arr, int k)
     }
     return false;
 }
-
-int main()
-{
-    vector<int> arr = {7, 8, 1, 2, 3, 3, 3, 4, 5, 6};
-    int k = 3;
-    bool ans = searchInARotatedSortedArrayII(arr, k);
-    if (!ans)
-        cout << "Target is not present.\n";
-    else
-        cout << "Target is present in the array.\n";
-    return 0;
-}

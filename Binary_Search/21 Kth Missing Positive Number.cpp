@@ -24,4 +24,5 @@ int missingK(vector<int> vec, int n, int k)
         }
     }
     return k + high + 1; // REVIEW  or  low+k
+    // REVIEW we are returning the index not the value !
 }
