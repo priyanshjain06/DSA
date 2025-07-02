@@ -8,7 +8,7 @@ using namespace std;
 int singleNonDuplicate(vector<int> &arr)
 {
     int n = arr.size();
-    
+
     // Edge cases:
     if (n == 1)
         return arr[0];
@@ -16,7 +16,7 @@ int singleNonDuplicate(vector<int> &arr)
         return arr[0]; // REVIEW -
     if (arr[n - 1] != arr[n - 2])
         return arr[n - 1];
-        
+
     int low = 1, high = n - 2; // REVIEW -
     while (low <= high)
     {
@@ -44,12 +44,4 @@ int singleNonDuplicate(vector<int> &arr)
 
     // dummy return statement:
     return -1;
-}
-
-int main()
-{
-    vector<int> arr = {1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 6};
-    int ans = singleNonDuplicate(arr);
-    cout << "The single element is: " << ans << "\n";
-    return 0;
 }
