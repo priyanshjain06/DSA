@@ -31,6 +31,7 @@ bool canWePlace(vector<int> &stalls, int dist, int cows)
     }
     return false;
 }
+
 int aggressiveCows(vector<int> &stalls, int k)
 {
     int n = stalls.size();
@@ -50,12 +51,4 @@ int aggressiveCows(vector<int> &stalls, int k)
             high = mid - 1;
     }
     return high; // REVIEW - why ? always return oposite polarity from the position where high and low are when the answer is found !
-}
-int main()
-{
-    vector<int> stalls = {0, 3, 4, 7, 10, 9};
-    int k = 4;
-    int ans = aggressiveCows(stalls, k);
-    cout << "The maximum possible minimum distance is: " << ans << "\n";
-    return 0;
 }
