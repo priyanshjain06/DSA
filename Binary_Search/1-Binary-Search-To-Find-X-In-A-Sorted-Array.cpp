@@ -1,6 +1,7 @@
 
 // LINK  array should be in sorted order
 // ANCHOR time complexity : O(logn)=>
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -8,7 +9,7 @@ using namespace std;
 int binarySearch(vector<int> &nums, int target)
 {
     int n = nums.size();
-    int low = 0, high = n - 1; 
+    int low = 0, high = n - 1;
 
     while (low <= high)
     {

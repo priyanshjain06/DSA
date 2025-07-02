@@ -21,15 +21,3 @@ int search(vector<int> &nums, int target)
     return binarySearch(nums, 0, nums.size() - 1, target); // REVIEW
 }
 
-int main()
-{
-    vector<int> a = {3, 4, 6, 7, 9, 12, 16, 17};
-    int target = 6;
-    int ind = search(a, target);
-    if (ind == -1)
-        cout << "The target is not present." << endl;
-    else
-        cout << "The target is at index: "
-             << ind << endl;
-    return 0;
-}

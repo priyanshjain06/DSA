@@ -3,7 +3,7 @@
 // REVIEW Example 1:
 //  Input:N = 153
 //  Output:True
-//  Explanation: 13+53+33 = 1 + 125 + 27 = 153
+//  Explanation: 1^3+5^3+3^3 = 1 + 125 + 27 = 153
 
 // Example 2:
 // Input:N = 371
