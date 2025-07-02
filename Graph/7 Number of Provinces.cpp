@@ -44,7 +44,7 @@ public:
         {
             // if the node is not visited
             dfs(i, adjLs, vis);
-            cnt++;
+            cnt++; // REVIEW count after the dfs
         }
         return cnt;
     }
