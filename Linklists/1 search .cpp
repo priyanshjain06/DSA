@@ -27,7 +27,7 @@ int checkifPresent(Node *head, int desiredElement)
     Node *temp = head;
 
     // Traverse the linked list
-    while (temp != nullptr)
+    while (temp != nullptr) //REVIEW it traverse all nodes 
     {
         // Check if the current node's data is equal to the desired element
         if (temp->data == desiredElement)
