@@ -76,7 +76,7 @@ int lengthOfLoop(Node *head)
     // Step 1: Traverse the list to detect a loop
     while (fast != nullptr && fast->next != nullptr)
     {
-        // Move slow one step
+        //Step 1: Move slow one step
         slow = slow->next;
         // Move fast two steps
         fast = fast->next->next;
