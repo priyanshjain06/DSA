@@ -42,15 +42,3 @@ Node *deleteNthFromEnd(Node *head, int N)
 
     return head;
 }
-
-int main()
-{
-    // Create linked list: 1 -> 2 -> 3 -> 4 -> 5
-    Node *head = new Node(1, new Node(2, new Node(3, new Node(4, new Node(5)))));
-
-    int N = 3; // Remove 3rd node from end
-
-    head = deleteNthFromEnd(head, N);
-
-    return 0;
-}

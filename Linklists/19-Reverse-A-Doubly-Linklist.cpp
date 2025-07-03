@@ -105,20 +105,3 @@ Node *reverseDLL(Node *head)
     // becomes the new head after reversal
     return prev->back; // REVIEW
 }
-
-int main()
-{
-    vector<int> arr = {12, 5, 8, 7, 4};
-    Node *head = convertArr2DLL(arr); // REVIEW -
-    cout << endl
-         << "Doubly Linked List Initially:  " << endl;
-    print(head);
-    cout << endl
-         << "Doubly Linked List After Reversing " << endl;
-
-    // Insert a node with value 10 at the end
-    head = reverseDLL(head);
-    print(head);
-
-    return 0;
-}
