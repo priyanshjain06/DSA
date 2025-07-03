@@ -3,6 +3,7 @@
 // ANCHOR -  Time Complexity is : O(n) and space Complexity is O(1)
 
 // LINK - we will use concept of floyde's cycle detection algo or tortoise and hare algo
+
 #include <iostream>
 #include <vector>
 
@@ -43,7 +44,7 @@ int findLength(Node *slow, Node *fast)
 {
 
     // count to keep track of
-    // nodes encountered in loop
+    // nodes encountered in loop 
     int cnt = 1;
 
     // move fast by one step
@@ -63,8 +64,8 @@ int findLength(Node *slow, Node *fast)
 
     // loop terminates when fast reaches
     // slow again and the count is returned
-   
 }
+
 // Function to find the length
 // of the loop in a linked list
 int lengthOfLoop(Node *head)
@@ -92,39 +93,5 @@ int lengthOfLoop(Node *head)
 
     // Step 3: If the fast pointer
     // reaches the end, there is no loop
-    return 0;
-}
-
-int main()
-{
-    // Create a sample linked
-    // list with a loop
-
-    Node *head = new Node(1);
-    Node *second = new Node(2);
-    Node *third = new Node(3);
-    Node *fourth = new Node(4);
-    Node *fifth = new Node(5);
-
-    // Create a loop from
-    // fifth to second
-    head->next = second;
-    second->next = third;
-    third->next = fourth;
-    fourth->next = fifth;
-
-    // This creates a loop
-    fifth->next = second;
-
-    int loopLength = lengthOfLoop(head);
-    if (loopLength > 0)
-    {
-        cout << "Length of the loop: " << loopLength << endl;
-    }
-    else
-    {
-        cout << "No loop found in the linked list." << endl;
-    }
-
     return 0;
 }
