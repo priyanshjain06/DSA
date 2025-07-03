@@ -17,7 +17,7 @@ public:
         double r2 = (double)b.value / (double)b.weight;
         return r1 > r2;
     }
-    // function to return fractionalweights
+    
     double fractionalKnapsack(int W, Item arr[], int n)
     {
 

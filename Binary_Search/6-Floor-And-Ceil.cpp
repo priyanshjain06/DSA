@@ -14,12 +14,12 @@ int findFloor(int arr[], int n, int x)
         if (arr[mid] <= x) // REVIEW
         {
             ans = arr[mid];
-            // look for smaller index on the right 
-            low = mid + 1; //REVIEW - 
+            // look for smaller index on the right
+            low = mid + 1; // REVIEW -
         }
         else
         {
-            high = mid - 1; // look on the  //REVIEW - 
+            high = mid - 1; // look on the  //REVIEW -
         }
     }
     return ans;
@@ -49,7 +49,7 @@ int findCeil(int arr[], int n, int x)
 }
 
 pair<int, int> getFloorAndCeil(int arr[], int n, int x)
-{           
+{
     int f = findFloor(arr, n, x);
     int c = findCeil(arr, n, x);
     return make_pair(f, c);

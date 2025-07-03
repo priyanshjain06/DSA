@@ -25,7 +25,7 @@ int findMin(vector<int> &arr)
             ans = min(ans, arr[low]);
 
             // Eliminate left half:
-            low = mid + 1; //REVIEW 
+            low = mid + 1; // REVIEW
         }
         else
         {
