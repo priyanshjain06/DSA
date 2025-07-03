@@ -31,7 +31,7 @@ void insertNode(node *&head, int val)
         head = newNode;
         return;
     }
-    
+
     node *temp = head;
     while (temp->next != NULL)
         temp = temp->next;
@@ -43,11 +43,11 @@ void insertNode(node *&head, int val)
 // utility function to rotate list by k times
 node *rotateRight(node *head, int k)
 {
-    if (head == NULL || head->next == NULL || k == 0) // REVIEW -
+    if (head == NULL || head->next == NULL || k == 0)
         return head;
 
     node *temp = head;
-    int length = 1; // REVIEW - 1 se start hoga
+    int length = 1;
 
     // calculate the length of the list
     while (temp->next != NULL)
@@ -59,11 +59,11 @@ node *rotateRight(node *head, int k)
     // link last node to first node
     temp->next = head;
     k = k % length;
-    int end = length - k; // to get end of the list
-    while (end--)
+    int end = length - k; // REVIEW  to get end of the list
+    while (end--)         // REVIEW
         temp = temp->next;
     head = temp->next;
-    temp->next = NULL; // REVIEW -
+    temp->next = NULL;
 
     return head;
 }
