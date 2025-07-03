@@ -203,7 +203,6 @@ Node *getStartingNode(Node *head)
 {
 
     if (head == NULL)
-
         return NULL;
 
     Node *intersection = floydDetectLoop(head);

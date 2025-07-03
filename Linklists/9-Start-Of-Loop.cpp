@@ -60,12 +60,12 @@ Node *firstNode(Node *head)
             }
 
             // Return the first node of the loop
-            return slow;
+            return slow; //REVIEW - 
         }
     }
 
     // If no loop is found, return NULL
-    return NULL;
+    return NULL; //REVIEW - 
 }
 
 int main()
