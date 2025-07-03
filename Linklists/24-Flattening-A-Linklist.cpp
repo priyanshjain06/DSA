@@ -8,7 +8,9 @@
 // ANCHOR : Time Complexity:  O(2 N*M) where N is no. of parent nodesand M is no. of child nodes
 // Space Complexity : O(1)
 
-// LINK : Follow 3 steps :- 1) Create a dummy node. and check for basic condtions  2) Merge the lists. 3) Connect the list by using recursion
+// SECTION : Follow 3 steps :- 1) Create a dummy node. and check for basic condtions  2) Merge the lists. 3) Connect the list by using recursion
+
+// LINK https://www.geeksforgeeks.org/problems/flattening-a-linked-list/1
 
 #include <iostream>
 using namespace std;
@@ -37,7 +39,7 @@ Node *merge(Node *list1, Node *list2)
             res->child = list1; 
             // here list1 means the  current node of the list1
             res = list1;
-            list1 = list1->child;
+            list1 = list1->child; //REVIEW - 
         }
         else
         {

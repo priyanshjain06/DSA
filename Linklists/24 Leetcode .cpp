@@ -14,10 +14,12 @@ public:
 
 // LINK https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/
 
+//SECTION -  read the question see input format 
+
 class Solution
 {
 public:
-    Node *flatten(Node *head)
+    Node *flatten(Node *head) //REVIEW - 
     {
         if (!head)
             return nullptr;
@@ -53,7 +55,7 @@ private:
                     next->prev = childTail;
                 }
 
-                last = childTail;
+                last = childTail; //REVIEW - 
             }
             else
             {
