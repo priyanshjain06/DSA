@@ -16,23 +16,23 @@ public:
                 continue;
             }
 
-            int peak = 1;//REVIEW - 
+            int peak = 1; // REVIEW -
             while (i < n && ratings[i] > ratings[i - 1])
             {
                 peak++;
                 sum += peak;
                 i++;
             }
-            
-            int down = 0;//REVIEW - 
+
+            int down = 0; // REVIEW -
             while (i < n && ratings[i] < ratings[i - 1])
             {
                 down++;
                 sum += down;
                 i++;
             }
-            down++;          // REVIEW -
-            
+            down++; // REVIEW -
+
             if (down > peak) // REVIEW -  not >=
                 sum += (down - peak);
         }
