@@ -32,7 +32,7 @@ int countStudents(vector<int> &arr, int pages)
             currentPagePerStudent = arr[i];
         }
     }
-    return students;
+    return students; 
 }
 
 int findPages(vector<int> &arr, int n, int m)
