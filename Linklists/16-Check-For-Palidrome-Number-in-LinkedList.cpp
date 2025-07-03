@@ -22,6 +22,7 @@ public:
         next = nullptr;
     }
 };
+
 Node *reverseLinkedList(Node *head) // REVIEW
 {
     Node *curr = head;
