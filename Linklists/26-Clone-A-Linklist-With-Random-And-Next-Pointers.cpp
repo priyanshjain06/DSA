@@ -59,7 +59,7 @@ void connectRandomPointers(Node *head)
         {
             // Point the copied node's random to the
             // corresponding copied random node
-            copyNode->random = temp->random->next;  
+            copyNode->random = temp->random->next;
         }
         else
         {
