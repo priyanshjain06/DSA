@@ -25,7 +25,7 @@ public:
         // Finding the tail of DLL
         Node *left = head, *right = head;
 
-        while (right->next) //REVIEW - 
+        while (right->next) 
             right = right->next; 
 
         // Two-pointer approach

@@ -95,7 +95,7 @@ Node *reverseDLL(Node *head)
         current->back = current->next;
 
         // This step reverses the links
-        current->next = prev;
+        current->next = prev; 
 
         // Move to the next node
         // in the original list
