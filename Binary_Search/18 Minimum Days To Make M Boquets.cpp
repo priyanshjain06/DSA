@@ -18,11 +18,10 @@
 using namespace std;
 bool possible(vector<int> &arr, int day, int m, int k)
 {
-    int n = arr.size(); // size of the array
+    int n = arr.size();
     int cnt = 0;
     int noOfB = 0;
 
-    // count the number of bouquets:
     for (int i = 0; i < n; i++)
     {
         if (arr[i] <= day)

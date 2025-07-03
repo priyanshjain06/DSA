@@ -35,7 +35,7 @@ int leastWeightCapacity(vector<int> &weights, int d)
 {
     int low = *max_element(weights.begin(), weights.end());
     int high = accumulate(weights.begin(), weights.end(), 0); // REVIEW -  for accumulate function remeber the syntax
-    
+
     while (low <= high)
     {
         int mid = (low + high) / 2;
@@ -45,5 +45,5 @@ int leastWeightCapacity(vector<int> &weights, int d)
         else
             low = mid + 1;
     }
-    return low;
+    return low; // REVIEW
 }
