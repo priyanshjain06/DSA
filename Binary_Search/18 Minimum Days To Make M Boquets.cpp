@@ -37,6 +37,7 @@ bool possible(vector<int> &arr, int day, int m, int k)
     noOfB += (cnt / k);
     return noOfB >= m; // REVIEW -
 }
+
 int roseGarden(vector<int> arr, int k, int m)
 {
     long long val = m * 1ll * k * 1ll;

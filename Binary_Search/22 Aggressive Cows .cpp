@@ -1,7 +1,7 @@
 // NOTE -Problem Statement: You are given an array 'arr' of size 'n' which denotes the position of stalls.
 // You are also given an integer 'k' which denotes the number of aggressive cows.
 // You are given the task of assigning stalls to 'k' cows such that the minimum distance between any two of them is the maximum possible.
-// Find the maximum possible minimum distance
+// Find the maximum possible minimum distance.
 
 // REVIEW - Time Complexity: O(NlogN) + O(N * log(max(stalls[])-min(stalls[]))) and Space Complexity: O(1)
 
@@ -38,7 +38,8 @@ int aggressiveCows(vector<int> &stalls, int k)
 
     sort(stalls.begin(), stalls.end()); // REVIEW -
 
-    int low = 1, high = stalls[n - 1] - stalls[0]; // REVIEW max -min in array
+    int low = 1, high = stalls[n - 1] - stalls[0]; 
+    // REVIEW max -min in array
 
     while (low <= high)
     {
