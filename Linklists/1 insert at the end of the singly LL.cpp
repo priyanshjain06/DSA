@@ -20,4 +20,4 @@ public:
 
     temp->next = newNode;
     return head;
-} ;
+};
