@@ -42,6 +42,7 @@ int orangesRotting(vector<vector<int>> &grid)
                 {
                     grid[nr][nc] = 2; // REVIEW - no visisted vector
                     q.push({nr, nc}); // REVIEW -
+                    
                 }
             }
         }
