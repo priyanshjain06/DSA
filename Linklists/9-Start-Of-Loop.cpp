@@ -23,6 +23,7 @@ public:
         next = nullptr;
     }
 };
+
 Node *firstNode(Node *head)
 {
  
