@@ -5,7 +5,6 @@
 // NOTE  New starting point => count ++
 
 // NOTE  how to deterimine the starting point ? => by bfs and maintaining visited array
-
 // NOTE how to check the island ? => use 8 direction checking !
 
 #include <iostream>
