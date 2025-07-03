@@ -1,7 +1,6 @@
 #include <iostream>
 #include <unordered_map> //REVIEW -
 using namespace std;
-
 class Node
 {
 public:
@@ -44,37 +43,4 @@ void removeDuplicates(Node *head)
         curr = prev->next; // Move to the next node //REVIEW -
     }
 }
-// Helper function to print the linked list
-void printList(Node *head)
-{
-    Node *temp = head;
-    while (temp != NULL)
-    {
-        cout << temp->data << " -> ";
-        temp = temp->next;
-    }
-    cout << "NULL" << endl;
-}
 
-int main()
-{
-    // Creating a sample unsorted linked list
-    Node *head = new Node(10);
-    head->next = new Node(12);
-    head->next->next = new Node(11);
-    head->next->next->next = new Node(11);
-    head->next->next->next->next = new Node(12);
-    head->next->next->next->next->next = new Node(11);
-    head->next->next->next->next->next->next = new Node(10);
-
-    cout << "Original Linked List: " << endl;
-    printList(head);
-
-    // Remove duplicates
-    removeDuplicates(head);
-
-    cout << "\nLinked List after removing duplicates: " << endl;
-    printList(head);
-
-    return 0;
-}

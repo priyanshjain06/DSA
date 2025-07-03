@@ -29,7 +29,6 @@ Node *mergeTwoSortedLinkedLists(Node *list1, Node *list2)
     Node *dummyNode = new Node(-1);
     Node *temp = dummyNode;
 
-    // Traverse both lists simultaneously
     while (list1 != nullptr && list2 != nullptr)
     {
         // Compare elements of both lists and

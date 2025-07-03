@@ -13,7 +13,6 @@ public:
     }
 };
 
-// Function to reverse the linked list
 Node *reverse(Node *head)
 {
     Node *prev = nullptr;
@@ -30,13 +29,12 @@ Node *reverse(Node *head)
     return prev; // New head of the reversed list
 }
 
-// Function to add 1 to the linked list
 Node *addOne(Node *head)
 {
     // Step 1: Reverse the linked list
     head = reverse(head); // REVIEW -
     Node *temp = head;
-    int carry = 1;
+    int carry = 1; // REVIEW -  keep it one !
 
     // Step 2: Traverse and add 1
     while (temp != nullptr)
@@ -54,7 +52,6 @@ Node *addOne(Node *head)
             carry = 1;
         }
 
-        // If carry remains and we are at the last node, create a new node
         if (carry == 1 && temp->next == nullptr)
         {
             temp->next = new Node(1);
@@ -68,34 +65,4 @@ Node *addOne(Node *head)
     // Step 3: Reverse the list back to original order
     head = reverse(head);
     return head;
-}
-
-// Function to print the linked list
-void printList(Node *head)
-{
-    Node *temp = head;
-    while (temp != nullptr)
-    {
-        cout << temp->data << " ";
-        temp = temp->next;
-    }
-    cout << endl;
-}
-
-int main()
-{
-    // Creating a linked list: 9 -> 9 -> 9
-    Node *head = new Node(9);
-    head->next = new Node(9);
-    head->next->next = new Node(9);
-
-    cout << "Original list: ";
-    printList(head);
-
-    head = addOne(head);
-
-    cout << "List after adding 1: ";
-    printList(head);
-
-    return 0;
 }
