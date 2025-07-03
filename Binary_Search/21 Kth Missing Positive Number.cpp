@@ -8,7 +8,7 @@ using namespace std;
 
 int missingK(vector<int> vec, int n, int k)
 {
-    // NOTE see its burte force !
+    // NOTE see its brute force !
     int low = 0, high = n - 1; // REVIEW high is n-1
     while (low <= high)
     {
