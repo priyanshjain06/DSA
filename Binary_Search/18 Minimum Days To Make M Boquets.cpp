@@ -21,7 +21,7 @@ bool possible(vector<int> &arr, int day, int m, int k)
     int n = arr.size(); // size of the array
     int cnt = 0;
     int noOfB = 0;
-    
+
     // count the number of bouquets:
     for (int i = 0; i < n; i++)
     {
@@ -53,6 +53,7 @@ int roseGarden(vector<int> arr, int k, int m)
     }
 
     int low = mini, high = maxi;
+
     while (low <= high)
     {
         int mid = (low + high) / 2;
@@ -62,5 +63,6 @@ int roseGarden(vector<int> arr, int k, int m)
         else
             low = mid + 1;
     }
+
     return low; // NOTE why low ? becuase we want to return the minimum
 }
