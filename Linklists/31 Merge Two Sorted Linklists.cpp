@@ -15,7 +15,7 @@ public:
     ListNode *mergeTwoLists(ListNode *list1, ListNode *list2)
     {
         // Dummy node to simplify edge cases
-        ListNode dummy(0);
+        ListNode dummy(0); //FIXME - 
         ListNode *tail = &dummy;
 
         while (list1 != nullptr && list2 != nullptr)

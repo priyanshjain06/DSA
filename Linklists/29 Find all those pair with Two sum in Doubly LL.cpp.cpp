@@ -10,7 +10,7 @@ public:
     Node *next, *prev;
     Node(int val) : data(val), next(NULL), prev(NULL)
     {
-        }
+    }
 };
 
 class Solution
@@ -25,8 +25,8 @@ public:
         // Finding the tail of DLL
         Node *left = head, *right = head;
 
-        while (right->next)
-            right = right->next;
+        while (right->next) //REVIEW - 
+            right = right->next; 
 
         // Two-pointer approach
         while (left != right && left->prev != right) // REVIEW -
@@ -34,7 +34,7 @@ public:
             int sum = left->data + right->data;
             if (sum == target)
             {
-                result.push_back({left->data, right->data});
+                result.push_back({left->data, right->data}); // REVIEW
                 left = left->next;
                 right = right->prev;
             }

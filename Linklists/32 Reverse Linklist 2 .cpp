@@ -23,7 +23,7 @@ public:
 
         // Step 1: Reach the node before `left`
         ListNode *prev = dummy;
-        for (int i = 1; i < left; ++i) // REVIEW from 1
+        for (int i = 1; i < left; ++i) // REVIEW from 1 since dummy node 
         {
             prev = prev->next;
         }

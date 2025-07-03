@@ -23,7 +23,7 @@ public:
 
         Node *curr = head;
 
-        while (curr && curr->next)
+        while (curr && curr->next) //REVIEW - 
         {
             if (curr->data == curr->next->data)
             {

@@ -41,7 +41,7 @@ public:
         // Connect less list to greater list
         less->next = greaterHead->next;
 
-        ListNode *result = lessHead->next;
+        ListNode *result = lessHead->next; // REVIEW
 
         // Free dummy nodes
         delete lessHead;
