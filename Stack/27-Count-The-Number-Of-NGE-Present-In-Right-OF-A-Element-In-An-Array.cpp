@@ -3,7 +3,7 @@
 using namespace std;
 
 // REVIEW this is brute force , no need for optimal approach
-//NOTE read the question
+// NOTE read the question
 
 class Solution
 {
@@ -12,7 +12,7 @@ public:
     {
         vector<int> result;
         for (int i = 0; i < indices.size(); i++)
-        //REVIEW loop for indices only and not for arr
+        // REVIEW loop for indices only and not for arr
         {
             int threshold = indices[i];
             int countGreaterElements = 0;
@@ -22,7 +22,8 @@ public:
                 {
                     countGreaterElements += 1;
                 }
-            }w
+            }
+
             result.push_back(countGreaterElements);
         }
         return result;

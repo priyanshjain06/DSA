@@ -38,15 +38,3 @@ public:
         return nge;
     }
 };
-
-int main()
-{
-    Solution obj;
-    vector<int> v{5, 7, 1, 2, 6, 0};
-    vector<int> res = obj.nextGreaterElements(v);
-    cout << "The next greater elements are" << endl;
-    for (int i = 0; i < res.size(); i++)
-    {
-        cout << res[i] << " ";
-    }
-}
