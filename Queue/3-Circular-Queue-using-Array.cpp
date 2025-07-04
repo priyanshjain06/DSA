@@ -3,7 +3,7 @@ using namespace std;
 
 class CircularQueue
 {
-    int *arr;
+    int *arr; // REVIEW
     int front;
     int rear;
     int size;
@@ -13,7 +13,7 @@ public:
     CircularQueue(int n)
     {
         size = n;
-        arr = new int[size];
+        arr = new int[size]; // REVIEW
         front = rear = -1;
     }
 
@@ -45,9 +45,9 @@ public:
             return -1; // Queue is empty F
         }
         int ans = arr[front];
-        arr[front] = -1; //REVIEW
+        arr[front] = -1; // REVIEW
 
-        if (front = rear) //REVIEW  Last element is removed, reset queue
+        if (front = rear) // REVIEW  Last element is removed, reset queue
         {
             front = rear = -1;
         }

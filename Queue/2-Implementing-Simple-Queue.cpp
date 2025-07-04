@@ -1,4 +1,8 @@
-// REVIEW : 1) Conditions:  if(qfront == rear)  underflow and empty conditions. 2) Overflow:  if(rear == size)  overflow condition.
+// REVIEW :
+// 1) Empty condition: qfront == -1 && rear == -1
+// 2) Queue becomes empty after dequeue when qfront > rear
+// 3) Overflow condition: rear == size - 1 (queue is full)
+
 
 #include <iostream>
 using namespace std;
@@ -13,15 +17,15 @@ public:
     Queue()
     {
         size = 100001;
-        arr = new int[size];
+        arr = new int[size]; // REVIEW
         qfront = -1;
         rear = -1;
     }
 
     bool isEmpty()
     {
-        return (qfront == -1 && rear == -1  // || qfront > rear
-                || qfront == rear);
+        return (qfront == -1 && rear == -1 // || qfront > rear
+                );
     }
 
     void enqueue(int data)
@@ -48,8 +52,9 @@ public:
 
         int deletedElement = arr[qfront];
         qfront++;
-        if (qfront > rear) //REVIEW 
-        { // Reset queue when empty
+
+        if (qfront > rear) // REVIEW
+        {                  // Reset queue when empty
             qfront = rear = -1;
         }
         return deletedElement;

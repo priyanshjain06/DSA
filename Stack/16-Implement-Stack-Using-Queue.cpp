@@ -9,13 +9,13 @@ public:
     void Push(int x)
     {
         // Step 1: Get the current size of the queue
-        int s = q.size(); //REVIEW - 
+        int s = q.size(); // REVIEW -
 
         // Step 2: Push the new element 'x' to the back of the queue
         q.push(x);
 
         // Step 3: Move all the elements that were previously in the queue to the back
-        for (int i = 0; i < s; i++) //REVIEW 
+        for (int i = 0; i < s; i++) // REVIEW
         {
             // Push the front element to the back of the queue
             q.push(q.front());
