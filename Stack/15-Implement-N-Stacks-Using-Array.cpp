@@ -12,7 +12,7 @@
 using namespace std;
 class NStack
 {
-    int *arr;
+    int *arr; // REVIEW * is used to declare pointers
     int *top;
     int *next;
 
@@ -41,6 +41,7 @@ public:
         {
             next[i] = i + 1;
         }
+
         // update last index value to -1
         next[s - 1] = -1; // REVIEW -
 
@@ -78,7 +79,7 @@ public:
     // Pops top element from Mth Stack. Returns -1 if the stack is empty, otherwise returns the popped element.
     int pop(int m)
     {
-        //REVIEW  check underflow condition
+        // REVIEW  check underflow condition
         if (top[m - 1] == -1)
         {
             return -1;
@@ -92,6 +93,6 @@ public:
 
         freespot = index;
 
-        return arr[index]; //REVIEW 
+        return arr[index]; // REVIEW
     }
 };

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stack>
-#include <cctype> //REVIEW 
+#include <cctype> //REVIEW
 using namespace std;
 int prec(char c)
 {
@@ -18,7 +18,7 @@ void infixToPostfix(string s)
 
     stack<char> st; // REVIEW - character stack
     string result;
-    for (int i = 0; i < s.length(); i++) //REVIEW .length for string 
+    for (int i = 0; i < s.length(); i++) // REVIEW .length for string
     {
         char c = s[i];
 
@@ -54,7 +54,7 @@ void infixToPostfix(string s)
                 result += st.top();
                 st.pop();
             }
-            st.push(c); //REVIEW - 
+            st.push(c); // REVIEW -
         }
     }
 

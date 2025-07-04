@@ -1,10 +1,10 @@
-//NOTE there is one edge case that we  return when the  head is null
+// NOTE there is one edge case that we  return when the  head is null
 class Node
 {
 public:
     int data;
-    Node *next;
-    Node(int data) //REVIEW - 
+    Node *next;    // REVIEW
+    Node(int data) // REVIEW -
     {
         this->data = data;
         this->next = nullptr;
@@ -14,11 +14,11 @@ public:
 class Stack
 {
 private:
-    Node *head;
+    Node *head; // REVIEW
     int size;
 
 public:
-    Stack() //REVIEW 
+    Stack() // REVIEW
     {
         head = nullptr;
         size = 0;
@@ -37,9 +37,9 @@ public:
     void push(int data)
     {
         Node *newNode = new Node(data);
-        newNode->next = head; //REVIEW 
+        newNode->next = head; // REVIEW
         head = newNode;
-        size++; //REVIEW
+        size++; // REVIEW
     }
 
     void pop()
@@ -50,7 +50,7 @@ public:
         head = head->next;
         delete temp;
         size--;
-    } 
+    }
 
     int getTop()
     {
