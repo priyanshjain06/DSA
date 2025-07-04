@@ -21,4 +21,3 @@ vector<int> nextSmallerElement(vector<int> &arr, int n)
     }
     return ans;
 }
-w

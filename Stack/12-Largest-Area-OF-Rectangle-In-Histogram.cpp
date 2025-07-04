@@ -37,7 +37,6 @@ private:
         {
             int curr = arr[i];
             while (s.top() != -1 && arr[s.top()] >= curr)
-            // REVIEW - arr[s.top()]
             {
                 s.pop();
             }
