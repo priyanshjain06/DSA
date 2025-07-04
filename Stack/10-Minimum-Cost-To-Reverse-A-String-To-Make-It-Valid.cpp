@@ -16,7 +16,7 @@ int findMinimumCost(string str)
         return -1;
     }
 
-    stack<char> s;
+    stack<char> s; //REVIEW char stack
 
     for (int i = 0; i < str.length(); i++)
     {
