@@ -48,7 +48,7 @@ void Queue ::Enqueue(int value)
 {
     QueueNode *Temp;
     Temp = new QueueNode(value);
-    if (Temp == nullptr) // When heap exhausted //REVIEW - empty 
+    if (Temp == nullptr) // When heap exhausted //REVIEW - empty
         cout << "Queue is Full" << endl;
     else
     {
@@ -63,7 +63,7 @@ void Queue ::Enqueue(int value)
             Rare = Temp;
         }
         cout << value << " Inserted into Queue " << endl;
-        size++; //REVIEW 
+        size++; // REVIEW
     }
 }
 void Queue ::Dequeue()
@@ -76,6 +76,6 @@ void Queue ::Dequeue()
         QueueNode *Temp = Front;
         Front = Front->next;
         delete Temp;
-        size--;
+        size--; //REVIEW - 
     }
 }

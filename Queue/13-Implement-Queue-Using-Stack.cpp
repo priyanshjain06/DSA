@@ -40,7 +40,7 @@ public:
 
     bool empty()
     {
-        return input.empty() && output.empty();
+        return input.empty() && output.empty(); //REVIEW - 
     }
 
     int size()

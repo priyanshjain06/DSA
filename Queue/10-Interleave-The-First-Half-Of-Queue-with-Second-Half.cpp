@@ -20,7 +20,7 @@ using namespace std;
 void interLeaveQueue(queue<int> &q)
 {
     // To check the even number of elements
-    if (q.size() % 2 != 0)
+    if (q.size() % 2 != 0) //REVIEW - 
         cout << "Input even number of integers." << endl;
 
     stack<int> s;
