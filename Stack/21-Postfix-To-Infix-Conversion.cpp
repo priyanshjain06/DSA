@@ -1,4 +1,3 @@
-
 // REVIEW The reason for using a stack of strings (stack<string>) instead of a stack of characters (stack<char>) is because we need to build and store entire subexpressions as strings.
 
 #include <iostream>
@@ -11,7 +10,6 @@ string getInfix(string exp)
 
     for (int i = 0; i < exp.length(); i++) // REVIEW -
     {
-        // Push operands
         if (isalpha(exp[i]) || isdigit(exp[i]))
         {
 
@@ -25,7 +23,7 @@ string getInfix(string exp)
         else
         {
             if (s.size() < 2)
-                return "Invalid Expression"; //REVIEW  Edge case
+                return "Invalid Expression"; // REVIEW  Edge case
 
             string op1 = s.top();
             s.pop();
@@ -35,17 +33,5 @@ string getInfix(string exp)
                    op1 + ")"); // REVIEW  carrefully see the op
         }
     }
-
-    // There must be a single element
-    // in stack now which is the required
-    // infix.
-    return s.top(); // REVIEW this will contain the final entire string 
-}
-
-// Driver code
-int main()
-{
-    string exp = "ab*c+";
-    cout << getInfix(exp);
-    return 0;
+    return s.top(); // REVIEW this will contain the final entire string
 }

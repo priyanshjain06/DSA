@@ -23,7 +23,7 @@ string postToPre(string post_exp)
             string op2 = s.top();
             s.pop();
 
-            string temp = post_exp[i] + op2 + op1; // REVIEW -
+            string temp = post_exp[i] + op2 + op1; // REVIEW - no brackets
 
             s.push(temp);
         }

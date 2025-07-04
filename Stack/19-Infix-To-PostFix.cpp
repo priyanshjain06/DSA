@@ -67,11 +67,3 @@ void infixToPostfix(string s)
 
     cout << "Prefix expression: " << result << endl;
 }
-
-int main()
-{
-    string exp = "(p+q)*(m-n)";
-    cout << "Infix expression: " << exp << endl;
-    infixToPostfix(exp);
-    return 0;
-}

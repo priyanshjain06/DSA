@@ -100,12 +100,3 @@ string infixToPrefix(string infix)
 
     return postfix;
 }
-
-// Driver Code
-int main()
-{
-    string exp = "((p+q)*(m-n)/o^r)";
-    cout << "Infix Expression: " << exp << endl;
-    cout << "Prefix Expression: " << infixToPrefix(exp) << endl;
-    return 0;
-}
