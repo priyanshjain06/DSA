@@ -6,11 +6,11 @@
 //         if (*head_ref == NULL) //FIXME
 //             return;
 
-//         Node *curr = *head_ref;  //FIXME 
+//         Node *curr = *head_ref;  //FIXME
 //         while (curr)
 //         {
 //             Node *temp = curr;
-//             curr = curr->next; //REVIEW - 
+//             curr = curr->next; //REVIEW -
 //             if (temp->data == x)
 //             {
 //                 if (temp->prev)

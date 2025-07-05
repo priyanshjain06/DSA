@@ -1,11 +1,13 @@
 // NOTE  This  is the most optimal solution
 // REVIEW time complexity : O(no of bits)
 #include <iostream>
+#include <math.h>
 using namespace std;
+
 int countSetBits(int n)
 {
     int count = 0;
-    while (n > 0) //REVIEW - 
+    while (n > 0) // REVIEW -
     {
         n = n & (n - 1); // Removes the rightmost set bit
         count++;
@@ -13,9 +15,15 @@ int countSetBits(int n)
     return count;
 }
 
-int main()
-{
-    int num = 29; // Example number
-    cout << "The number of set bits in " << num << " is: " << countSetBits(num) << endl;
-    return 0;
-}
+// REVIEW brute force
+
+// int count = 0;
+// while(n) {
+//     if(n & 1) count++;
+//     n >>= 1;
+// }
+
+// REVIEW most optimal way :
+
+// __builtin_popcount(n);       // For 32-bit
+// __builtin_popcountll(n);     // For 64-bit
