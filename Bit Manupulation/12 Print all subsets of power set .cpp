@@ -21,11 +21,3 @@ void printSubsets(const vector<int> &set)
         cout << "}" << endl;
     }
 }
-
-int main()
-{
-    vector<int> set = {1, 2, 3};
-    cout << "All subsets of the set are:" << endl;
-    printSubsets(set);
-    return 0;
-}
