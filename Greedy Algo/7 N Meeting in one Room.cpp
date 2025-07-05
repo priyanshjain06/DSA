@@ -38,7 +38,7 @@ public:
       int limit = meet[0].end;
       answer.push_back(meet[0].pos);
 
-      for (int i = 1; i < n; i++)
+      for (int i = 1; i < n; i++) //REVIEW from 1 
       {
          if (meet[i].start > limit)
          {
