@@ -3,7 +3,7 @@ class Solution
 public:
     int evalRPN(vector<string> &tokens)
     {
-        stack<int> st;
+        stack<int> st; // REVIEW integer type
 
         for (const string &token : tokens) // REVIEW
         {

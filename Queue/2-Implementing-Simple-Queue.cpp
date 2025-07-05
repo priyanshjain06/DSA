@@ -3,7 +3,6 @@
 // 2) Queue becomes empty after dequeue when qfront > rear
 // 3) Overflow condition: rear == size - 1 (queue is full)
 
-
 #include <iostream>
 using namespace std;
 class Queue
