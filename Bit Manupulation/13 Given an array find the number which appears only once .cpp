@@ -6,6 +6,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 int findSingleElement(vector<int> &nums)
 {
     int single = 0;
@@ -15,9 +16,4 @@ int findSingleElement(vector<int> &nums)
     }
     return single;
 }
-int main()
-{
-    vector<int> nums = {4, 1, 2, 1, 2};
-    cout << "The single element is: " << findSingleElement(nums) << endl;
-    return 0;
-}
+
