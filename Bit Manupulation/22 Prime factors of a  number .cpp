@@ -18,12 +18,10 @@ void findUniquePrimeFactors(int n)
         n = n / 2;
     }
 
-    // Handle divisibility by odd numbers from 3 to sqrt(n)
-    for (int i = 3; i <= sqrt(n); i += 2)
+    for (int i = 3; i <= sqrt(n); i += 2) // increment by 2
     {
         while (n % i == 0)
         {
-
             n = n / i;
         }
     }
@@ -36,7 +34,7 @@ void findUniquePrimeFactors(int n)
 
 
 
-    
+
     // Print the unique prime factors
     cout << "Unique prime factors: ";
     for (int factor : primeFactors)
