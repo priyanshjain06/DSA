@@ -53,7 +53,7 @@ Node *mergeTwoSortedLinkedLists(Node *list1, Node *list2)
     {
         temp->next = list2;
     }
-   
+
     return dummyNode->next; // REVIEW -
 }
 
