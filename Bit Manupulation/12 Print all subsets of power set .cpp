@@ -1,4 +1,6 @@
 // REVIEW time complexity : O(2^n) *  total number of subsets
+// REVIEW  Space Complexity : O(1) or near about 2^N * N
+
 #include <iostream>
 #include <vector>
 using namespace std;
