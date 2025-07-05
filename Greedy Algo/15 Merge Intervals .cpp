@@ -20,7 +20,7 @@ public:
         // Step 2: Iterate through intervals and merge overlapping ones
         result.push_back(intervals[0]); // Add the first interval to the result
 
-        for (int i = 1; i < intervals.size(); i++)
+        for (int i = 1; i < intervals.size(); i++) //REVIEW 1
         {
             // Get the last merged interval
             vector<int> &last = result.back(); // FIXME

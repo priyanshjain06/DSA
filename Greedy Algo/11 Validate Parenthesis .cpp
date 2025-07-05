@@ -38,19 +38,3 @@ public:
         return 0;
     }
 };
-
-// Driver code for testing
-int main()
-{
-    Solution sol;
-    string s;
-    cout << "Enter a string: ";
-    cin >> s;
-
-    if (sol.checkValidString(s))
-        cout << "Valid Parenthesis String\n";
-    else
-        cout << "Invalid Parenthesis String\n";
-
-    return 0;
-}
