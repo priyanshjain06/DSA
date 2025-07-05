@@ -21,9 +21,4 @@ int findSingleElement(const vector<int> &arr)
     }
     return one; // 'one' now contains the element that appears only once
 }
-int main()
-{
-    vector<int> arr = {6, 6, 6, 3, 3, 3, 7}; // Example input
-    cout << "The element that appears only once is: " << findSingleElement(arr) << endl;
-    return 0;
-}
+

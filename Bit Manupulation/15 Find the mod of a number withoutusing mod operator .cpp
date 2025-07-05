@@ -9,10 +9,3 @@ int modWithoutMod(int A, int B)
     }
     return A;
 }
-int main()
-{
-    int A = 17;
-    int B = 5;
-    cout << "Modulus of " << A << " with " << B << " is: " << modWithoutMod(A, B) << endl;
-    return 0;
-}
