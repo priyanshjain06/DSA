@@ -6,7 +6,7 @@
 #include <cmath>
 #include <set>
 using namespace std;
-// Function to find and print the unique prime factors
+
 void findUniquePrimeFactors(int n)
 {
     set<int> primeFactors; // REVIEW  // Use a set to store unique prime factors
@@ -23,7 +23,7 @@ void findUniquePrimeFactors(int n)
     {
         while (n % i == 0)
         {
-       
+
             n = n / i;
         }
     }
@@ -33,6 +33,9 @@ void findUniquePrimeFactors(int n)
     {
         primeFactors.insert(n);
     }
+
+
+
     
     // Print the unique prime factors
     cout << "Unique prime factors: ";
@@ -41,11 +44,4 @@ void findUniquePrimeFactors(int n)
         cout << factor << " ";
     }
     cout << endl;
-}
-
-int main()
-{
-    int n = 1483; // Example number
-    findUniquePrimeFactors(n);
-    return 0;
 }
