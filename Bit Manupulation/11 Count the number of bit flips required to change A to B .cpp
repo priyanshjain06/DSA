@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int countBitFlips(int A, int B)
+
+int countBitFlips(int A, int B) // REVIEW -  a is start and b is goal
 {
     int diff = A ^ B; // XOR of A and B gives the positions where bits are different
 
@@ -12,11 +13,4 @@ int countBitFlips(int A, int B)
         count++;
     }
     return count;
-}
-
-int main()
-{
-    int A = 29, B = 15; // Example numbers (29 = 11101, 15 = 01111)
-    cout << "Number of bit flips required to convert " << A << " to " << B << " is: " << countBitFlips(A, B) << endl;
-    return 0;
 }
