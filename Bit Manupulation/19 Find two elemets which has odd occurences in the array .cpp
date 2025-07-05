@@ -4,13 +4,10 @@
 
 // ANCHOR use gpt to understand the dry run
 
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
-
-
 
 void findTwoOddOccurrenceNumbers(const vector<int> &arr)
 {
@@ -21,12 +18,10 @@ void findTwoOddOccurrenceNumbers(const vector<int> &arr)
         xorResult ^= num; // REVIEW compounded operator
     }
 
-
     // Step 2: Find the rightmost set bit (1st set bit) in xorResult
     int rightmostSetBit = xorResult & -xorResult; // REVIEW  - minus
     // -x means two complement here that is ~x+1
 
-    
     // Step 3: Divide the array into two groups based on the rightmost set bit
     int num1 = 0, num2 = 0;
     {
