@@ -3,17 +3,14 @@
 #include <math.h>
 using namespace std;
 
-// Function to check if a
-// given number is prime.
 bool checkPrime(int n)
 {
-    // Initialize a counter variable to
-    // count the number of factors.
+
     int cnt = 0;
 
     // Loop through numbers from 1
     // to the square root of n.
-    for (int i = 1; i <= sqrt(n); i++)
+    for (int i = 1; i <= sqrt(n); i++) // REVIEW start from 1
     {
 
         // If n is divisible by i
