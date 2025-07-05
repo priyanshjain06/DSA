@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int removeRightmostSetBit(int x)
+int removeRightmostSetBit(int n)
 {
-    return x & (x - 1);
+    return n & (n - 1);
 }
-
