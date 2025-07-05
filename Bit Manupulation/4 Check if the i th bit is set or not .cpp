@@ -15,7 +15,7 @@ int main()
 
     if (isIthBitSet(n, i))
     {
-     w   cout << "The " << i << "-th bit is set." << endl;
+        cout << "The " << i << "-th bit is set." << endl;
     }
     else
     {
