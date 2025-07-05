@@ -18,6 +18,7 @@ void printSubsets(const vector<int> &set)
             if (mask & (1 << i)) // REVIEW check if the ith bit is set
             {
                 cout << set[i] << " ";
+                // REVIEW count ++ if want the count
             }
         }
         cout << "}" << endl;
