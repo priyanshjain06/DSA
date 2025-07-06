@@ -1,5 +1,5 @@
 #include <iostream>
-#include <sstream>
+#include <sstream> //REVIEW - 
 #include <vector>
 using namespace std;
 
@@ -8,11 +8,11 @@ int main()
     string line;
     getline(cin, line); // Take full input line
 
-    istringstream iss(line);
+    istringstream iss(line); // to split the string by white space : A B
     string word;
     vector<int> lengths;
 
-    while (iss >> word)
+    while (iss >> word) // input operator 
     {
         cout << word << endl;
         lengths.push_back(word.length());
