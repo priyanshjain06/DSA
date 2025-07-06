@@ -1,6 +1,7 @@
 // REVIEW A divisor of an integer N is a positive integer that divides N without leaving a remainder.
 
 // REVIEW divisor and factors are not same they are different
+
 #include <iostream>
 #include <vector>
 #include <cmath>
