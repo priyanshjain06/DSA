@@ -1,36 +1,27 @@
 #include <iostream>
-#include <cstring>
+#include <sstream>
+#include <vector>
 using namespace std;
 
 int main()
 {
-    char str[1000];  //REVIEW char type 
-    cin.getline(str, 1000); // Take full line as input
+    string line;
+    getline(cin, line); // Take full input line
 
-    char *word = strtok(str, " "); //REVIEW pointer 
-    int lengths[100]; // To store word lengths
-    int idx = 0;
+    istringstream iss(line);
+    string word;
+    vector<int> lengths;
 
-    // Print words line by line and store their lengths
-    while (word != NULL)
+    while (iss >> word)
     {
         cout << word << endl;
-        lengths[idx++] = strlen(word);
-        word = strtok(NULL, " ");
+        lengths.push_back(word.length());
     }
 
-    // Print word lengths
-    for (int i = 0; i < idx; i++)
+    for (int len : lengths)
     {
-        cout << lengths[i] << endl;
+        cout << len << endl;
     }
 
     return 0;
 }
-
-//REVIEW Process words individually	Count words, print each word on a new line
-
-//REVIEW to get the next token in the string.
-// "Continue from where you left off in the previous call.
-
-//REVIEW Because C-style strings are arrays of characters, and in C/C++, a string is represented by a pointer to its first character.
