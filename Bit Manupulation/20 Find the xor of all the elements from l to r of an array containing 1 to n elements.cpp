@@ -21,6 +21,7 @@ int findXorInRange(int l, int r)
     return xorTillN(r) ^ xorTillN(l - 1); // REVIEW
 }
 
+
 // n       XOR from 1 to n
 //  -------------------------
 //  1       1              (1)
