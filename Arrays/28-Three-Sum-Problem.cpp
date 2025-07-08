@@ -11,7 +11,7 @@ vector<vector<int>> triplet(int n, vector<int> &arr)
     sort(arr.begin(), arr.end());
     for (int i = 0; i < n; i++)
     {
-        // remove duplicates: //REVIEW - 
+        // remove duplicates: //REVIEW -
         if (i != 0 && arr[i] == arr[i - 1])
             continue;
 
@@ -32,11 +32,11 @@ vector<vector<int>> triplet(int n, vector<int> &arr)
             else
             {
                 vector<int> temp = {arr[i], arr[j], arr[k]};
-                ans.push_back(temp); //REVIEW - 
+                ans.push_back(temp); // REVIEW -
                 j++;
                 k--;
                 // skip the duplicates:
-                while (j < k && arr[j] == arr[j - 1]) //REVIEW - 
+                while (j < k && arr[j] == arr[j - 1]) // REVIEW -
                     j++;
                 while (j < k && arr[k] == arr[k + 1])
                     k--;
