@@ -19,7 +19,7 @@ public:
         for (int i = 1; i < strs.size(); i++) // REVIEW -  starts from 1
         {
             // Reduce prefix until it matches the start of strs[i]
-            while (strs[i].find(prefix) != 0)
+            while (strs[i].find(prefix) )
             {
                 prefix.pop_back();
                 if (prefix == "")

@@ -27,7 +27,7 @@ int beautySum(string s)
                 }
             }
 
-            totalBeauty += (maxFreq - minFreq); // REVIEW -  compund operator
+                totalBeauty += (maxFreq - minFreq); // REVIEW -  compund operator
         }
     }
     return totalBeauty;
