@@ -1,3 +1,15 @@
+// REVIEW question summary :
+
+// You are given a list of words and a maxWidth. You must format the text so that:
+
+// Each line has exactly maxWidth characters.
+
+// Words are fully justified (evenly spaced).
+
+// The last line should be left-justified.
+
+// If spaces can’t be evenly divided, put extra spaces on the left.
+
 #include <iostream>
 #include <vector>
 #include <string>
